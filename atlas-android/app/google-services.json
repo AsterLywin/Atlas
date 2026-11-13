@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "579402078708",
+    "project_id": "atlas-be875",
+    "storage_bucket": "atlas-be875.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579402078708:android:546386ceb33e2183be41a1",
+        "android_client_info": {
+          "package_name": "com.atlas.reader"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdLsnYqzHLxhpwpqpFJBuc28XHIzY5XUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579402078708:android:70bfa457be0ba749be41a1",
+        "android_client_info": {
+          "package_name": "com.atlas.reader.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdLsnYqzHLxhpwpqpFJBuc28XHIzY5XUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
