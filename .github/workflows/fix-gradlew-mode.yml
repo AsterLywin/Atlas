@@ -1,0 +1,29 @@
+name: Fix gradlew executable bit
+
+# One-off helper: the file-push tool cannot carry the executable bit, so
+# gradlew landed on GitHub as 100644 and CI fails on spotlessCheck with
+# "Permission denied". This workflow sets the bit with real git and pushes
+# it back. Run it once manually (Actions -> Fix gradlew executable bit ->
+# Run workflow); it does nothing if the bit is already set.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set gradlew executable bit
+        run: |
+          git update-index --chmod=+x gradlew
+          if git diff --cached --quiet; then
+            echo "gradlew already executable, nothing to do"
+          else
+            git config user.name "Aster"
+            git config user.email "161702699+AsterLywin@users.noreply.github.com"
+            git commit -m "Fix gradlew executable bit"
+            git push
+          fi
