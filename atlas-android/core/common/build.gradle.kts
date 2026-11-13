@@ -1,0 +1,62 @@
+plugins {
+    alias(atlasx.plugins.android.library)
+    alias(atlasx.plugins.spotless)
+
+    alias(libs.plugins.metro)
+    alias(libs.plugins.kotlin.serialization)
+}
+
+android {
+    namespace = "com.atlas.reader.core.common"
+}
+
+kotlin {
+    compilerOptions {
+        freeCompilerArgs.addAll(
+            "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+            "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
+        )
+    }
+}
+
+dependencies {
+    implementation(projects.atlasAndroid.core.metro)
+    implementation(projects.atlasAndroid.i18n)
+
+    api(libs.logcat)
+
+    api(libs.rxJava)
+
+    api(libs.okhttp.core)
+    api(libs.okhttp.logging)
+    api(libs.okhttp.brotli)
+    api(libs.okhttp.dnsOverHttps)
+    api(libs.okio)
+
+    api(libs.apollo)
+
+    implementation(libs.image.decoder)
+
+    implementation(libs.unifile)
+    implementation(libs.archive)
+
+    api(libs.kotlinx.coroutines.core)
+    api(libs.kotlinx.serialization.json)
+    api(libs.kotlinx.serialization.jsonOkio)
+
+    api(libs.androidx.preference)
+    implementation(libs.androidx.webkit)
+
+    implementation(libs.jsoup)
+
+    // Sort
+    implementation(libs.natural.comparator)
+
+    // JavaScript engine
+    implementation(libs.quickJs)
+
+    testImplementation(libs.bundles.test)
+    testRuntimeOnly(libs.junit.platform.launcher)
+
+    implementation(libs.metro.runtime)
+}
