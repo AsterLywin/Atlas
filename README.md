@@ -7,11 +7,13 @@ Windows, Linux and macOS** — one app that aims to be better than Kotatsu,
 Mihon and Suwayomi combined: Kotatsu's built-in sources, Mihon's reader and
 library, Suwayomi's server, sync and auto-download.
 
-> **Source v1.** This repository is the *source* skeleton, not a finished app:
-> the three-part structure exists and compiles, the Android app is the Mihon
-> base renamed to Atlas, the desktop app opens a library. Kotatsu parsers,
-> Suwayomi sync / auto-download, the full reader, trackers, backup and the
-> Play Store release are **phase 2** and are not in this version.
+> **Source v1 + Phase 2 step 1.** This repository is the *source* skeleton,
+> not a finished app: the three-part structure exists and compiles, the
+> Android app is the Mihon base renamed to Atlas, the desktop app opens a
+> library. Kotatsu's 1,413 parsers are vendored in `atlas-parsers/` with an
+> adapter to the Atlas `Source` contract, but are not yet wired into the
+> Android or desktop UI. Suwayomi sync / auto-download, the full reader,
+> trackers, backup and the Play Store release are still **phase 2**.
 
 ## Structure
 
@@ -65,7 +67,9 @@ Atlas is **GPL-3.0** (see `LICENSE`). It is built from open-source work:
   `atlas-android/`; its Apache license is kept at `atlas-android/LICENSE`.
 - **Kotatsu** (GPL-3.0, `KotatsuApp/Kotatsu`, archived) and its live fork
   **Kotatsu-Redo** — the 1200+ built-in parsers Atlas plans to adopt in
-  phase 2. Kotatsu code is why the whole app is GPL-3.0.
+  phase 2. Kotatsu code is why the whole app is GPL-3.0. The parsers
+  themselves (`Kotatsu-Redo/kotatsu-parsers-redo`, HEAD `c429dceb`) are
+  vendored in `atlas-parsers/` with an Atlas adapter; see its README.
 - **Suwayomi-Server** (MPL-2.0, `Suwayomi/Suwayomi-Server`) — the server,
   sync and auto-download model for phase 2.
 
@@ -90,11 +94,13 @@ Atlas is **GPL-3.0** (see `LICENSE`). It is built from open-source work:
 میهون و سووایومی با هم بهتر باشد: سورس‌های داخلی کوتاتسو، خواننده و کتابخانه‌ی
 میهون، سرور و همگام‌سازی و دانلود خودکار سووایومی.
 
-> **نسخه‌ی اول سورس.** این مخزن اسکلت *سورس* است، نه یک برنامه‌ی کامل:
+> **نسخه‌ی اول سورس + قدم اول فاز ۲.** این مخزن اسکلت *سورس* است، نه یک برنامه‌ی کامل:
 > ساختار سه‌بخشی وجود دارد و کامپایل می‌شود، برنامه‌ی اندروید همان میهون است
-> که به اطلس تغییر نام داده، و برنامه‌ی دسکتاپ کتابخانه را باز می‌کند. پارسرهای
-> کوتاتسو، همگام‌سازی و دانلود خودکار سووایومی، خواننده‌ی کامل، ترکرها، پشتیبان
-> و انتشار در پلی‌استور **فاز ۲** هستند و در این نسخه نیستند.
+> که به اطلس تغییر نام داده، و برنامه‌ی دسکتاپ کتابخانه را باز می‌کند. ۱۴۱۳
+> پارسر کوتاتسو در `atlas-parsers/` کپی شده و به قرارداد `Source` اطلس وصل
+> شده، ولی هنوز به رابط کاربری اندروید یا دسکتاپ وصل نشده. همگام‌سازی و
+> دانلود خودکار سووایومی، خواننده‌ی کامل، ترکرها، پشتیبان و انتشار در
+> پلی‌استور هنوز **فاز ۲** هستند.
 
 ### ساختار
 
@@ -129,6 +135,8 @@ Atlas/
   در `atlas-android/`؛ مجوز آپاچی آن در `atlas-android/LICENSE` نگه داشته شده است.
 - **کوتاتسو** (GPL-3.0، ‏`KotatsuApp/Kotatsu`‏، آرشیو شده) و فورک زنده‌ی آن
   **Kotatsu-Redo** — بیش از ۱۲۰۰ پارسر داخلی که اطلس در فاز ۲ می‌خواهد
-  استفاده کند. کد کوتاتسو دلیل GPL-3.0 بودن کل برنامه است.
+  استفاده کند. کد کوتاتسو دلیل GPL-3.0 بودن کل برنامه است. خود پارسرها
+  (`Kotatsu-Redo/kotatsu-parsers-redo`، کامیت `c429dceb`) در `atlas-parsers/`
+  کپی شده‌اند و یک آداپتور اطلس دارند؛ README همان پوشه را ببینید.
 - **Suwayomi-Server** (MPL-2.0، ‏`Suwayomi/Suwayomi-Server`‏) — مدل سرور،
   همگام‌سازی و دانلود خودکار برای فاز ۲.

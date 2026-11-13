@@ -30,6 +30,7 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "Atlas"
 include(":atlas-core")
+include(":atlas-parsers")
 include(":atlas-desktop")
 include(":atlas-android:app")
 include(":atlas-android:baseline-profile")

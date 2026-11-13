@@ -24,4 +24,17 @@ interface Source {
 
     /** Chapters of one book, in reading order. */
     suspend fun listChapters(bookId: String): List<com.atlas.core.library.Chapter>
+
+    /**
+     * Books matching [query]. The default implementation filters [listBooks]
+     * by title; network sources override it with a server-side search.
+     */
+    suspend fun searchBooks(query: String): List<com.atlas.core.library.Book> =
+        listBooks().filter { it.title.contains(query, ignoreCase = true) }
+
+    /**
+     * Direct image URLs of one chapter, in reading order. The default is
+     * empty (the source does not serve pages); network sources override it.
+     */
+    suspend fun listPages(chapterId: String): List<String> = emptyList()
 }
