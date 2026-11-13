@@ -1,0 +1,16 @@
+[versions]
+# Used in [/gradle/build-config/src/main/kotlin/PluginKotlinMultiplatform.kt]
+android-sdk-min = "26"
+android-sdk-compile = "36"
+android-sdk-target = "36"
+android-ndk = "28.2.13676358"
+java = "17"
+
+[plugins]
+android-application = { id = "atlas.plugins.android.application" }
+android-base = { id = "atlas.plugins.android.base" }
+android-library = { id = "atlas.plugins.android.library" }
+android-test = { id = "atlas.plugins.android.test" }
+compose = { id = "atlas.plugins.compose.android" }
+kotlin-multiplatform = { id = "atlas.plugins.kotlin.multiplatform" }
+spotless = { id = "atlas.plugins.spotless" }

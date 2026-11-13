@@ -1,0 +1,32 @@
+# Types extensions implement, extend or construct
+-keep class com.atlas.reader.source.Source { public protected *; }
+-keep class com.atlas.reader.source.Source$DefaultImpls { public protected *; }
+-keep class com.atlas.reader.source.CatalogueSource { public protected *; }
+-keep class com.atlas.reader.source.CatalogueSource$DefaultImpls { public protected *; }
+-keep class com.atlas.reader.source.ConfigurableSource { public protected *; }
+-keep class com.atlas.reader.source.SourceFactory { public protected *; }
+-keep class com.atlas.reader.source.UnmeteredSource { public protected *; }
+-keep class com.atlas.reader.source.model.Filter { public protected *; }
+-keep class com.atlas.reader.source.model.Filter$* { public protected *; }
+-keep class com.atlas.reader.source.model.FilterList { public protected *; }
+-keep class com.atlas.reader.source.model.MangasPage { public protected *; }
+-keep class com.atlas.reader.source.model.Page { public protected *; }
+-keep class com.atlas.reader.source.model.SChapter { public protected *; }
+-keep class com.atlas.reader.source.model.SChapter$Companion { public protected *; }
+-keep class com.atlas.reader.source.model.SManga { public protected *; }
+-keep class com.atlas.reader.source.model.SManga$Companion { public protected *; }
+-keep class com.atlas.reader.source.model.SMangaUpdate { public protected *; }
+-keep class com.atlas.reader.source.model.UpdateStrategy { public protected *; }
+-keep class com.atlas.reader.source.online.HttpSource { public protected *; }
+-keep class com.atlas.reader.source.online.ParsedHttpSource { public protected *; }
+
+# Final classes and top-level functions extensions only call into
+-keep,allowoptimization class com.atlas.reader.AppInfo { public protected *; }
+-keep,allowoptimization class com.atlas.reader.network.HttpException { public protected *; }
+-keep,allowoptimization class com.atlas.reader.network.JavaScriptEngine { public protected *; }
+-keep,allowoptimization class com.atlas.reader.network.NetworkHelper { public protected *; }
+-keep,allowoptimization class com.atlas.reader.network.OkHttpExtensionsKt { public protected *; }
+-keep,allowoptimization class com.atlas.reader.network.RequestsKt { public protected *; }
+-keep,allowoptimization class com.atlas.reader.network.interceptor.RateLimitInterceptorKt { public protected *; }
+-keep,allowoptimization class com.atlas.reader.network.interceptor.SpecificHostRateLimitInterceptorKt { public protected *; }
+-keep,allowoptimization class com.atlas.reader.util.JsoupExtensionsKt { public protected *; }
