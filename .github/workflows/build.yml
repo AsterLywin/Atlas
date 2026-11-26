@@ -44,6 +44,9 @@ jobs:
         with:
           cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
 
+      - name: Install Android 37 platform
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --channel=3 "platforms;android-37.2" "build-tools;37.0.0"
+
       - name: Check code format
         run: ./gradlew spotlessCheck
 
