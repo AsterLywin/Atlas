@@ -46,6 +46,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    testOptions {
+        unitTests.isIncludeAndroidResources = true
+    }
+
     if (System.getenv("ATLAS_GITHUB_RELEASE").toBoolean()) {
         signingConfigs {
             named("debug") {
@@ -214,6 +218,7 @@ dependencies {
     implementation(projects.atlasAndroid.coreMetadata)
     implementation(projects.atlasAndroid.sourceApi)
     implementation(projects.atlasAndroid.sourceLocal)
+    implementation(projects.atlasParsers)
     implementation(projects.atlasAndroid.data)
     implementation(projects.atlasAndroid.domain)
     implementation(projects.atlasAndroid.presentationCore)
@@ -324,7 +329,11 @@ dependencies {
 
     // Tests
     testImplementation(libs.bundles.test)
+    testImplementation(libs.junit4)
+    testImplementation(libs.mockwebserver)
+    testImplementation(libs.robolectric)
     testRuntimeOnly(libs.junit.platform.launcher)
+    testRuntimeOnly(libs.junit.vintage.engine)
 
     // For detecting memory leaks; see https://square.github.io/leakcanary/
     // debugImplementation(libs.leakCanary.android)

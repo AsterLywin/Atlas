@@ -7,6 +7,7 @@ import atlas.domain.source.service.SourceManager
 import atlas.source.local.LocalSource
 import com.atlas.reader.data.download.DownloadManager
 import com.atlas.reader.extension.ExtensionManager
+import com.atlas.reader.source.kotatsu.KotatsuSourceProvider
 import com.atlas.reader.source.online.HttpSource
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
@@ -31,6 +32,7 @@ class AndroidSourceManager(
     private val sourceRepository: StubSourceRepository,
     private val localSource: LocalSource,
     private val downloadManager: Lazy<DownloadManager>,
+    private val kotatsuSourceProvider: KotatsuSourceProvider,
 ) : SourceManager {
 
     /**
@@ -51,6 +53,10 @@ class AndroidSourceManager(
                     val mutableMap = ConcurrentHashMap<Long, Source>(
                         mapOf(LocalSource.ID to localSource),
                     )
+                    kotatsuSourceProvider.sources.forEach {
+                        mutableMap[it.id] = it
+                        registerStubSource(StubSource.from(it))
+                    }
                     extensions.forEach { extension ->
                         extension.sources.forEach {
                             mutableMap[it.id] = it

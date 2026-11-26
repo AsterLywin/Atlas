@@ -112,7 +112,11 @@ class InMemoryPreferenceStore(
 
         override fun defaultValue(): T = defaultValue
 
-        override fun changes(): Flow<T> = flow { data }
+        // Must emit the current value on collection, like
+        // AndroidPreference.changes() does (onStart { emit("ignition") }).
+        // `flow { data }` never emitted anything, so any combine() over
+        // these preferences (e.g. GetEnabledSources) waited forever.
+        override fun changes(): Flow<T> = flow { emit(get()) }
 
         override fun stateIn(scope: CoroutineScope): StateFlow<T> {
             return changes().stateIn(scope, SharingStarted.Eagerly, get())

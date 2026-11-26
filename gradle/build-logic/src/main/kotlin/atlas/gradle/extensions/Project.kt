@@ -28,5 +28,13 @@ fun Project.configureTest() {
         testLogging {
             events(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED)
         }
+        // Local VM only: Robolectric downloads android-all through the
+        // Maven mirror instead of Maven Central directly (the sandbox
+        // egress breaks its HTTPS fetch). Pass
+        // -ProbolectricRepoUrl=http://127.0.0.1:18080/central on the
+        // Gradle command line; CI omits it and uses Maven Central.
+        findProperty("robolectricRepoUrl")?.let {
+            systemProperty("robolectric.dependency.repo.url", it.toString())
+        }
     }
 }
