@@ -1,8 +1,8 @@
 package com.atlas.domain.manga.interactor
 
+import atlas.domain.manga.repository.MangaRepository
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.Flow
-import atlas.domain.manga.repository.MangaRepository
 
 @Inject
 class GetExcludedScanlators(

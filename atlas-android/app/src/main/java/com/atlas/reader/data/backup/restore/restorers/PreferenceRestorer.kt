@@ -2,7 +2,13 @@ package com.atlas.reader.data.backup.restore.restorers
 
 import android.content.Context
 import android.util.Log
-import dev.zacsweers.metro.Inject
+import atlas.core.common.preference.AndroidPreferenceStore
+import atlas.core.common.preference.PreferenceStore
+import atlas.core.common.preference.plusAssign
+import atlas.domain.category.interactor.GetCategories
+import atlas.domain.category.model.Category
+import atlas.domain.download.service.DownloadPreferences
+import atlas.domain.library.service.LibraryPreferences
 import com.atlas.reader.data.backup.create.BackupCreateWorker
 import com.atlas.reader.data.backup.models.BackupCategory
 import com.atlas.reader.data.backup.models.BackupPreference
@@ -15,13 +21,7 @@ import com.atlas.reader.data.backup.models.StringPreferenceValue
 import com.atlas.reader.data.backup.models.StringSetPreferenceValue
 import com.atlas.reader.data.library.LibraryUpdateWorker
 import com.atlas.reader.source.sourcePreferences
-import atlas.core.common.preference.AndroidPreferenceStore
-import atlas.core.common.preference.PreferenceStore
-import atlas.core.common.preference.plusAssign
-import atlas.domain.category.interactor.GetCategories
-import atlas.domain.category.model.Category
-import atlas.domain.download.service.DownloadPreferences
-import atlas.domain.library.service.LibraryPreferences
+import dev.zacsweers.metro.Inject
 
 @Inject
 class PreferenceRestorer(

@@ -1,25 +1,6 @@
 package com.atlas.reader.data.download
 
 import android.content.Context
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.data.download.model.Download
-import com.atlas.reader.source.Source
-import com.atlas.reader.source.model.Page
-import com.atlas.reader.source.online.HttpSource
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.asFlow
-import kotlinx.coroutines.flow.drop
-import kotlinx.coroutines.flow.emitAll
-import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.merge
-import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import logcat.LogPriority
 import atlas.core.common.i18n.stringResource
 import atlas.core.common.storage.extension
 import atlas.core.common.util.system.ImageUtil
@@ -32,6 +13,25 @@ import atlas.domain.manga.interactor.GetManga
 import atlas.domain.manga.model.Manga
 import atlas.domain.source.service.SourceManager
 import atlas.i18n.MR
+import com.atlas.reader.data.download.model.Download
+import com.atlas.reader.source.Source
+import com.atlas.reader.source.model.Page
+import com.atlas.reader.source.online.HttpSource
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.emitAll
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.merge
+import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import logcat.LogPriority
 
 /**
  * This class is used to manage chapter downloads in the application. It must be instantiated once

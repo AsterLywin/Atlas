@@ -15,14 +15,14 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
-import com.atlas.core.preference.PreferenceMutableState
-import com.atlas.reader.ui.library.LibraryItem
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import atlas.domain.category.model.Category
 import atlas.domain.library.model.LibraryDisplayMode
 import atlas.domain.library.model.LibraryManga
 import atlas.presentation.core.components.material.PullRefresh
+import com.atlas.core.preference.PreferenceMutableState
+import com.atlas.reader.ui.library.LibraryItem
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.seconds
 
 @Composable

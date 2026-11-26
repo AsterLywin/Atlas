@@ -17,13 +17,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Check
-import atlas.i18n.MR
 import atlas.presentation.core.components.SettingsItemsPaddings
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
 
 @Composable
 fun ModeSelectionDialog(

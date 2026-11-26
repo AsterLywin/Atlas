@@ -6,9 +6,9 @@ import androidx.compose.material3.PrimaryScrollableTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.category.visualName
 import atlas.domain.category.model.Category
 import atlas.presentation.core.components.material.TabText
+import com.atlas.presentation.category.visualName
 
 @Composable
 internal fun LibraryTabs(

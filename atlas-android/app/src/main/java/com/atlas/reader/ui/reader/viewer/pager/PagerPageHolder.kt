@@ -4,6 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.ImageUtil
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.presentation.util.formattedMessage
 import com.atlas.reader.databinding.ReaderErrorBinding
 import com.atlas.reader.source.model.Page
@@ -23,10 +27,6 @@ import kotlinx.coroutines.withContext
 import logcat.LogPriority
 import okio.Buffer
 import okio.BufferedSource
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.ImageUtil
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 
 /**
  * View of the ViewPager that contains a page of a chapter.

@@ -3,13 +3,13 @@ package com.atlas.reader.ui.setting.track
 import android.net.Uri
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.data.track.comick.ComickMissingScopesException
 import com.atlas.reader.util.system.toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
 
 class TrackLoginActivity : BaseOAuthLoginActivity() {
 

@@ -9,19 +9,19 @@ import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import androidx.appcompat.widget.AppCompatTextView
-import com.google.android.material.progressindicator.CircularProgressIndicator
+import atlas.core.common.i18n.stringResource
+import atlas.i18n.MR
 import com.atlas.reader.ui.reader.model.ChapterTransition
 import com.atlas.reader.ui.reader.model.ReaderChapter
 import com.atlas.reader.ui.reader.viewer.ReaderButton
 import com.atlas.reader.ui.reader.viewer.ReaderTransitionView
 import com.atlas.reader.util.system.dpToPx
 import com.atlas.reader.widget.ViewPagerAdapter
+import com.google.android.material.progressindicator.CircularProgressIndicator
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
 
 /**
  * View of the ViewPager that contains a chapter transition.

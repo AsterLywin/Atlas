@@ -1,10 +1,10 @@
 package com.atlas.reader.util.chapter
 
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.manga.model.Manga
 import com.atlas.domain.chapter.model.applyFilters
 import com.atlas.reader.data.download.DownloadManager
 import com.atlas.reader.ui.manga.ChapterList
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.manga.model.Manga
 
 /**
  * Gets next unread chapter with filters and sorting applied

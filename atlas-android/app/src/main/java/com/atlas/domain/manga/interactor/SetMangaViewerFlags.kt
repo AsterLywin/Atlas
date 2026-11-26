@@ -1,10 +1,10 @@
 package com.atlas.domain.manga.interactor
 
-import dev.zacsweers.metro.Inject
-import com.atlas.reader.ui.reader.setting.ReaderOrientation
-import com.atlas.reader.ui.reader.setting.ReadingMode
 import atlas.domain.manga.model.MangaUpdate
 import atlas.domain.manga.repository.MangaRepository
+import com.atlas.reader.ui.reader.setting.ReaderOrientation
+import com.atlas.reader.ui.reader.setting.ReadingMode
+import dev.zacsweers.metro.Inject
 
 @Inject
 class SetMangaViewerFlags(

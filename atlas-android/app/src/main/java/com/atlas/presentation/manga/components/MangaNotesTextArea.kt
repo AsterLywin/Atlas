@@ -35,24 +35,24 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import com.mohamedrejeb.richeditor.model.rememberRichTextState
-import com.mohamedrejeb.richeditor.ui.material3.RichTextEditor
-import com.mohamedrejeb.richeditor.ui.material3.RichTextEditorDefaults.richTextEditorColors
-import com.atlas.reader.ui.manga.notes.MangaNotesScreen
-import kotlinx.coroutines.flow.debounce
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.FormatListBulleted
 import atlas.icons.materialsymbols.rounded.FormatBold
 import atlas.icons.materialsymbols.rounded.FormatItalic
 import atlas.icons.materialsymbols.rounded.FormatListNumbered
 import atlas.icons.materialsymbols.rounded.FormatUnderlined
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.reader.ui.manga.notes.MangaNotesScreen
+import com.mohamedrejeb.richeditor.model.rememberRichTextState
+import com.mohamedrejeb.richeditor.ui.material3.RichTextEditor
+import com.mohamedrejeb.richeditor.ui.material3.RichTextEditorDefaults.richTextEditorColors
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
 import kotlin.time.Duration.Companion.seconds
 
 @Composable

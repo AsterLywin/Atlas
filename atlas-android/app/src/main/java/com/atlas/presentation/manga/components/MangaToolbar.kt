@@ -11,19 +11,19 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.components.AppBarActions
-import com.atlas.presentation.components.AppBarTitle
-import com.atlas.presentation.components.DownloadDropdownMenu
-import com.atlas.presentation.manga.DownloadAction
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Download
 import atlas.icons.materialsymbols.rounded.FilterList
 import atlas.icons.materialsymbols.rounded.FlipToBack
 import atlas.icons.materialsymbols.rounded.SelectAll
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.theme.active
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.components.AppBarActions
+import com.atlas.presentation.components.AppBarTitle
+import com.atlas.presentation.components.DownloadDropdownMenu
+import com.atlas.presentation.manga.DownloadAction
 
 @Composable
 fun MangaToolbar(

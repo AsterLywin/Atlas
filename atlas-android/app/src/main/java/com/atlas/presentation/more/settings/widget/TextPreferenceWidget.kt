@@ -11,10 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Preview
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
 
 @Composable
 fun TextPreferenceWidget(

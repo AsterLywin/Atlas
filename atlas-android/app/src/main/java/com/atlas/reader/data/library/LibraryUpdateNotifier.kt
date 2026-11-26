@@ -10,12 +10,19 @@ import android.net.Uri
 import android.os.SystemClock
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import atlas.core.common.Constants
+import atlas.core.common.i18n.pluralStringResource
+import atlas.core.common.i18n.stringResource
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.library.model.LibraryManga
+import atlas.domain.manga.model.Manga
+import atlas.domain.source.service.SourceManager
+import atlas.i18n.MR
 import coil3.asDrawable
 import coil3.imageLoader
 import coil3.request.ImageRequest
 import coil3.request.transformations
 import coil3.transform.CircleCropTransformation
-import dev.zacsweers.metro.Inject
 import com.atlas.presentation.util.formatChapterNumber
 import com.atlas.reader.R
 import com.atlas.reader.core.security.SecurityPreferences
@@ -30,14 +37,7 @@ import com.atlas.reader.util.system.cancelNotification
 import com.atlas.reader.util.system.getBitmapOrNull
 import com.atlas.reader.util.system.notificationBuilder
 import com.atlas.reader.util.system.notify
-import atlas.core.common.Constants
-import atlas.core.common.i18n.pluralStringResource
-import atlas.core.common.i18n.stringResource
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.library.model.LibraryManga
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.service.SourceManager
-import atlas.i18n.MR
+import dev.zacsweers.metro.Inject
 import java.math.RoundingMode
 import java.text.NumberFormat
 import atlas.icons.materialsymbols.R as MaterialSymbolsR

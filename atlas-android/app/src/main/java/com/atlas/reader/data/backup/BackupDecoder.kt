@@ -2,9 +2,11 @@ package com.atlas.reader.data.backup
 
 import android.content.Context
 import android.net.Uri
-import dev.zacsweers.metro.Inject
+import atlas.core.common.i18n.stringResource
+import atlas.i18n.MR
 import com.atlas.reader.data.backup.models.Backup
 import com.atlas.reader.data.backup.models.BackupManga
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.serialization.DeserializationStrategy
@@ -13,8 +15,6 @@ import okio.BufferedSource
 import okio.buffer
 import okio.gzip
 import okio.source
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
 import java.io.IOException
 
 @Inject

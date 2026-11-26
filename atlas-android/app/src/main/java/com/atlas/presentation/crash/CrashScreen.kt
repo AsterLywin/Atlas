@@ -13,15 +13,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
-import kotlinx.coroutines.launch
 import atlas.app.di.appGraph
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.BugReport
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.InfoScreen
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import kotlinx.coroutines.launch
 
 @Composable
 fun CrashScreen(

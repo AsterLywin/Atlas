@@ -1,13 +1,7 @@
 package com.atlas.reader.ui.reader.setting
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import dev.icerock.moko.resources.StringResource
-import com.atlas.reader.ui.reader.ReaderActivity
-import com.atlas.reader.ui.reader.viewer.Viewer
-import com.atlas.reader.ui.reader.viewer.pager.L2RPagerViewer
-import com.atlas.reader.ui.reader.viewer.pager.R2LPagerViewer
-import com.atlas.reader.ui.reader.viewer.pager.VerticalPagerViewer
-import com.atlas.reader.ui.reader.viewer.webtoon.WebtoonViewer
+import atlas.i18n.MR
 import atlas.icons.custommaterialsymbols.CustomMaterialSymbols
 import atlas.icons.custommaterialsymbols.rounded.ReaderLeftToRight
 import atlas.icons.custommaterialsymbols.rounded.ReaderLongStrip
@@ -16,7 +10,13 @@ import atlas.icons.custommaterialsymbols.rounded.ReaderRightToLeft
 import atlas.icons.custommaterialsymbols.rounded.ReaderVertical
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.MobileGear
-import atlas.i18n.MR
+import com.atlas.reader.ui.reader.ReaderActivity
+import com.atlas.reader.ui.reader.viewer.Viewer
+import com.atlas.reader.ui.reader.viewer.pager.L2RPagerViewer
+import com.atlas.reader.ui.reader.viewer.pager.R2LPagerViewer
+import com.atlas.reader.ui.reader.viewer.pager.VerticalPagerViewer
+import com.atlas.reader.ui.reader.viewer.webtoon.WebtoonViewer
+import dev.icerock.moko.resources.StringResource
 
 enum class ReadingMode(
     val stringRes: StringResource,

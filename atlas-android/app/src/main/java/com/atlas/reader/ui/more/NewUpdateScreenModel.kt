@@ -5,13 +5,7 @@ import android.content.Intent
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Assisted
-import dev.zacsweers.metro.AssistedFactory
-import dev.zacsweers.metro.AssistedInject
-import dev.zacsweers.metro.ContributesIntoMap
-import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
-import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
+import atlas.core.common.util.system.logcat
 import com.atlas.domain.base.BasePreferences
 import com.atlas.reader.extension.util.ExtensionInstaller
 import com.atlas.reader.network.GET
@@ -21,6 +15,13 @@ import com.atlas.reader.network.awaitSuccess
 import com.atlas.reader.network.newCachelessCallWithProgress
 import com.atlas.reader.util.storage.getUriCompat
 import com.atlas.reader.util.storage.saveTo
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Assisted
+import dev.zacsweers.metro.AssistedFactory
+import dev.zacsweers.metro.AssistedInject
+import dev.zacsweers.metro.ContributesIntoMap
+import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
+import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -30,7 +31,6 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
 import java.io.File
 
 @AssistedInject

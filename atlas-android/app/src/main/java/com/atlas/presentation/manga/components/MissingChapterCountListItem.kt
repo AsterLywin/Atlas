@@ -11,11 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
 
 @Composable
 fun MissingChapterCountListItem(

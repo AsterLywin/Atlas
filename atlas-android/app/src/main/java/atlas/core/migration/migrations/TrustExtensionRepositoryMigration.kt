@@ -1,16 +1,16 @@
 package atlas.core.migration.migrations
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoSet
-import dev.zacsweers.metro.Inject
-import com.atlas.domain.source.service.SourcePreferences
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import logcat.LogPriority
+import atlas.core.common.util.system.logcat
 import atlas.core.migration.Migration
 import atlas.core.migration.MigrationContext
 import atlas.domain.extension.repository.ExtensionStoreRepository
-import atlas.core.common.util.system.logcat
+import com.atlas.domain.source.service.SourcePreferences
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoSet
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import logcat.LogPriority
 
 @Inject
 @ContributesIntoSet(AppScope::class)

@@ -2,6 +2,7 @@ package com.atlas.reader.ui.reader.viewer.pager
 
 import android.view.View
 import android.view.ViewGroup
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.ui.reader.model.ChapterTransition
 import com.atlas.reader.ui.reader.model.InsertPage
 import com.atlas.reader.ui.reader.model.ReaderChapter
@@ -10,7 +11,6 @@ import com.atlas.reader.ui.reader.model.ViewerChapters
 import com.atlas.reader.ui.reader.viewer.calculateChapterGap
 import com.atlas.reader.util.system.createReaderThemeContext
 import com.atlas.reader.widget.ViewPagerAdapter
-import atlas.core.common.util.system.logcat
 
 /**
  * Pager adapter used by this [viewer] to where [ViewerChapters] updates are posted.

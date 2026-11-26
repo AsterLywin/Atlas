@@ -9,13 +9,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
-import com.atlas.domain.manga.model.readerOrientation
-import com.atlas.domain.manga.model.readingMode
-import com.atlas.reader.ui.reader.setting.ReaderOrientation
-import com.atlas.reader.ui.reader.setting.ReaderPreferences
-import com.atlas.reader.ui.reader.setting.ReaderSettingsViewModel
-import com.atlas.reader.ui.reader.setting.ReadingMode
-import com.atlas.reader.ui.reader.viewer.webtoon.WebtoonViewer
 import atlas.app.di.appGraph
 import atlas.i18n.MR
 import atlas.presentation.core.components.CheckboxItem
@@ -24,6 +17,13 @@ import atlas.presentation.core.components.SettingsChipRow
 import atlas.presentation.core.components.SliderItem
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import com.atlas.domain.manga.model.readerOrientation
+import com.atlas.domain.manga.model.readingMode
+import com.atlas.reader.ui.reader.setting.ReaderOrientation
+import com.atlas.reader.ui.reader.setting.ReaderPreferences
+import com.atlas.reader.ui.reader.setting.ReaderSettingsViewModel
+import com.atlas.reader.ui.reader.setting.ReadingMode
+import com.atlas.reader.ui.reader.viewer.webtoon.WebtoonViewer
 import java.text.NumberFormat
 
 @Composable

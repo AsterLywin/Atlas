@@ -4,13 +4,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
+import atlas.presentation.core.screens.LoadingScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import com.atlas.presentation.util.AssistContentScreen
 import com.atlas.presentation.util.Screen
 import com.atlas.presentation.webview.WebViewScreenContent
-import atlas.presentation.core.screens.LoadingScreen
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 
 class WebViewScreen(
     private val url: String,

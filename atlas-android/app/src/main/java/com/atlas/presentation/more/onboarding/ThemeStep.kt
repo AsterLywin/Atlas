@@ -5,11 +5,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import atlas.app.di.appGraph
+import atlas.presentation.core.util.collectAsState
 import com.atlas.domain.ui.model.setAppCompatDelegateThemeMode
 import com.atlas.presentation.more.settings.widget.AppThemeModePreferenceWidget
 import com.atlas.presentation.more.settings.widget.AppThemePreferenceWidget
-import atlas.app.di.appGraph
-import atlas.presentation.core.util.collectAsState
 
 internal class ThemeStep : OnboardingStep {
 

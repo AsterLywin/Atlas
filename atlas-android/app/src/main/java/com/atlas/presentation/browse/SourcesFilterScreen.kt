@@ -7,17 +7,17 @@ import androidx.compose.material3.Checkbox
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import com.atlas.presentation.browse.components.BaseSourceItem
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.more.settings.widget.SwitchPreferenceWidget
-import com.atlas.reader.ui.browse.source.SourcesFilterViewModel
-import com.atlas.reader.util.system.LocaleHelper
 import atlas.domain.source.model.Source
 import atlas.i18n.MR
 import atlas.presentation.core.components.FastScrollLazyColumn
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.EmptyScreen
+import com.atlas.presentation.browse.components.BaseSourceItem
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.more.settings.widget.SwitchPreferenceWidget
+import com.atlas.reader.ui.browse.source.SourcesFilterViewModel
+import com.atlas.reader.util.system.LocaleHelper
 
 @Composable
 fun SourcesFilterScreen(

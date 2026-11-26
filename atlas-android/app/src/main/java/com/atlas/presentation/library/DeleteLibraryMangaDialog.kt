@@ -9,11 +9,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import dev.icerock.moko.resources.StringResource
 import atlas.core.common.preference.CheckboxState
 import atlas.i18n.MR
 import atlas.presentation.core.components.LabeledCheckbox
 import atlas.presentation.core.i18n.stringResource
+import dev.icerock.moko.resources.StringResource
 
 @Composable
 fun DeleteLibraryMangaDialog(

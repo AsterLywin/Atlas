@@ -1,9 +1,9 @@
 package com.atlas.reader.data.backup.create.creators
 
-import dev.zacsweers.metro.Inject
+import atlas.domain.extension.interactor.GetExtensionStores
 import com.atlas.reader.data.backup.models.BackupExtensionStore
 import com.atlas.reader.data.backup.models.backupExtensionStoreMapper
-import atlas.domain.extension.interactor.GetExtensionStores
+import dev.zacsweers.metro.Inject
 
 @Inject
 class ExtensionStoresBackupCreator(

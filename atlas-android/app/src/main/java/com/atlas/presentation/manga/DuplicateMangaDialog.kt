@@ -44,16 +44,11 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastMaxOfOrNull
-import coil3.request.ImageRequest
-import coil3.request.crossfade
-import com.atlas.presentation.components.AdaptiveSheet
-import com.atlas.presentation.components.TabbedDialogPaddings
-import com.atlas.presentation.manga.components.MangaCover
-import com.atlas.presentation.more.settings.LocalPreferenceMinHeight
-import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
-import com.atlas.reader.source.Source
-import com.atlas.reader.source.model.SManga
 import atlas.app.di.appGraph
+import atlas.domain.manga.model.Manga
+import atlas.domain.manga.model.MangaWithChapterCount
+import atlas.domain.source.model.StubSource
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Add
 import atlas.icons.materialsymbols.rounded.AttachMoney
@@ -66,16 +61,21 @@ import atlas.icons.materialsymbols.rounded.Schedule
 import atlas.icons.materialsymbols.roundedfilled.Brush
 import atlas.icons.materialsymbols.roundedfilled.Pause
 import atlas.icons.materialsymbols.roundedfilled.Warning
-import atlas.domain.manga.model.Manga
-import atlas.domain.manga.model.MangaWithChapterCount
-import atlas.domain.source.model.StubSource
-import atlas.i18n.MR
 import atlas.presentation.core.components.Badge
 import atlas.presentation.core.components.BadgeGroup
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.secondaryItemAlpha
+import coil3.request.ImageRequest
+import coil3.request.crossfade
+import com.atlas.presentation.components.AdaptiveSheet
+import com.atlas.presentation.components.TabbedDialogPaddings
+import com.atlas.presentation.manga.components.MangaCover
+import com.atlas.presentation.more.settings.LocalPreferenceMinHeight
+import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
+import com.atlas.reader.source.Source
+import com.atlas.reader.source.model.SManga
 
 @Composable
 fun DuplicateMangaDialog(

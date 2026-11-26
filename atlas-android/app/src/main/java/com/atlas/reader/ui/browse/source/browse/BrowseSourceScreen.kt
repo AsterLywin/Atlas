@@ -28,9 +28,22 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalUriHandler
+import atlas.core.common.Constants
+import atlas.domain.source.model.StubSource
+import atlas.feature.migration.dialog.MigrateMangaDialog
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.FilterList
+import atlas.icons.materialsymbols.rounded.Verified
+import atlas.icons.materialsymbols.roundedfilled.Favorite
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.LoadingScreen
+import atlas.presentation.core.util.collectAsLazyPagingItems
+import atlas.source.local.LocalSource
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import com.atlas.presentation.browse.BrowseSourceContent
 import com.atlas.presentation.browse.MissingSourceScreen
 import com.atlas.presentation.browse.components.BrowseSourceToolbar
@@ -45,25 +58,12 @@ import com.atlas.reader.ui.browse.source.browse.BrowseSourceViewModel.Listing
 import com.atlas.reader.ui.category.CategoryScreen
 import com.atlas.reader.ui.manga.MangaScreen
 import com.atlas.reader.ui.webview.WebViewScreen
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import atlas.feature.migration.dialog.MigrateMangaDialog
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.FilterList
-import atlas.icons.materialsymbols.rounded.Verified
-import atlas.icons.materialsymbols.roundedfilled.Favorite
-import atlas.presentation.core.util.collectAsLazyPagingItems
-import atlas.core.common.Constants
-import atlas.domain.source.model.StubSource
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.LoadingScreen
-import atlas.source.local.LocalSource
 
 data class BrowseSourceScreen(
     val sourceId: Long,

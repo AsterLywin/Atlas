@@ -26,21 +26,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.atlas.domain.manga.model.downloadedFilter
-import com.atlas.presentation.components.TabbedDialog
-import com.atlas.presentation.components.TabbedDialogPaddings
 import atlas.app.di.appGraph
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Group
 import atlas.core.common.preference.TriState
 import atlas.domain.manga.model.Manga
 import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Group
 import atlas.presentation.core.components.LabeledCheckbox
 import atlas.presentation.core.components.RadioItem
 import atlas.presentation.core.components.SortItem
 import atlas.presentation.core.components.TriStateItem
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.theme.active
+import com.atlas.domain.manga.model.downloadedFilter
+import com.atlas.presentation.components.TabbedDialog
+import com.atlas.presentation.components.TabbedDialogPaddings
 
 @Composable
 fun ChapterSettingsDialog(

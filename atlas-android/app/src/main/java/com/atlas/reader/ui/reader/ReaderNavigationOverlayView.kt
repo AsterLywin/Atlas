@@ -11,9 +11,9 @@ import android.view.ViewPropertyAnimator
 import androidx.core.graphics.withScale
 import androidx.core.graphics.withTranslation
 import androidx.core.view.isVisible
+import atlas.core.common.i18n.stringResource
 import com.atlas.reader.ui.reader.viewer.ViewerNavigation
 import com.atlas.reader.ui.reader.viewer.navigation.DisabledNavigation
-import atlas.core.common.i18n.stringResource
 import kotlin.math.abs
 
 class ReaderNavigationOverlayView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet) {

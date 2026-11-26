@@ -1,19 +1,19 @@
 package com.atlas.domain.track.interactor
 
 import android.content.Context
-import dev.zacsweers.metro.Inject
+import atlas.core.common.util.system.logcat
+import atlas.domain.track.interactor.GetTracks
+import atlas.domain.track.interactor.UpsertTrack
 import com.atlas.domain.track.model.toDbTrack
 import com.atlas.domain.track.model.toDomainTrack
 import com.atlas.domain.track.service.DelayedTrackingUpdateWorker
 import com.atlas.domain.track.store.DelayedTrackingStore
 import com.atlas.reader.data.track.TrackerManager
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
-import atlas.domain.track.interactor.GetTracks
-import atlas.domain.track.interactor.UpsertTrack
 
 @Inject
 class TrackChapter(

@@ -2,12 +2,12 @@ package atlas.app.di.injekt
 
 import android.app.Application
 import android.content.Context
+import atlas.app.di.AppGraph
+import atlas.core.metro.GraphProvider
 import com.atlas.reader.network.JavaScriptEngine
 import com.atlas.reader.network.NetworkHelper
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.protobuf.ProtoBuf
-import atlas.app.di.AppGraph
-import atlas.core.metro.GraphProvider
 import nl.adaptivity.xmlutil.serialization.XML
 import uy.kohesive.injekt.api.InjektModule
 import uy.kohesive.injekt.api.InjektRegistrar

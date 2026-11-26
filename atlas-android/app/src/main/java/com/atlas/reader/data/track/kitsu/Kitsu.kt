@@ -1,16 +1,16 @@
 package com.atlas.reader.data.track.kitsu
 
-import dev.icerock.moko.resources.StringResource
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.reader.R
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.BaseTracker
 import com.atlas.reader.data.track.DeletableTracker
 import com.atlas.reader.data.track.kitsu.dto.KitsuOAuth
 import com.atlas.reader.data.track.model.TrackSearch
+import dev.icerock.moko.resources.StringResource
 import kotlinx.serialization.json.Json
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 import uy.kohesive.injekt.injectLazy
 import java.text.DecimalFormat
 import atlas.domain.track.model.Track as DomainTrack

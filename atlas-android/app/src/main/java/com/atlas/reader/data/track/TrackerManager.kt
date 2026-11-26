@@ -1,8 +1,5 @@
 package com.atlas.reader.data.track
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
 import com.atlas.reader.data.track.anilist.Anilist
 import com.atlas.reader.data.track.bangumi.Bangumi
 import com.atlas.reader.data.track.comick.Comick
@@ -15,6 +12,9 @@ import com.atlas.reader.data.track.mangaupdates.MangaUpdates
 import com.atlas.reader.data.track.myanimelist.MyAnimeList
 import com.atlas.reader.data.track.shikimori.Shikimori
 import com.atlas.reader.data.track.suwayomi.Suwayomi
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.flow.combine
 
 @Inject

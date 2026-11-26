@@ -1,12 +1,12 @@
 package com.atlas.reader.data.backup.models
 
-import com.atlas.reader.source.model.UpdateStrategy
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.protobuf.ProtoNumber
 import atlas.core.common.extensions.JsonObjectEmptyBytes
 import atlas.core.common.extensions.toInstantOrNull
 import atlas.core.common.extensions.toJsonObject
 import atlas.domain.manga.model.Manga
+import com.atlas.reader.source.model.UpdateStrategy
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.protobuf.ProtoNumber
 import kotlin.time.Instant
 
 @Suppress("DEPRECATION")

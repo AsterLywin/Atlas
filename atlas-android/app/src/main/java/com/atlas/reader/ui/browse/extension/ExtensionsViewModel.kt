@@ -4,12 +4,7 @@ import android.content.Context
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.icerock.moko.resources.StringResource
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoMap
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.binding
-import dev.zacsweers.metrox.viewmodel.ViewModelKey
+import atlas.i18n.MR
 import com.atlas.domain.base.BasePreferences
 import com.atlas.domain.extension.interactor.GetExtensionsByType
 import com.atlas.domain.source.service.SourcePreferences
@@ -18,6 +13,12 @@ import com.atlas.reader.extension.model.Extension
 import com.atlas.reader.extension.model.InstallStep
 import com.atlas.reader.source.online.HttpSource
 import com.atlas.reader.util.system.LocaleHelper
+import dev.icerock.moko.resources.StringResource
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoMap
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.binding
+import dev.zacsweers.metrox.viewmodel.ViewModelKey
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
@@ -36,7 +37,6 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.takeWhile
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import atlas.i18n.MR
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 

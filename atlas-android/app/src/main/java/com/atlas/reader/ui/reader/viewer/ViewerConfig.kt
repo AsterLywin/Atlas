@@ -1,11 +1,11 @@
 package com.atlas.reader.ui.reader.viewer
 
+import atlas.core.common.preference.Preference
 import com.atlas.reader.ui.reader.setting.ReaderPreferences
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import atlas.core.common.preference.Preference
 
 /**
  * Common configuration for all viewers.

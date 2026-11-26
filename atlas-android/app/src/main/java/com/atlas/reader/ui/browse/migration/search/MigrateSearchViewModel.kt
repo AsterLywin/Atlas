@@ -1,6 +1,14 @@
 package com.atlas.reader.ui.browse.migration.search
 
 import androidx.lifecycle.viewModelScope
+import atlas.domain.manga.interactor.GetManga
+import atlas.domain.manga.interactor.NetworkToLocalManga
+import atlas.domain.source.service.SourceManager
+import com.atlas.domain.source.service.SourcePreferences
+import com.atlas.reader.extension.ExtensionManager
+import com.atlas.reader.source.Source
+import com.atlas.reader.ui.browse.source.globalsearch.SearchItemResult
+import com.atlas.reader.ui.browse.source.globalsearch.SearchViewModel
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
@@ -8,15 +16,7 @@ import dev.zacsweers.metro.AssistedInject
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
-import com.atlas.domain.source.service.SourcePreferences
-import com.atlas.reader.extension.ExtensionManager
-import com.atlas.reader.source.Source
-import com.atlas.reader.ui.browse.source.globalsearch.SearchItemResult
-import com.atlas.reader.ui.browse.source.globalsearch.SearchViewModel
 import kotlinx.coroutines.launch
-import atlas.domain.manga.interactor.GetManga
-import atlas.domain.manga.interactor.NetworkToLocalManga
-import atlas.domain.source.service.SourceManager
 
 @AssistedInject
 class MigrateSearchViewModel(

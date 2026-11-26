@@ -1,16 +1,16 @@
 package com.atlas.domain.track.interactor
 
-import dev.zacsweers.metro.Inject
-import com.atlas.domain.track.model.toDbTrack
-import com.atlas.reader.data.track.EnhancedTracker
-import com.atlas.reader.data.track.Tracker
-import logcat.LogPriority
 import atlas.core.common.util.system.logcat
 import atlas.domain.chapter.interactor.GetChaptersByMangaId
 import atlas.domain.chapter.interactor.UpdateChapter
 import atlas.domain.chapter.model.ChapterUpdate
 import atlas.domain.track.interactor.UpsertTrack
 import atlas.domain.track.model.Track
+import com.atlas.domain.track.model.toDbTrack
+import com.atlas.reader.data.track.EnhancedTracker
+import com.atlas.reader.data.track.Tracker
+import dev.zacsweers.metro.Inject
+import logcat.LogPriority
 import kotlin.math.max
 
 @Inject

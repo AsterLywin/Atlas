@@ -30,6 +30,9 @@ import androidx.preference.PreferenceScreen
 import androidx.preference.R
 import androidx.preference.forEach
 import androidx.preference.getOnBindEditTextListener
+import atlas.app.di.appGraph
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.screens.LoadingScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.presentation.components.AppBar
@@ -42,9 +45,6 @@ import com.atlas.reader.widget.TachiyomiTextInputEditText.Companion.setIncognito
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import atlas.app.di.appGraph
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.screens.LoadingScreen
 
 class SourcePreferencesScreen(val sourceId: Long) : Screen() {
 

@@ -1,16 +1,16 @@
 package com.atlas.domain.track.service
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.PreferenceStore
+import atlas.core.common.preference.getEnum
 import com.atlas.domain.track.model.AutoTrackState
 import com.atlas.reader.data.track.Tracker
 import com.atlas.reader.data.track.anilist.Anilist
 import com.atlas.reader.data.track.kitsu.Kitsu
 import com.atlas.reader.data.track.mangabaka.MangaBaka
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.PreferenceStore
-import atlas.core.common.preference.getEnum
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 
 @Inject
 @SingleIn(AppScope::class)

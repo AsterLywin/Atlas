@@ -6,7 +6,17 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.core.net.toUri
-import dev.zacsweers.metro.Inject
+import atlas.app.di.appGraph
+import atlas.core.common.Constants
+import atlas.core.metro.AppCoroutineScope
+import atlas.domain.chapter.interactor.GetChapter
+import atlas.domain.chapter.interactor.UpdateChapter
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.chapter.model.ChapterUpdate
+import atlas.domain.download.service.DownloadPreferences
+import atlas.domain.manga.interactor.GetManga
+import atlas.domain.manga.model.Manga
+import atlas.domain.source.service.SourceManager
 import com.atlas.reader.data.backup.restore.BackupRestoreWorker
 import com.atlas.reader.data.download.DownloadManager
 import com.atlas.reader.data.library.LibraryUpdateWorker
@@ -17,19 +27,9 @@ import com.atlas.reader.util.system.getParcelableExtraCompat
 import com.atlas.reader.util.system.notificationManager
 import com.atlas.reader.util.system.toShareIntent
 import com.atlas.reader.util.system.workManager
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import atlas.app.di.appGraph
-import atlas.core.metro.AppCoroutineScope
-import atlas.core.common.Constants
-import atlas.domain.chapter.interactor.GetChapter
-import atlas.domain.chapter.interactor.UpdateChapter
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.chapter.model.ChapterUpdate
-import atlas.domain.download.service.DownloadPreferences
-import atlas.domain.manga.interactor.GetManga
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.service.SourceManager
 import com.atlas.reader.BuildConfig.APPLICATION_ID as ID
 
 /**

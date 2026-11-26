@@ -15,9 +15,6 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.components.AdaptiveSheet
-import com.atlas.reader.source.model.Filter
-import com.atlas.reader.source.model.FilterList
 import atlas.core.common.preference.TriState
 import atlas.i18n.MR
 import atlas.presentation.core.components.CheckboxItem
@@ -29,6 +26,9 @@ import atlas.presentation.core.components.TextItem
 import atlas.presentation.core.components.TriStateItem
 import atlas.presentation.core.components.material.Button
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.components.AdaptiveSheet
+import com.atlas.reader.source.model.Filter
+import com.atlas.reader.source.model.FilterList
 
 @Composable
 fun SourceFilterDialog(

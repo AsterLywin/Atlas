@@ -12,6 +12,7 @@ import android.content.pm.PackageInstaller
 import android.os.Build
 import androidx.core.content.ContextCompat
 import androidx.core.content.IntentSanitizer
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.extension.model.InstallStep
 import com.atlas.reader.util.lang.use
 import com.atlas.reader.util.system.getParcelableExtraCompat
@@ -22,7 +23,6 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
 
 class PackageInstallerInstaller(private val service: Service) : Installer(service) {
 

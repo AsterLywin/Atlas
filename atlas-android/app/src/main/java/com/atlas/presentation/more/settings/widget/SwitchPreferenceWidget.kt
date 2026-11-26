@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Preview
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
 
 @Composable
 fun SwitchPreferenceWidget(

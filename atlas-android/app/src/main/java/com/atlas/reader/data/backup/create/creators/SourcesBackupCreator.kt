@@ -1,9 +1,9 @@
 package com.atlas.reader.data.backup.create.creators
 
-import dev.zacsweers.metro.Inject
+import atlas.domain.source.service.SourceManager
 import com.atlas.reader.data.backup.models.BackupSource
 import com.atlas.reader.source.Source
-import atlas.domain.source.service.SourceManager
+import dev.zacsweers.metro.Inject
 
 @Inject
 class SourcesBackupCreator(

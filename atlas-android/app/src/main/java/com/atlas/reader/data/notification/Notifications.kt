@@ -5,10 +5,10 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.NotificationManagerCompat.IMPORTANCE_DEFAULT
 import androidx.core.app.NotificationManagerCompat.IMPORTANCE_HIGH
 import androidx.core.app.NotificationManagerCompat.IMPORTANCE_LOW
-import com.atlas.reader.util.system.buildNotificationChannel
-import com.atlas.reader.util.system.buildNotificationChannelGroup
 import atlas.core.common.i18n.stringResource
 import atlas.i18n.MR
+import com.atlas.reader.util.system.buildNotificationChannel
+import com.atlas.reader.util.system.buildNotificationChannelGroup
 
 /**
  * Class to manage the basic information of all the notifications used in the app.

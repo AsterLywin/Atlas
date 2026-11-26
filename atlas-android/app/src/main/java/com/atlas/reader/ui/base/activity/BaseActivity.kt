@@ -3,12 +3,12 @@ package com.atlas.reader.ui.base.activity
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import atlas.app.di.appGraph
 import com.atlas.reader.ui.base.delegate.SecureActivityDelegate
 import com.atlas.reader.ui.base.delegate.SecureActivityDelegateImpl
 import com.atlas.reader.ui.base.delegate.ThemingDelegate
 import com.atlas.reader.ui.base.delegate.ThemingDelegateImpl
 import com.atlas.reader.util.system.prepareTabletUiContext
-import atlas.app.di.appGraph
 
 open class BaseActivity :
     AppCompatActivity(),

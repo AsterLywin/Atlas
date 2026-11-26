@@ -5,10 +5,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.DpOffset
-import com.atlas.presentation.manga.DownloadAction
 import atlas.i18n.MR
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.manga.DownloadAction
 
 @Composable
 fun DownloadDropdownMenu(

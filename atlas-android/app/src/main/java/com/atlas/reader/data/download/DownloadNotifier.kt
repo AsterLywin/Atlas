@@ -5,7 +5,8 @@ import android.content.Context
 import android.graphics.BitmapFactory
 import android.os.SystemClock
 import androidx.core.app.NotificationCompat
-import dev.zacsweers.metro.Inject
+import atlas.core.common.i18n.stringResource
+import atlas.i18n.MR
 import com.atlas.reader.R
 import com.atlas.reader.core.security.SecurityPreferences
 import com.atlas.reader.data.download.model.Download
@@ -16,8 +17,7 @@ import com.atlas.reader.util.lang.chop
 import com.atlas.reader.util.system.cancelNotification
 import com.atlas.reader.util.system.notificationBuilder
 import com.atlas.reader.util.system.notify
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
+import dev.zacsweers.metro.Inject
 import java.util.regex.Pattern
 import atlas.icons.materialsymbols.R as MaterialSymbolsR
 

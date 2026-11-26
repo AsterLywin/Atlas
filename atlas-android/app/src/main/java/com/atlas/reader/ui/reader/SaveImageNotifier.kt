@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
 import androidx.core.app.NotificationCompat
+import atlas.core.common.i18n.stringResource
+import atlas.i18n.MR
 import coil3.asDrawable
 import coil3.imageLoader
 import coil3.request.CachePolicy
@@ -16,8 +18,6 @@ import com.atlas.reader.util.system.cancelNotification
 import com.atlas.reader.util.system.getBitmapOrNull
 import com.atlas.reader.util.system.notificationBuilder
 import com.atlas.reader.util.system.notify
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
 import atlas.icons.materialsymbols.R as MaterialSymbolsR
 
 /**

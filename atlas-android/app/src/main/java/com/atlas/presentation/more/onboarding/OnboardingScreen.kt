@@ -15,14 +15,14 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.RocketLaunch
-import soup.compose.material.motion.animation.materialSharedAxisX
-import soup.compose.material.motion.animation.rememberSlideDistance
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.InfoScreen
+import soup.compose.material.motion.animation.materialSharedAxisX
+import soup.compose.material.motion.animation.rememberSlideDistance
 
 @Composable
 fun OnboardingScreen(

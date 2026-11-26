@@ -19,6 +19,7 @@ import androidx.annotation.StyleRes
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.os.postDelayed
 import androidx.core.view.isVisible
+import atlas.core.common.util.system.ImageUtil
 import coil3.asDrawable
 import coil3.dispose
 import coil3.imageLoader
@@ -28,20 +29,19 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.size.Precision
 import coil3.size.ViewSizeResolver
-import com.davemorrissey.labs.subscaleview.ImageSource
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.EASE_IN_OUT_QUAD
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.EASE_OUT_QUAD
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.SCALE_TYPE_CENTER_INSIDE
-import com.github.chrisbanes.photoview.PhotoView
 import com.atlas.reader.data.coil.ImageDecoder
 import com.atlas.reader.data.coil.cropBorders
 import com.atlas.reader.data.coil.webtoonStrips
 import com.atlas.reader.ui.reader.viewer.webtoon.WebtoonStripImageView
 import com.atlas.reader.util.system.animatorDurationScale
 import com.atlas.reader.util.view.isVisibleOnScreen
+import com.davemorrissey.labs.subscaleview.ImageSource
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.EASE_IN_OUT_QUAD
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.EASE_OUT_QUAD
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.SCALE_TYPE_CENTER_INSIDE
+import com.github.chrisbanes.photoview.PhotoView
 import okio.BufferedSource
-import atlas.core.common.util.system.ImageUtil
 
 /**
  * A wrapper view for showing page image.

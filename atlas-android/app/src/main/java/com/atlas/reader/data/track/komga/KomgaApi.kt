@@ -1,5 +1,6 @@
 package com.atlas.reader.data.track.komga
 
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.BuildConfig
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.model.TrackSearch
@@ -15,7 +16,6 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
-import atlas.core.common.util.system.logcat
 import uy.kohesive.injekt.injectLazy
 
 private const val READLIST_API = "/api/v1/readlists"

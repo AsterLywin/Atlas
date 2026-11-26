@@ -22,16 +22,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.Navigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.icerock.moko.resources.StringResource
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.components.AppBarActions
-import com.atlas.presentation.more.settings.screen.about.AboutScreen
-import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
-import com.atlas.presentation.util.LocalBackPress
-import com.atlas.presentation.util.Screen
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.ChromeReaderMode
 import atlas.icons.materialsymbols.rounded.Code
@@ -44,9 +35,18 @@ import atlas.icons.materialsymbols.rounded.Search
 import atlas.icons.materialsymbols.rounded.Security
 import atlas.icons.materialsymbols.rounded.Storage
 import atlas.icons.materialsymbols.rounded.Sync
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.i18n.stringResource
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.Navigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.components.AppBarActions
+import com.atlas.presentation.more.settings.screen.about.AboutScreen
+import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
+import com.atlas.presentation.util.LocalBackPress
+import com.atlas.presentation.util.Screen
+import dev.icerock.moko.resources.StringResource
 import cafe.adriel.voyager.core.screen.Screen as VoyagerScreen
 
 object SettingsMainScreen : Screen() {

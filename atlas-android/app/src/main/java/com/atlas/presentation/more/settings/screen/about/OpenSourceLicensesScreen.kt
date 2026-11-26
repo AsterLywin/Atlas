@@ -4,17 +4,17 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import com.mikepenz.aboutlibraries.ui.compose.android.produceLibraries
-import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
-import com.mikepenz.aboutlibraries.ui.compose.variant.LibraryDetailMode
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.util.Screen
-import com.atlas.reader.R
 import atlas.i18n.MR
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.i18n.stringResource
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.util.Screen
+import com.atlas.reader.R
+import com.mikepenz.aboutlibraries.ui.compose.android.produceLibraries
+import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
+import com.mikepenz.aboutlibraries.ui.compose.variant.LibraryDetailMode
 
 class OpenSourceLicensesScreen : Screen() {
 

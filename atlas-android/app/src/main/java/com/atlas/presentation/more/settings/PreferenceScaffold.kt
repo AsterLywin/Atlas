@@ -2,10 +2,10 @@ package com.atlas.presentation.more.settings
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.runtime.Composable
-import dev.icerock.moko.resources.StringResource
-import com.atlas.presentation.components.AppBar
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.components.AppBar
+import dev.icerock.moko.resources.StringResource
 
 @Composable
 fun PreferenceScaffold(

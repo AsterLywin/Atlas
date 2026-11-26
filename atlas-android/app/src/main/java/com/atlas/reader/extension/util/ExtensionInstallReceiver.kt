@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.BuildConfig
 import com.atlas.reader.extension.model.Extension
 import kotlinx.coroutines.CancellationException
@@ -13,7 +14,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
 
 /**
  * Broadcast receiver that listens for the system's packages installed, updated or removed, and only

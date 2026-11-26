@@ -1,16 +1,16 @@
 package com.atlas.reader.data.track.komga
 
-import dev.icerock.moko.resources.StringResource
+import atlas.domain.manga.model.Manga
+import atlas.i18n.MR
 import com.atlas.reader.R
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.BaseTracker
 import com.atlas.reader.data.track.EnhancedTracker
 import com.atlas.reader.data.track.model.TrackSearch
 import com.atlas.reader.source.Source
+import dev.icerock.moko.resources.StringResource
 import okhttp3.Dns
 import okhttp3.OkHttpClient
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
 import atlas.domain.track.model.Track as DomainTrack
 
 class Komga(id: Long) : BaseTracker(id, "Komga"), EnhancedTracker {

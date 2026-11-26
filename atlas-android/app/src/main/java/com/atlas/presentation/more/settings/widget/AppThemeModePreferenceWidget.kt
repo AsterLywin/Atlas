@@ -8,9 +8,9 @@ import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.atlas.domain.ui.model.ThemeMode
 import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.domain.ui.model.ThemeMode
 
 private val options = mapOf(
     ThemeMode.SYSTEM to MR.strings.theme_system,

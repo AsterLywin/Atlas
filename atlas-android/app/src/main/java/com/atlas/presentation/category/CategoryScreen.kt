@@ -14,12 +14,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
-import com.atlas.presentation.category.components.CategoryFloatingActionButton
-import com.atlas.presentation.category.components.CategoryListItem
-import com.atlas.presentation.components.AppBar
-import com.atlas.reader.ui.category.CategoryScreenState
-import sh.calvin.reorderable.ReorderableItem
-import sh.calvin.reorderable.rememberReorderableLazyListState
 import atlas.domain.category.model.Category
 import atlas.i18n.MR
 import atlas.presentation.core.components.material.Scaffold
@@ -28,6 +22,12 @@ import atlas.presentation.core.components.material.topSmallPaddingValues
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.EmptyScreen
 import atlas.presentation.core.util.plus
+import com.atlas.presentation.category.components.CategoryFloatingActionButton
+import com.atlas.presentation.category.components.CategoryListItem
+import com.atlas.presentation.components.AppBar
+import com.atlas.reader.ui.category.CategoryScreenState
+import sh.calvin.reorderable.ReorderableItem
+import sh.calvin.reorderable.rememberReorderableLazyListState
 
 @Composable
 fun CategoryScreen(

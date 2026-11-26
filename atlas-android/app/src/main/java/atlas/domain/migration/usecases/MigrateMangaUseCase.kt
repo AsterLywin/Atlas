@@ -1,19 +1,6 @@
 package atlas.domain.migration.usecases
 
-import dev.zacsweers.metro.Inject
-import com.atlas.domain.manga.interactor.UpdateManga
-import com.atlas.domain.manga.model.hasCustomCover
-import com.atlas.domain.source.service.SourcePreferences
-import com.atlas.reader.data.cache.CoverCache
-import com.atlas.reader.data.download.DownloadManager
-import com.atlas.reader.data.track.EnhancedTracker
-import com.atlas.reader.data.track.TrackerManager
-import kotlinx.coroutines.CancellationException
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 import atlas.core.metro.AppCoroutineScope
-import atlas.domain.migration.models.MigrationFlag
-import atlas.domain.source.interactor.UpdateMangaFromRemote
 import atlas.domain.category.interactor.GetCategories
 import atlas.domain.category.interactor.SetMangaCategories
 import atlas.domain.chapter.interactor.GetChaptersByMangaId
@@ -21,9 +8,22 @@ import atlas.domain.chapter.interactor.UpdateChapter
 import atlas.domain.chapter.model.ChapterUpdate
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.MangaUpdate
+import atlas.domain.migration.models.MigrationFlag
+import atlas.domain.source.interactor.UpdateMangaFromRemote
 import atlas.domain.source.service.SourceManager
 import atlas.domain.track.interactor.GetTracks
 import atlas.domain.track.interactor.UpsertTrack
+import com.atlas.domain.manga.interactor.UpdateManga
+import com.atlas.domain.manga.model.hasCustomCover
+import com.atlas.domain.source.service.SourcePreferences
+import com.atlas.reader.data.cache.CoverCache
+import com.atlas.reader.data.download.DownloadManager
+import com.atlas.reader.data.track.EnhancedTracker
+import com.atlas.reader.data.track.TrackerManager
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import kotlin.time.Clock
 
 @Inject

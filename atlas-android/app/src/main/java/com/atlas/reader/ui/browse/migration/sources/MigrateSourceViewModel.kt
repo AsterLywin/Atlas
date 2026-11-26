@@ -3,14 +3,17 @@ package com.atlas.reader.ui.browse.migration.sources
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.core.common.preference.getAndSet
+import atlas.core.common.util.system.logcat
+import atlas.domain.source.model.Source
+import com.atlas.domain.source.interactor.GetSourcesWithFavoriteCount
+import com.atlas.domain.source.interactor.SetMigrateSorting
+import com.atlas.domain.source.service.SourcePreferences
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.binding
 import dev.zacsweers.metrox.viewmodel.ViewModelKey
-import com.atlas.domain.source.interactor.GetSourcesWithFavoriteCount
-import com.atlas.domain.source.interactor.SetMigrateSorting
-import com.atlas.domain.source.service.SourcePreferences
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.SharingStarted
@@ -22,9 +25,6 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import logcat.LogPriority
-import atlas.core.common.preference.getAndSet
-import atlas.core.common.util.system.logcat
-import atlas.domain.source.model.Source
 import kotlin.time.Duration.Companion.seconds
 
 @Inject

@@ -10,8 +10,6 @@ import androidx.core.graphics.alpha
 import androidx.core.graphics.blue
 import androidx.core.graphics.green
 import androidx.core.graphics.red
-import com.atlas.reader.ui.reader.setting.ReaderPreferences.Companion.ColorFilterMode
-import com.atlas.reader.ui.reader.setting.ReaderSettingsViewModel
 import atlas.core.common.preference.getAndSet
 import atlas.i18n.MR
 import atlas.presentation.core.components.CheckboxItem
@@ -19,6 +17,8 @@ import atlas.presentation.core.components.SettingsChipRow
 import atlas.presentation.core.components.SliderItem
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import com.atlas.reader.ui.reader.setting.ReaderPreferences.Companion.ColorFilterMode
+import com.atlas.reader.ui.reader.setting.ReaderSettingsViewModel
 
 @Composable
 internal fun ColumnScope.ColorFilterPage(viewModel: ReaderSettingsViewModel) {

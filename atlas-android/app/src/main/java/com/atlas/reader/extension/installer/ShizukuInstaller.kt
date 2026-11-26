@@ -12,6 +12,10 @@ import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.os.IBinder
 import androidx.core.content.ContextCompat
+import atlas.app.shizuku.IShellInterface
+import atlas.app.shizuku.ShellInterface
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.reader.BuildConfig
 import com.atlas.reader.extension.model.InstallStep
 import com.atlas.reader.util.system.toast
@@ -21,11 +25,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import logcat.LogPriority
-import atlas.app.shizuku.IShellInterface
-import atlas.app.shizuku.ShellInterface
 import rikka.shizuku.Shizuku
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 
 class ShizukuInstaller(private val service: Service) : Installer(service) {
 

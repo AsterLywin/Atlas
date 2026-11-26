@@ -29,19 +29,19 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
-import com.atlas.reader.ui.reader.model.ChapterTransition
-import com.atlas.reader.ui.reader.model.ReaderChapter
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.chapter.service.calculateChapterGap
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Info
 import atlas.icons.materialsymbols.roundedfilled.CheckCircle
 import atlas.icons.materialsymbols.roundedfilled.Warning
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.chapter.service.calculateChapterGap
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import com.atlas.reader.ui.reader.model.ChapterTransition
+import com.atlas.reader.ui.reader.model.ReaderChapter
 
 @Composable
 fun ChapterTransition(

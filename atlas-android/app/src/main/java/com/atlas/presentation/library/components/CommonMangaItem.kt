@@ -36,13 +36,13 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.atlas.presentation.manga.components.MangaCover
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.roundedfilled.PlayArrow
-import atlas.i18n.MR
 import atlas.presentation.core.components.BadgeGroup
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.selectedBackground
+import com.atlas.presentation.manga.components.MangaCover
 import atlas.domain.manga.model.MangaCover as MangaCoverModel
 
 object CommonMangaItemDefaults {

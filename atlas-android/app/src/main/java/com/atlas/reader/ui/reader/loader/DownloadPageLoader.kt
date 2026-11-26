@@ -2,15 +2,15 @@ package com.atlas.reader.ui.reader.loader
 
 import android.content.Context
 import android.net.Uri
-import com.hippo.unifile.UniFile
+import atlas.core.archive.archiveReader
+import atlas.domain.manga.model.Manga
 import com.atlas.reader.data.download.DownloadManager
 import com.atlas.reader.data.download.DownloadProvider
 import com.atlas.reader.source.Source
 import com.atlas.reader.source.model.Page
 import com.atlas.reader.ui.reader.model.ReaderChapter
 import com.atlas.reader.ui.reader.model.ReaderPage
-import atlas.core.archive.archiveReader
-import atlas.domain.manga.model.Manga
+import com.hippo.unifile.UniFile
 import uy.kohesive.injekt.injectLazy
 
 /**

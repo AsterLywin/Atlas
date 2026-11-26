@@ -44,19 +44,19 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Close
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.EmptyScreen
+import atlas.presentation.core.util.runOnEnterKeyPressed
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.presentation.components.UpIcon
 import com.atlas.presentation.more.settings.Preference
 import com.atlas.presentation.util.Screen
 import kotlinx.coroutines.flow.collectLatest
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Close
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.EmptyScreen
-import atlas.presentation.core.util.runOnEnterKeyPressed
 import cafe.adriel.voyager.core.screen.Screen as VoyagerScreen
 
 class SettingsSearchScreen : Screen() {

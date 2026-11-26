@@ -9,12 +9,15 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.core.common.i18n.stringResource
+import atlas.feature.upcoming.UpcomingScreen
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.updates.UpdateScreen
 import com.atlas.presentation.updates.UpdatesDeleteConfirmationDialog
 import com.atlas.presentation.updates.UpdatesFilterDialog
@@ -26,11 +29,8 @@ import com.atlas.reader.ui.main.MainActivity
 import com.atlas.reader.ui.manga.MangaScreen
 import com.atlas.reader.ui.reader.ReaderActivity
 import com.atlas.reader.ui.updates.UpdatesViewModel.Event
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 import kotlinx.coroutines.flow.collectLatest
-import atlas.feature.upcoming.UpcomingScreen
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 
 data object UpdatesTab : Tab {
 

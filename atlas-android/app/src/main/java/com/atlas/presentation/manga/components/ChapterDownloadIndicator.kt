@@ -28,18 +28,18 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.components.DropdownMenu
-import com.atlas.reader.data.download.model.Download
+import atlas.i18n.MR
 import atlas.icons.custommaterialsymbols.CustomMaterialSymbols
 import atlas.icons.custommaterialsymbols.rounded.DownloadArrow
 import atlas.icons.custommaterialsymbols.rounded.DownloadCircle
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Error
 import atlas.icons.materialsymbols.roundedfilled.CheckCircle
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.IconButtonTokens
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.presentation.components.DropdownMenu
+import com.atlas.reader.data.download.model.Download
 
 enum class ChapterDownloadAction {
     START,

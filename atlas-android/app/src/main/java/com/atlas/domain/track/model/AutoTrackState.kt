@@ -1,7 +1,7 @@
 package com.atlas.domain.track.model
 
-import dev.icerock.moko.resources.StringResource
 import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
 
 enum class AutoTrackState(val titleRes: StringResource) {
     ALWAYS(MR.strings.lock_always),

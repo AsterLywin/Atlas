@@ -1,6 +1,10 @@
 package com.atlas.domain.track.interactor
 
-import dev.zacsweers.metro.Inject
+import atlas.core.common.util.system.logcat
+import atlas.domain.chapter.interactor.GetChaptersByMangaId
+import atlas.domain.history.interactor.GetHistory
+import atlas.domain.manga.model.Manga
+import atlas.domain.track.interactor.UpsertTrack
 import com.atlas.domain.track.model.toDbTrack
 import com.atlas.domain.track.model.toDomainTrack
 import com.atlas.reader.data.database.models.Track
@@ -8,14 +12,10 @@ import com.atlas.reader.data.track.EnhancedTracker
 import com.atlas.reader.data.track.Tracker
 import com.atlas.reader.data.track.TrackerManager
 import com.atlas.reader.source.Source
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
-import atlas.domain.chapter.interactor.GetChaptersByMangaId
-import atlas.domain.history.interactor.GetHistory
-import atlas.domain.manga.model.Manga
-import atlas.domain.track.interactor.UpsertTrack
 import kotlin.time.Instant
 
 @Inject

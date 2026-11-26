@@ -1,13 +1,13 @@
 package com.atlas.reader.data.backup.models
 
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.protobuf.ProtoNumber
 import atlas.core.common.extensions.JsonObjectEmptyBytes
 import atlas.core.common.extensions.toByteArray
 import atlas.core.common.extensions.toEpochMillisOrZero
 import atlas.core.common.extensions.toInstantOrNull
 import atlas.core.common.extensions.toJsonObject
 import atlas.domain.chapter.model.Chapter
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.protobuf.ProtoNumber
 import kotlin.time.Instant
 
 @Serializable

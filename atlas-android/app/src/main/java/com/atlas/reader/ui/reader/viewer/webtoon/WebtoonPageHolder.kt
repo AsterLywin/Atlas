@@ -8,7 +8,10 @@ import android.widget.FrameLayout
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
 import androidx.core.view.updateMargins
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.ImageUtil
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.presentation.util.formattedMessage
 import com.atlas.reader.databinding.ReaderErrorBinding
 import com.atlas.reader.source.model.Page
@@ -17,6 +20,7 @@ import com.atlas.reader.ui.reader.viewer.ReaderPageImageView
 import com.atlas.reader.ui.reader.viewer.ReaderProgressIndicator
 import com.atlas.reader.ui.webview.WebViewActivity
 import com.atlas.reader.util.system.dpToPx
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
@@ -27,10 +31,6 @@ import kotlinx.coroutines.withContext
 import logcat.LogPriority
 import okio.Buffer
 import okio.BufferedSource
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.ImageUtil
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 
 /**
  * Holder of the webtoon reader for a single page of a chapter.

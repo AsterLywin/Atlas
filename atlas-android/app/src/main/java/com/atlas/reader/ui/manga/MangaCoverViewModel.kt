@@ -5,17 +5,16 @@ import android.net.Uri
 import androidx.compose.material3.SnackbarHostState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.domain.manga.interactor.GetManga
+import atlas.domain.manga.model.Manga
+import atlas.i18n.MR
+import atlas.source.local.image.LocalCoverManager
 import coil3.asDrawable
 import coil3.imageLoader
 import coil3.request.ImageRequest
 import coil3.size.Size
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Assisted
-import dev.zacsweers.metro.AssistedFactory
-import dev.zacsweers.metro.AssistedInject
-import dev.zacsweers.metro.ContributesIntoMap
-import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
-import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
 import com.atlas.domain.manga.interactor.UpdateManga
 import com.atlas.reader.data.cache.CoverCache
 import com.atlas.reader.data.saver.Image
@@ -24,6 +23,13 @@ import com.atlas.reader.data.saver.Location
 import com.atlas.reader.util.editCover
 import com.atlas.reader.util.system.getBitmapOrNull
 import com.atlas.reader.util.system.toShareIntent
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Assisted
+import dev.zacsweers.metro.AssistedFactory
+import dev.zacsweers.metro.AssistedInject
+import dev.zacsweers.metro.ContributesIntoMap
+import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
+import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -33,12 +39,6 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.domain.manga.interactor.GetManga
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
-import atlas.source.local.image.LocalCoverManager
 import kotlin.time.Duration.Companion.seconds
 
 @AssistedInject

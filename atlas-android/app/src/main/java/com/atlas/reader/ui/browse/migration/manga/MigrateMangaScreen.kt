@@ -17,20 +17,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.manga.components.BaseMangaListItem
-import com.atlas.presentation.util.Screen
-import com.atlas.reader.ui.manga.MangaScreen
-import com.atlas.reader.util.system.toast
-import kotlinx.coroutines.flow.collectLatest
+import atlas.domain.manga.model.Manga
 import atlas.feature.migration.config.MigrationConfigScreen
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.ArrowForward
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
 import atlas.presentation.core.components.FastScrollLazyColumn
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.i18n.stringResource
@@ -38,6 +29,15 @@ import atlas.presentation.core.screens.EmptyScreen
 import atlas.presentation.core.screens.LoadingScreen
 import atlas.presentation.core.util.selectedBackground
 import atlas.presentation.core.util.shouldExpandFAB
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.manga.components.BaseMangaListItem
+import com.atlas.presentation.util.Screen
+import com.atlas.reader.ui.manga.MangaScreen
+import com.atlas.reader.util.system.toast
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
+import kotlinx.coroutines.flow.collectLatest
 
 data class MigrateMangaScreen(
     private val sourceId: Long,

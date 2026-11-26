@@ -12,15 +12,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.util.fastMap
 import androidx.core.content.ContextCompat
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.Navigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import com.atlas.presentation.category.visualName
-import com.atlas.presentation.more.settings.Preference
-import com.atlas.presentation.more.settings.widget.TriStateListDialog
-import com.atlas.reader.data.library.LibraryUpdateWorker
-import com.atlas.reader.ui.category.CategoryScreen
-import kotlinx.coroutines.launch
 import atlas.app.di.appGraph
 import atlas.domain.category.model.Category
 import atlas.domain.library.service.LibraryPreferences
@@ -37,6 +28,15 @@ import atlas.i18n.MR
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.Navigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.category.visualName
+import com.atlas.presentation.more.settings.Preference
+import com.atlas.presentation.more.settings.widget.TriStateListDialog
+import com.atlas.reader.data.library.LibraryUpdateWorker
+import com.atlas.reader.ui.category.CategoryScreen
+import kotlinx.coroutines.launch
 
 object SettingsLibraryScreen : SearchableSettings {
 

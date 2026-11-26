@@ -40,13 +40,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.components.AppBarActions
-import com.atlas.presentation.manga.components.MangaCover
-import com.atlas.presentation.util.formatChapterNumber
-import com.atlas.presentation.util.rememberResourceBitmapPainter
-import com.atlas.reader.R
+import atlas.domain.manga.model.Manga
 import atlas.feature.migration.list.models.MigratingManga
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.ArrowForward
 import atlas.icons.materialsymbols.rounded.Check
@@ -55,8 +51,6 @@ import atlas.icons.materialsymbols.rounded.ContentCopy
 import atlas.icons.materialsymbols.rounded.CopyAll
 import atlas.icons.materialsymbols.rounded.DoneAll
 import atlas.icons.materialsymbols.rounded.MoreVert
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
 import atlas.presentation.core.components.Badge
 import atlas.presentation.core.components.BadgeGroup
 import atlas.presentation.core.components.FastScrollLazyColumn
@@ -65,6 +59,12 @@ import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.components.material.topSmallPaddingValues
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.plus
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.components.AppBarActions
+import com.atlas.presentation.manga.components.MangaCover
+import com.atlas.presentation.util.formatChapterNumber
+import com.atlas.presentation.util.rememberResourceBitmapPainter
+import com.atlas.reader.R
 
 @Composable
 fun MigrationListScreenContent(

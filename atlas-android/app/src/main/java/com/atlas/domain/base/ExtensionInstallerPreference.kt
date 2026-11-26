@@ -1,13 +1,13 @@
 package com.atlas.domain.base
 
 import android.content.Context
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.PreferenceStore
+import atlas.core.common.preference.getEnum
 import com.atlas.domain.base.BasePreferences.ExtensionInstaller
 import com.atlas.reader.util.system.hasMiuiPackageInstaller
 import com.atlas.reader.util.system.isShizukuInstalled
 import kotlinx.coroutines.CoroutineScope
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.PreferenceStore
-import atlas.core.common.preference.getEnum
 
 class ExtensionInstallerPreference(
     private val context: Context,

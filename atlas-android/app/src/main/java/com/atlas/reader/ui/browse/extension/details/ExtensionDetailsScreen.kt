@@ -4,14 +4,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
-import com.atlas.presentation.browse.ExtensionDetailsScreen
-import com.atlas.presentation.util.Screen
 import atlas.i18n.MR
 import atlas.presentation.core.screens.EmptyScreen
 import atlas.presentation.core.screens.LoadingScreen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.browse.ExtensionDetailsScreen
+import com.atlas.presentation.util.Screen
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 
 data class ExtensionDetailsScreen(
     private val pkgName: String,

@@ -1,12 +1,12 @@
-import com.android.build.api.dsl.KotlinMultiplatformAndroidLibraryTarget
 import atlas.gradle.configurations.configureKotlin
 import atlas.gradle.extensions.alias
+import atlas.gradle.extensions.atlasx
 import atlas.gradle.extensions.configureTest
 import atlas.gradle.extensions.coreLibraryDesugaring
 import atlas.gradle.extensions.libs
-import atlas.gradle.extensions.atlasx
 import atlas.gradle.extensions.plugins
 import atlas.gradle.extensions.release
+import com.android.build.api.dsl.KotlinMultiplatformAndroidLibraryTarget
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

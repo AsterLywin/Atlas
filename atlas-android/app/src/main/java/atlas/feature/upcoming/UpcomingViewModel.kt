@@ -5,12 +5,19 @@ import androidx.compose.ui.util.fastMap
 import androidx.compose.ui.util.fastMapIndexedNotNull
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.core.common.preference.getAndSet
+import atlas.core.common.util.lang.SubscriberGate
+import atlas.domain.category.interactor.GetCategories
+import atlas.domain.category.model.Category
+import atlas.domain.manga.model.Manga
+import atlas.domain.upcoming.interactor.GetUpcomingManga
+import atlas.domain.upcoming.service.UpcomingPreferences
+import com.atlas.core.util.insertSeparatorsReversed
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.binding
 import dev.zacsweers.metrox.viewmodel.ViewModelKey
-import com.atlas.core.util.insertSeparatorsReversed
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -29,13 +36,6 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.YearMonth
 import kotlinx.datetime.toLocalDateTime
 import kotlinx.datetime.yearMonth
-import atlas.domain.upcoming.interactor.GetUpcomingManga
-import atlas.core.common.preference.getAndSet
-import atlas.core.common.util.lang.SubscriberGate
-import atlas.domain.category.interactor.GetCategories
-import atlas.domain.category.model.Category
-import atlas.domain.manga.model.Manga
-import atlas.domain.upcoming.service.UpcomingPreferences
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.seconds
 

@@ -1,6 +1,6 @@
 package com.atlas.reader.data.track.anilist
 
-import dev.icerock.moko.resources.StringResource
+import atlas.i18n.MR
 import com.atlas.domain.track.model.toDbTrack
 import com.atlas.reader.R
 import com.atlas.reader.data.database.models.Track
@@ -8,8 +8,8 @@ import com.atlas.reader.data.track.BaseTracker
 import com.atlas.reader.data.track.DeletableTracker
 import com.atlas.reader.data.track.anilist.dto.ALOAuth
 import com.atlas.reader.data.track.model.TrackSearch
+import dev.icerock.moko.resources.StringResource
 import kotlinx.serialization.json.Json
-import atlas.i18n.MR
 import atlas.domain.track.model.Track as DomainTrack
 
 class Anilist(id: Long) : BaseTracker(id, "AniList"), DeletableTracker {

@@ -11,10 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.atlas.reader.util.system.LocaleHelper
 import atlas.domain.source.model.Source
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.reader.util.system.LocaleHelper
 
 @Composable
 fun BaseSourceItem(

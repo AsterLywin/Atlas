@@ -5,13 +5,13 @@ import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import atlas.i18n.MR
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.components.AppBarTitle
 import com.atlas.presentation.manga.components.MangaNotesTextArea
 import com.atlas.reader.ui.manga.notes.MangaNotesScreen
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
 
 @Composable
 fun MangaNotesScreen(

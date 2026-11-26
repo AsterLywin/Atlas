@@ -1,11 +1,11 @@
 package atlas.feature.migration.list.search
 
+import atlas.domain.manga.model.Manga
+import atlas.domain.manga.model.toDomainManga
 import com.atlas.reader.source.Source
 import com.atlas.reader.source.model.SManga
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import atlas.domain.manga.model.toDomainManga
-import atlas.domain.manga.model.Manga
 
 class SmartSourceSearchEngine(extraSearchParams: String?) : BaseSmartSearchEngine<SManga>(extraSearchParams) {
 

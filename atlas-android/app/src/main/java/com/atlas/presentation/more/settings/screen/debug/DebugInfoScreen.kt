@@ -12,6 +12,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.profileinstaller.ProfileVerifier
+import atlas.app.di.appGraph
+import atlas.core.common.FeatureFlags
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Autorenew
+import atlas.presentation.core.util.collectAsState
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.presentation.more.settings.Preference
@@ -24,12 +30,6 @@ import com.atlas.reader.util.system.WebViewUtil
 import com.atlas.reader.util.system.copyToClipboard
 import kotlinx.coroutines.guava.await
 import kotlinx.coroutines.launch
-import atlas.app.di.appGraph
-import atlas.core.common.FeatureFlags
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Autorenew
-import atlas.i18n.MR
-import atlas.presentation.core.util.collectAsState
 
 class DebugInfoScreen : Screen() {
 

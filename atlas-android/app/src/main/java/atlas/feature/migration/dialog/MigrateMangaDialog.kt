@@ -19,32 +19,32 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.util.fastForEach
 import androidx.lifecycle.ViewModel
+import atlas.domain.manga.model.Manga
+import atlas.domain.migration.models.MigrationFlag
+import atlas.domain.migration.usecases.MigrateMangaUseCase
+import atlas.feature.common.utils.getLabel
+import atlas.i18n.MR
+import atlas.presentation.core.components.LabeledCheckbox
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.LoadingScreen
 import cafe.adriel.voyager.core.screen.Screen
+import com.atlas.domain.manga.model.hasCustomCover
+import com.atlas.domain.source.service.SourcePreferences
+import com.atlas.reader.data.cache.CoverCache
+import com.atlas.reader.data.download.DownloadManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.binding
 import dev.zacsweers.metrox.viewmodel.ViewModelKey
 import dev.zacsweers.metrox.viewmodel.metroViewModel
-import com.atlas.domain.manga.model.hasCustomCover
-import com.atlas.domain.source.service.SourcePreferences
-import com.atlas.reader.data.cache.CoverCache
-import com.atlas.reader.data.download.DownloadManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import atlas.domain.migration.models.MigrationFlag
-import atlas.domain.migration.usecases.MigrateMangaUseCase
-import atlas.feature.common.utils.getLabel
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
-import atlas.presentation.core.components.LabeledCheckbox
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.LoadingScreen
 
 @Composable
 internal fun Screen.MigrateMangaDialog(

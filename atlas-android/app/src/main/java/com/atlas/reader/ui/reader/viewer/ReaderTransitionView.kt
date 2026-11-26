@@ -12,13 +12,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.AbstractComposeView
+import atlas.domain.manga.model.Manga
+import atlas.source.local.isLocal
 import com.atlas.presentation.reader.ChapterTransition
 import com.atlas.presentation.theme.TachiyomiTheme
 import com.atlas.reader.data.download.DownloadManager
 import com.atlas.reader.source.Source
 import com.atlas.reader.ui.reader.model.ChapterTransition
-import atlas.domain.manga.model.Manga
-import atlas.source.local.isLocal
 
 class ReaderTransitionView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     AbstractComposeView(context, attrs) {

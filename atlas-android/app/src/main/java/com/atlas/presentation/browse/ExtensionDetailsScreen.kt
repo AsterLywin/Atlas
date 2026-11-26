@@ -39,7 +39,14 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import dev.icerock.moko.resources.StringResource
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Eyeglasses2
+import atlas.icons.materialsymbols.rounded.Settings
+import atlas.presentation.core.components.ScrollbarLazyColumn
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.domain.extension.interactor.ExtensionSourceItem
 import com.atlas.presentation.browse.components.ExtensionIcon
 import com.atlas.presentation.browse.components.ExtensionPill
@@ -54,14 +61,7 @@ import com.atlas.reader.source.ConfigurableSource
 import com.atlas.reader.ui.browse.extension.details.ExtensionDetailsViewModel
 import com.atlas.reader.util.system.LocaleHelper
 import com.atlas.reader.util.system.copyToClipboard
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Eyeglasses2
-import atlas.icons.materialsymbols.rounded.Settings
-import atlas.i18n.MR
-import atlas.presentation.core.components.ScrollbarLazyColumn
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
+import dev.icerock.moko.resources.StringResource
 
 @Composable
 fun ExtensionDetailsScreen(

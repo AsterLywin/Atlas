@@ -1,13 +1,13 @@
 package com.atlas.domain.source.interactor
 
-import dev.zacsweers.metro.Inject
-import com.atlas.domain.source.service.SourcePreferences
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.combine
 import atlas.core.common.util.lang.compareToWithCollator
 import atlas.domain.source.model.Source
 import atlas.domain.source.repository.SourceRepository
 import atlas.source.local.isLocal
+import com.atlas.domain.source.service.SourcePreferences
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
 import java.util.Collections
 
 @Inject

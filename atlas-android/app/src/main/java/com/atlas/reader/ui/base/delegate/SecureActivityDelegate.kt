@@ -8,17 +8,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
-import dev.zacsweers.metro.Inject
+import atlas.app.di.appGraph
 import com.atlas.domain.base.BasePreferences
 import com.atlas.reader.core.security.SecurityPreferences
 import com.atlas.reader.ui.security.UnlockActivity
 import com.atlas.reader.util.system.AuthenticatorUtil
 import com.atlas.reader.util.system.AuthenticatorUtil.isAuthenticationSupported
 import com.atlas.reader.util.view.setSecureScreen
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import atlas.app.di.appGraph
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 

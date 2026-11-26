@@ -1,7 +1,7 @@
 package com.atlas.reader.data.track.suwayomi
 
-import com.atlas.reader.data.track.model.TrackSearch
 import atlas.graphql.suwayomi.fragment.MangaFragment
+import com.atlas.reader.data.track.model.TrackSearch
 
 internal fun MangaFragment.toTrackSearch(trackId: Long, baseUrl: String): TrackSearch {
     val manga = this

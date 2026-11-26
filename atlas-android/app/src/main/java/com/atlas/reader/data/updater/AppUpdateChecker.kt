@@ -1,12 +1,12 @@
 package com.atlas.reader.data.updater
 
-import dev.zacsweers.metro.Inject
+import atlas.domain.release.interactor.GetApplicationRelease
 import com.atlas.reader.BuildConfig
 import com.atlas.reader.util.system.isFossBuildType
 import com.atlas.reader.util.system.isNightlyBuildType
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import atlas.domain.release.interactor.GetApplicationRelease
 
 @Inject
 class AppUpdateChecker(

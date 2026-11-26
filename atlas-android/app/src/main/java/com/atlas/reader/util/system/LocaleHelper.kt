@@ -2,9 +2,9 @@ package com.atlas.reader.util.system
 
 import android.content.Context
 import androidx.core.os.LocaleListCompat
-import com.atlas.reader.ui.browse.source.SourcesViewModel
 import atlas.core.common.i18n.stringResource
 import atlas.i18n.MR
+import com.atlas.reader.ui.browse.source.SourcesViewModel
 import java.util.Locale
 
 /**

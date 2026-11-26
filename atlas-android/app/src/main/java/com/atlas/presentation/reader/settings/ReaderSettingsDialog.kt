@@ -12,11 +12,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.window.DialogWindowProvider
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.presentation.components.TabbedDialog
 import com.atlas.presentation.components.TabbedDialogPaddings
 import com.atlas.reader.ui.reader.setting.ReaderSettingsViewModel
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 
 @Composable
 fun ReaderSettingsDialog(

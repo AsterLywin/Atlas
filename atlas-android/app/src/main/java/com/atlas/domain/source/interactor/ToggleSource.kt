@@ -1,9 +1,9 @@
 package com.atlas.domain.source.interactor
 
-import dev.zacsweers.metro.Inject
-import com.atlas.domain.source.service.SourcePreferences
 import atlas.core.common.preference.getAndSet
 import atlas.domain.source.model.Source
+import com.atlas.domain.source.service.SourcePreferences
+import dev.zacsweers.metro.Inject
 
 @Inject
 class ToggleSource(

@@ -20,12 +20,25 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.util.fastAll
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.core.common.i18n.stringResource
+import atlas.domain.category.model.Category
+import atlas.domain.library.model.LibraryManga
+import atlas.domain.manga.model.Manga
+import atlas.feature.migration.config.MigrationConfigScreen
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.automirroredrounded.Help
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.EmptyScreen
+import atlas.presentation.core.screens.EmptyScreenAction
+import atlas.presentation.core.screens.LoadingScreen
+import atlas.source.local.isLocal
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.category.components.ChangeCategoryDialog
 import com.atlas.presentation.library.DeleteLibraryMangaDialog
 import com.atlas.presentation.library.LibrarySettingsDialog
@@ -43,24 +56,11 @@ import com.atlas.reader.ui.main.MainActivity
 import com.atlas.reader.ui.manga.MangaScreen
 import com.atlas.reader.ui.reader.ReaderActivity
 import com.atlas.reader.util.system.workManager
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import atlas.feature.migration.config.MigrationConfigScreen
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.automirroredrounded.Help
-import atlas.core.common.i18n.stringResource
-import atlas.domain.category.model.Category
-import atlas.domain.library.model.LibraryManga
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.EmptyScreen
-import atlas.presentation.core.screens.EmptyScreenAction
-import atlas.presentation.core.screens.LoadingScreen
-import atlas.source.local.isLocal
 
 data object LibraryTab : Tab {
 

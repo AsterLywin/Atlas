@@ -3,14 +3,14 @@ package com.atlas.reader.extension.util
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import dev.zacsweers.metro.Inject
+import atlas.app.di.appGraph
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.extension.ExtensionManager
 import com.atlas.reader.extension.model.InstallStep
 import com.atlas.reader.util.system.hasMiuiPackageInstaller
 import com.atlas.reader.util.system.toast
+import dev.zacsweers.metro.Inject
 import logcat.LogPriority
-import atlas.app.di.appGraph
-import atlas.core.common.util.system.logcat
 import kotlin.time.Duration.Companion.seconds
 
 /**

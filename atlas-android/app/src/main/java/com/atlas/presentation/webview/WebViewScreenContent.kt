@@ -33,14 +33,16 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.automirroredrounded.ArrowBack
+import atlas.icons.materialsymbols.automirroredrounded.ArrowForward
+import atlas.icons.materialsymbols.rounded.Close
+import atlas.icons.materialsymbols.rounded.TabClose
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.core.stack.mutableStateStackOf
-import com.kevinnzou.web.AccompanistWebChromeClient
-import com.kevinnzou.web.AccompanistWebViewClient
-import com.kevinnzou.web.LoadingState
-import com.kevinnzou.web.WebContent
-import com.kevinnzou.web.WebView
-import com.kevinnzou.web.WebViewNavigator
-import com.kevinnzou.web.WebViewState
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.components.AppBarActions
 import com.atlas.presentation.components.WarningBanner
@@ -49,17 +51,15 @@ import com.atlas.reader.util.system.getHtml
 import com.atlas.reader.util.system.setDefaultSettings
 import com.atlas.reader.util.system.setUserAgent
 import com.atlas.reader.util.system.toast
+import com.kevinnzou.web.AccompanistWebChromeClient
+import com.kevinnzou.web.AccompanistWebViewClient
+import com.kevinnzou.web.LoadingState
+import com.kevinnzou.web.WebContent
+import com.kevinnzou.web.WebView
+import com.kevinnzou.web.WebViewNavigator
+import com.kevinnzou.web.WebViewState
 import kotlinx.coroutines.launch
 import logcat.LogPriority
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.automirroredrounded.ArrowBack
-import atlas.icons.materialsymbols.automirroredrounded.ArrowForward
-import atlas.icons.materialsymbols.rounded.Close
-import atlas.icons.materialsymbols.rounded.TabClose
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
 
 class WebViewWindow(webContent: WebContent, val navigator: WebViewNavigator) {
     var state by mutableStateOf(WebViewState(webContent))

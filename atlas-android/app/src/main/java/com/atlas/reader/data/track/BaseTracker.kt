@@ -2,6 +2,9 @@ package com.atlas.reader.data.track
 
 import android.content.Context
 import androidx.annotation.CallSuper
+import atlas.app.di.appGraph
+import atlas.core.common.util.system.logcat
+import atlas.domain.track.interactor.UpsertTrack
 import com.atlas.domain.track.interactor.AddTracks
 import com.atlas.domain.track.model.toDomainTrack
 import com.atlas.domain.track.service.TrackPreferences
@@ -18,10 +21,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.app.di.appGraph
 import okhttp3.OkHttpClient
-import atlas.core.common.util.system.logcat
-import atlas.domain.track.interactor.UpsertTrack
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 import atlas.domain.track.model.Track as DomainTrack

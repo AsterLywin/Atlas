@@ -3,14 +3,14 @@ package com.atlas.reader.ui.setting.track
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import dev.zacsweers.metro.HasMemberInjections
-import dev.zacsweers.metro.Inject
+import atlas.app.di.appGraph
+import atlas.presentation.core.screens.LoadingScreen
 import com.atlas.reader.data.track.TrackerManager
 import com.atlas.reader.ui.base.activity.BaseActivity
 import com.atlas.reader.ui.main.MainActivity
 import com.atlas.reader.util.view.setComposeContent
-import atlas.app.di.appGraph
-import atlas.presentation.core.screens.LoadingScreen
+import dev.zacsweers.metro.HasMemberInjections
+import dev.zacsweers.metro.Inject
 
 @HasMemberInjections
 abstract class BaseOAuthLoginActivity : BaseActivity() {

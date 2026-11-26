@@ -1,9 +1,9 @@
 package com.atlas.domain.extension.interactor
 
-import dev.zacsweers.metro.Inject
 import com.atlas.domain.source.service.SourcePreferences
 import com.atlas.reader.extension.ExtensionManager
 import com.atlas.reader.util.system.LocaleHelper
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 

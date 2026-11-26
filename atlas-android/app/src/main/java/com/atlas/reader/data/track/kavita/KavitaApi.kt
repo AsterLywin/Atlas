@@ -1,5 +1,6 @@
 package com.atlas.reader.data.track.kavita
 
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.model.TrackSearch
 import com.atlas.reader.network.GET
@@ -14,7 +15,6 @@ import logcat.LogPriority
 import okhttp3.Dns
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody.Companion.toRequestBody
-import atlas.core.common.util.system.logcat
 import uy.kohesive.injekt.injectLazy
 import java.io.IOException
 import java.net.SocketTimeoutException

@@ -1,12 +1,17 @@
 package com.atlas.reader.source
 
+import atlas.core.metro.AppCoroutineScope
+import atlas.domain.source.model.StubSource
+import atlas.domain.source.repository.StubSourceRepository
+import atlas.domain.source.service.SourceManager
+import atlas.source.local.LocalSource
+import com.atlas.reader.data.download.DownloadManager
+import com.atlas.reader.extension.ExtensionManager
+import com.atlas.reader.source.online.HttpSource
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.data.download.DownloadManager
-import com.atlas.reader.extension.ExtensionManager
-import com.atlas.reader.source.online.HttpSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -15,11 +20,6 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import atlas.core.metro.AppCoroutineScope
-import atlas.domain.source.model.StubSource
-import atlas.domain.source.repository.StubSourceRepository
-import atlas.domain.source.service.SourceManager
-import atlas.source.local.LocalSource
 import java.util.concurrent.ConcurrentHashMap
 
 @Inject

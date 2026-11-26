@@ -1,10 +1,10 @@
 package com.atlas.reader.ui.reader.loader
 
+import atlas.core.archive.ArchiveReader
+import atlas.core.common.util.system.ImageUtil
 import com.atlas.reader.source.model.Page
 import com.atlas.reader.ui.reader.model.ReaderPage
 import com.atlas.reader.util.lang.compareToCaseInsensitiveNaturalOrder
-import atlas.core.archive.ArchiveReader
-import atlas.core.common.util.system.ImageUtil
 
 /**
  * Loader used to load a chapter from an archive file.

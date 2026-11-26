@@ -2,17 +2,17 @@ package com.atlas.reader.data.download
 
 import android.content.Context
 import androidx.core.content.edit
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.data.download.model.Download
-import com.atlas.reader.source.online.HttpSource
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.Json
 import atlas.domain.chapter.interactor.GetChapter
 import atlas.domain.manga.interactor.GetManga
 import atlas.domain.manga.model.Manga
 import atlas.domain.source.service.SourceManager
+import com.atlas.reader.data.download.model.Download
+import com.atlas.reader.source.online.HttpSource
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 
 /**
  * This class is used to persist active downloads across application restarts.

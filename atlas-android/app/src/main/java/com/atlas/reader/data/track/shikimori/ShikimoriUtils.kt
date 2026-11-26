@@ -1,7 +1,5 @@
 package com.atlas.reader.data.track.shikimori
 
-import com.atlas.reader.data.database.models.Track
-import com.atlas.reader.data.track.model.TrackSearch
 import atlas.graphql.shikimori.ShikimoriGetLibMangaQuery
 import atlas.graphql.shikimori.ShikimoriGetMangaDetailsQuery
 import atlas.graphql.shikimori.ShikimoriSearchMangaQuery
@@ -9,6 +7,8 @@ import atlas.graphql.shikimori.fragment.MangaFragment
 import atlas.graphql.shikimori.type.MangaKindEnum
 import atlas.graphql.shikimori.type.MangaStatusEnum
 import atlas.graphql.shikimori.type.UserRateStatusEnum
+import com.atlas.reader.data.database.models.Track
+import com.atlas.reader.data.track.model.TrackSearch
 
 internal fun ShikimoriGetLibMangaQuery.Manga.toTrack(trackId: Long): Track {
     val sManga = this

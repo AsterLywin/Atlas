@@ -2,16 +2,16 @@ package com.atlas.reader.extension.api
 
 import android.content.Context
 import androidx.core.app.NotificationCompat
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
+import atlas.core.common.i18n.pluralStringResource
+import atlas.i18n.MR
 import com.atlas.reader.core.security.SecurityPreferences
 import com.atlas.reader.data.notification.NotificationReceiver
 import com.atlas.reader.data.notification.Notifications
 import com.atlas.reader.util.system.cancelNotification
 import com.atlas.reader.util.system.notify
-import atlas.core.common.i18n.pluralStringResource
-import atlas.i18n.MR
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 import atlas.icons.materialsymbols.R as MaterialSymbolsR
 
 @Inject

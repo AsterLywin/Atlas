@@ -8,10 +8,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.components.TabbedScreen
 import com.atlas.presentation.util.Tab
 import com.atlas.presentation.util.rememberAnimatedVectorPainter
@@ -22,12 +23,11 @@ import com.atlas.reader.ui.browse.migration.sources.migrateSourceTab
 import com.atlas.reader.ui.browse.source.globalsearch.GlobalSearchScreen
 import com.atlas.reader.ui.browse.source.sourcesTab
 import com.atlas.reader.ui.main.MainActivity
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.receiveAsFlow
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 
 data object BrowseTab : Tab {
 

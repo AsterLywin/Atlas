@@ -19,19 +19,19 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.os.LocaleListCompat
+import atlas.core.common.i18n.stringResource
+import atlas.i18n.MR
+import atlas.i18n.R
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Check
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.util.Screen
 import com.atlas.reader.util.system.LocaleHelper
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Check
 import org.xmlpull.v1.XmlPullParser
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
-import atlas.i18n.R
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
 
 class AppLanguageScreen : Screen() {
 

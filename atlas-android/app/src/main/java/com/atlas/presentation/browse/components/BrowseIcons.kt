@@ -13,17 +13,17 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.painter.ColorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import atlas.domain.source.model.Source
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.roundedfilled.Dangerous
+import atlas.icons.materialsymbols.roundedfilled.Warning
+import atlas.source.local.isLocal
 import coil3.compose.AsyncImage
 import com.atlas.presentation.util.rememberResourceBitmapPainter
 import com.atlas.reader.R
 import com.atlas.reader.data.coil.InstalledExtensionIcon
 import com.atlas.reader.data.coil.InstalledSourceIcon
 import com.atlas.reader.extension.model.Extension
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.roundedfilled.Dangerous
-import atlas.icons.materialsymbols.roundedfilled.Warning
-import atlas.domain.source.model.Source
-import atlas.source.local.isLocal
 
 private val defaultModifier = Modifier
     .height(40.dp)

@@ -3,6 +3,17 @@ package com.atlas.reader.ui.deeplink
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.domain.chapter.interactor.GetChapterByUrlAndMangaId
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.manga.interactor.NetworkToLocalManga
+import atlas.domain.manga.model.Manga
+import atlas.domain.manga.model.toDomainManga
+import atlas.domain.source.interactor.UpdateMangaFromRemote
+import atlas.domain.source.service.SourceManager
+import com.atlas.reader.source.Source
+import com.atlas.reader.source.model.SChapter
+import com.atlas.reader.source.online.ResolvableSource
+import com.atlas.reader.source.online.UriType
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
@@ -10,22 +21,11 @@ import dev.zacsweers.metro.AssistedInject
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
-import com.atlas.reader.source.Source
-import com.atlas.reader.source.model.SChapter
-import com.atlas.reader.source.online.ResolvableSource
-import com.atlas.reader.source.online.UriType
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import atlas.domain.manga.model.toDomainManga
-import atlas.domain.source.interactor.UpdateMangaFromRemote
-import atlas.domain.chapter.interactor.GetChapterByUrlAndMangaId
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.manga.interactor.NetworkToLocalManga
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.service.SourceManager
 
 @AssistedInject
 class DeepLinkViewModel(

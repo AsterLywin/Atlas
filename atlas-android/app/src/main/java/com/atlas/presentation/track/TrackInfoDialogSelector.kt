@@ -31,8 +31,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
-import dev.icerock.moko.resources.StringResource
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import atlas.i18n.MR
 import atlas.presentation.core.components.ScrollbarLazyColumn
 import atlas.presentation.core.components.WheelNumberPicker
@@ -40,6 +38,8 @@ import atlas.presentation.core.components.WheelTextPicker
 import atlas.presentation.core.components.material.AlertDialogContent
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import dev.icerock.moko.resources.StringResource
 
 @Composable
 fun TrackStatusSelector(

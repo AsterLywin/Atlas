@@ -1,8 +1,8 @@
 package com.atlas.reader.data.backup.models
 
+import atlas.domain.category.model.Category
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.protobuf.ProtoNumber
-import atlas.domain.category.model.Category
 
 @Serializable
 class BackupCategory(

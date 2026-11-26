@@ -8,15 +8,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
-import com.atlas.reader.ui.reader.setting.ReaderOrientation
-import com.atlas.reader.ui.reader.setting.ReadingMode
+import atlas.i18n.MR
 import atlas.icons.custommaterialsymbols.CustomMaterialSymbols
 import atlas.icons.custommaterialsymbols.rounded.CropOff
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Crop
 import atlas.icons.materialsymbols.rounded.Settings
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.reader.ui.reader.setting.ReaderOrientation
+import com.atlas.reader.ui.reader.setting.ReadingMode
 
 @Composable
 fun ReaderBottomBar(

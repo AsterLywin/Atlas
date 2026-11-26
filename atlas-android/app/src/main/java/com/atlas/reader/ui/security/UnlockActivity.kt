@@ -3,14 +3,14 @@ package com.atlas.reader.ui.security
 import android.os.Bundle
 import androidx.biometric.BiometricPrompt
 import androidx.fragment.app.FragmentActivity
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.reader.ui.base.activity.BaseActivity
 import com.atlas.reader.ui.base.delegate.SecureActivityDelegate
 import com.atlas.reader.util.system.AuthenticatorUtil
 import com.atlas.reader.util.system.AuthenticatorUtil.startAuthentication
 import logcat.LogPriority
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 
 /**
  * Blank activity with a BiometricPrompt.

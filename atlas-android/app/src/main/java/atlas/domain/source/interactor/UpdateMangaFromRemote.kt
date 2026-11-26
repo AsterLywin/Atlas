@@ -1,6 +1,15 @@
 package atlas.domain.source.interactor
 
-import dev.zacsweers.metro.Inject
+import atlas.core.common.util.system.logcat
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.chapter.repository.ChapterRepository
+import atlas.domain.library.service.LibraryPreferences
+import atlas.domain.manga.model.Manga
+import atlas.domain.manga.model.MangaRemoteUpdate
+import atlas.domain.manga.repository.MangaRepository
+import atlas.domain.source.models.RemoteMangaUpdate
+import atlas.domain.source.service.SourceManager
+import atlas.source.local.isLocal
 import com.atlas.domain.chapter.interactor.SyncChaptersWithSource
 import com.atlas.domain.chapter.model.toSChapter
 import com.atlas.domain.manga.model.hasCustomCover
@@ -9,19 +18,10 @@ import com.atlas.reader.data.cache.CoverCache
 import com.atlas.reader.data.download.DownloadManager
 import com.atlas.reader.source.Source
 import com.atlas.reader.source.model.SManga
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.domain.source.models.RemoteMangaUpdate
-import atlas.core.common.util.system.logcat
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.chapter.repository.ChapterRepository
-import atlas.domain.library.service.LibraryPreferences
-import atlas.domain.manga.model.Manga
-import atlas.domain.manga.model.MangaRemoteUpdate
-import atlas.domain.manga.repository.MangaRepository
-import atlas.domain.source.service.SourceManager
-import atlas.source.local.isLocal
 import kotlin.time.Clock
 import kotlin.time.Instant
 

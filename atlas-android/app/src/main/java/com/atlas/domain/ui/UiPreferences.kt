@@ -1,20 +1,20 @@
 package com.atlas.domain.ui
 
 import android.text.format.DateFormat
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.PreferenceStore
+import atlas.core.common.preference.getEnum
+import atlas.core.common.util.system.logcat
 import com.atlas.domain.ui.model.AppTheme
 import com.atlas.domain.ui.model.TabletUiMode
 import com.atlas.domain.ui.model.ThemeMode
 import com.atlas.domain.ui.model.TimeFormat
 import com.atlas.reader.util.system.DeviceUtil
 import com.atlas.reader.util.system.isDynamicColorAvailable
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 import logcat.LogPriority
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.PreferenceStore
-import atlas.core.common.preference.getEnum
-import atlas.core.common.util.system.logcat
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeFormatterBuilder
 import java.time.format.FormatStyle

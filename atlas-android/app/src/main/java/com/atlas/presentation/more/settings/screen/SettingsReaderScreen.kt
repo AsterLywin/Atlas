@@ -6,16 +6,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import com.atlas.presentation.more.settings.Preference
-import com.atlas.reader.ui.reader.setting.ReaderOrientation
-import com.atlas.reader.ui.reader.setting.ReaderPreferences
-import com.atlas.reader.ui.reader.setting.ReadingMode
-import com.atlas.reader.util.system.hasDisplayCutout
 import atlas.app.di.appGraph
 import atlas.i18n.MR
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import com.atlas.presentation.more.settings.Preference
+import com.atlas.reader.ui.reader.setting.ReaderOrientation
+import com.atlas.reader.ui.reader.setting.ReaderPreferences
+import com.atlas.reader.ui.reader.setting.ReadingMode
+import com.atlas.reader.util.system.hasDisplayCutout
 import java.text.NumberFormat
 
 object SettingsReaderScreen : SearchableSettings {

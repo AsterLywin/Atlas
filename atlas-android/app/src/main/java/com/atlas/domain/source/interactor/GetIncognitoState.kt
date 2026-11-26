@@ -1,9 +1,9 @@
 package com.atlas.domain.source.interactor
 
-import dev.zacsweers.metro.Inject
 import com.atlas.domain.base.BasePreferences
 import com.atlas.domain.source.service.SourcePreferences
 import com.atlas.reader.extension.ExtensionManager
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged

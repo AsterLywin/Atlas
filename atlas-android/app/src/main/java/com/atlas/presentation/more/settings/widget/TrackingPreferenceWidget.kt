@@ -20,17 +20,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Check
+import atlas.icons.materialsymbols.rounded.Refresh
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.presentation.more.settings.LocalPreferenceHighlighted
 import com.atlas.presentation.track.components.TrackLogoIcon
 import com.atlas.reader.data.track.EnhancedTracker
 import com.atlas.reader.data.track.Tracker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Check
-import atlas.icons.materialsymbols.rounded.Refresh
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 
 @Composable
 fun TrackingPreferenceWidget(

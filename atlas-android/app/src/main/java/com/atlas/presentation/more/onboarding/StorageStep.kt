@@ -18,14 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.more.settings.screen.SettingsDataScreen
-import com.atlas.reader.util.system.toast
-import kotlinx.coroutines.flow.collectLatest
 import atlas.app.di.appGraph
 import atlas.i18n.MR
 import atlas.presentation.core.components.material.Button
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.more.settings.screen.SettingsDataScreen
+import com.atlas.reader.util.system.toast
+import kotlinx.coroutines.flow.collectLatest
 
 internal class StorageStep : OnboardingStep {
 

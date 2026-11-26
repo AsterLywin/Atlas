@@ -1,13 +1,13 @@
 package com.atlas.domain.manga.interactor
 
-import dev.zacsweers.metro.Inject
-import kotlinx.datetime.LocalDateTime
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.toLocalDateTime
 import atlas.domain.manga.interactor.FetchInterval
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.MangaUpdate
 import atlas.domain.manga.repository.MangaRepository
+import dev.zacsweers.metro.Inject
+import kotlinx.datetime.LocalDateTime
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 import kotlin.time.Clock
 import kotlin.time.Instant
 

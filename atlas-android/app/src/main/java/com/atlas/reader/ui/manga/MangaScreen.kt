@@ -17,10 +17,15 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.core.net.toUri
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.core.common.util.system.logcat
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.manga.model.Manga
+import atlas.feature.migration.config.MigrationConfigScreen
+import atlas.feature.migration.dialog.MigrateMangaDialog
+import atlas.presentation.core.screens.LoadingScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import com.atlas.domain.manga.model.hasCustomCover
 import com.atlas.domain.manga.model.toSManga
 import com.atlas.presentation.browse.components.RemoveMangaDialog
@@ -52,16 +57,11 @@ import com.atlas.reader.ui.webview.WebViewScreen
 import com.atlas.reader.util.system.copyToClipboard
 import com.atlas.reader.util.system.toShareIntent
 import com.atlas.reader.util.system.toast
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.feature.migration.config.MigrationConfigScreen
-import atlas.feature.migration.dialog.MigrateMangaDialog
-import atlas.core.common.util.system.logcat
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.manga.model.Manga
-import atlas.presentation.core.screens.LoadingScreen
 
 class MangaScreen(
     private val mangaId: Long,

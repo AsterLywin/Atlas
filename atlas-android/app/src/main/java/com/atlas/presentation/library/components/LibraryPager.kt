@@ -18,14 +18,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
-import com.atlas.core.preference.PreferenceMutableState
-import com.atlas.reader.ui.library.LibraryItem
 import atlas.domain.category.model.Category
 import atlas.domain.library.model.LibraryDisplayMode
 import atlas.domain.library.model.LibraryManga
 import atlas.i18n.MR
 import atlas.presentation.core.screens.EmptyScreen
 import atlas.presentation.core.util.plus
+import com.atlas.core.preference.PreferenceMutableState
+import com.atlas.reader.ui.library.LibraryItem
 
 @Composable
 fun LibraryPager(

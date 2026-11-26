@@ -1,5 +1,3 @@
-import com.android.build.api.dsl.BuildFeatures
-import com.android.build.api.dsl.CommonExtension
 import atlas.gradle.extensions.alias
 import atlas.gradle.extensions.android
 import atlas.gradle.extensions.api
@@ -7,6 +5,8 @@ import atlas.gradle.extensions.debugApi
 import atlas.gradle.extensions.implementation
 import atlas.gradle.extensions.libs
 import atlas.gradle.extensions.plugins
+import com.android.build.api.dsl.BuildFeatures
+import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies

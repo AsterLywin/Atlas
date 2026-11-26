@@ -2,14 +2,14 @@ package com.atlas.reader.ui.reader.setting
 
 import android.content.pm.ActivityInfo
 import androidx.compose.ui.graphics.vector.ImageVector
-import dev.icerock.moko.resources.StringResource
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Mobile
 import atlas.icons.materialsymbols.rounded.MobileLandscape
 import atlas.icons.materialsymbols.rounded.MobileLockLandscape
 import atlas.icons.materialsymbols.rounded.MobileLockPortrait
 import atlas.icons.materialsymbols.rounded.MobileRotate
-import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
 
 enum class ReaderOrientation(
     val flag: Int,

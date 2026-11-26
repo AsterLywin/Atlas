@@ -5,6 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.IBinder
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.domain.base.BasePreferences
 import com.atlas.reader.R
 import com.atlas.reader.data.notification.Notifications
@@ -15,9 +18,6 @@ import com.atlas.reader.extension.util.ExtensionInstaller.Companion.EXTRA_DOWNLO
 import com.atlas.reader.util.system.getSerializableExtraCompat
 import com.atlas.reader.util.system.notificationBuilder
 import logcat.LogPriority
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 
 class ExtensionInstallService : Service() {
 

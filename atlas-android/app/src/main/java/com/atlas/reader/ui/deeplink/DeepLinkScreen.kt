@@ -6,18 +6,18 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import atlas.i18n.MR
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.LoadingScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.util.Screen
 import com.atlas.reader.ui.browse.source.globalsearch.GlobalSearchScreen
 import com.atlas.reader.ui.manga.MangaScreen
 import com.atlas.reader.ui.reader.ReaderActivity
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.LoadingScreen
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 
 class DeepLinkScreen(
     val query: String = "",

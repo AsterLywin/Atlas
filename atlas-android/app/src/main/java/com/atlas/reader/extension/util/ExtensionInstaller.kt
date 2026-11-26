@@ -5,7 +5,8 @@ import android.content.Intent
 import android.content.pm.PackageInfo
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import dev.zacsweers.metro.Inject
+import atlas.core.common.util.system.logcat
+import atlas.core.metro.AppCoroutineScope
 import com.atlas.domain.base.BasePreferences
 import com.atlas.reader.extension.installer.Installer
 import com.atlas.reader.extension.model.Extension
@@ -14,6 +15,7 @@ import com.atlas.reader.network.NetworkHelper
 import com.atlas.reader.network.await
 import com.atlas.reader.util.storage.getUriCompat
 import com.atlas.reader.util.system.isPackageInstalled
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -25,10 +27,8 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runInterruptible
 import logcat.LogPriority
-import atlas.core.metro.AppCoroutineScope
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import atlas.core.common.util.system.logcat
 import java.io.File
 import java.util.concurrent.ConcurrentHashMap
 

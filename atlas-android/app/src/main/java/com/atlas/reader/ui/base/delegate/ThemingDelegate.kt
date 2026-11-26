@@ -1,9 +1,9 @@
 package com.atlas.reader.ui.base.delegate
 
 import android.app.Activity
+import atlas.app.di.appGraph
 import com.atlas.domain.ui.model.AppTheme
 import com.atlas.reader.R
-import atlas.app.di.appGraph
 
 interface ThemingDelegate {
     fun applyAppTheme(activity: Activity)

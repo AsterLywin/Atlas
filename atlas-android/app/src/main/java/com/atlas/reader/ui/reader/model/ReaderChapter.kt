@@ -1,9 +1,9 @@
 package com.atlas.reader.ui.reader.model
 
-import com.atlas.reader.ui.reader.loader.PageLoader
-import kotlinx.coroutines.flow.MutableStateFlow
 import atlas.core.common.util.system.logcat
 import atlas.domain.chapter.model.Chapter
+import com.atlas.reader.ui.reader.loader.PageLoader
+import kotlinx.coroutines.flow.MutableStateFlow
 
 data class ReaderChapter(private val loadedChapter: Chapter) {
 

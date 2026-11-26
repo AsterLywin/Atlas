@@ -11,10 +11,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEachIndexed
+import atlas.presentation.core.components.ScrollbarLazyColumn
 import com.atlas.presentation.more.settings.screen.SearchableSettings
 import com.atlas.presentation.more.settings.widget.PreferenceGroupHeader
 import kotlinx.coroutines.delay
-import atlas.presentation.core.components.ScrollbarLazyColumn
 import kotlin.time.Duration.Companion.seconds
 
 /**

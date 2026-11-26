@@ -10,9 +10,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.util.fastMap
-import com.atlas.presentation.category.visualName
-import com.atlas.presentation.more.settings.Preference
-import com.atlas.presentation.more.settings.widget.TriStateListDialog
 import atlas.app.di.appGraph
 import atlas.domain.category.model.Category
 import atlas.domain.download.service.DownloadPreferences
@@ -20,6 +17,9 @@ import atlas.i18n.MR
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import com.atlas.presentation.category.visualName
+import com.atlas.presentation.more.settings.Preference
+import com.atlas.presentation.more.settings.widget.TriStateListDialog
 
 object SettingsDownloadScreen : SearchableSettings {
 

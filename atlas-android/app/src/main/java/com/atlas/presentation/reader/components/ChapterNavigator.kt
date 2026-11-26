@@ -43,13 +43,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
-import com.atlas.presentation.util.isTabletUi
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.SkipNext
 import atlas.icons.materialsymbols.rounded.SkipPrevious
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import com.atlas.presentation.util.isTabletUi
 import kotlin.math.roundToInt
 
 enum class ChapterNavigatorType {

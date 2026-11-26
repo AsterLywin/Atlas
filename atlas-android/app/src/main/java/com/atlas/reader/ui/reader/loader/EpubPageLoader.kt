@@ -1,8 +1,8 @@
 package com.atlas.reader.ui.reader.loader
 
+import atlas.core.archive.EpubReader
 import com.atlas.reader.source.model.Page
 import com.atlas.reader.ui.reader.model.ReaderPage
-import atlas.core.archive.EpubReader
 
 /**
  * Loader used to load a chapter from a .epub file.

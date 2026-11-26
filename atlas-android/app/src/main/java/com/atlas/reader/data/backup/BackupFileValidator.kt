@@ -1,12 +1,12 @@
 package com.atlas.reader.data.backup
 
 import android.net.Uri
-import dev.zacsweers.metro.Inject
+import atlas.domain.source.service.SourceManager
 import com.atlas.reader.data.backup.models.BackupTracking
 import com.atlas.reader.data.track.TrackerManager
+import dev.zacsweers.metro.Inject
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.protobuf.ProtoNumber
-import atlas.domain.source.service.SourceManager
 
 @Inject
 class BackupFileValidator(

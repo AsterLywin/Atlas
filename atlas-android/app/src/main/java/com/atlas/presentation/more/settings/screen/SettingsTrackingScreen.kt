@@ -39,7 +39,15 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import dev.icerock.moko.resources.StringResource
+import atlas.app.di.appGraph
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.automirroredrounded.Help
+import atlas.icons.materialsymbols.rounded.Close
+import atlas.icons.materialsymbols.roundedfilled.Visibility
+import atlas.icons.materialsymbols.roundedfilled.VisibilityOff
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.domain.track.model.AutoTrackState
 import com.atlas.presentation.more.settings.Preference
 import com.atlas.reader.data.track.EnhancedTracker
@@ -53,18 +61,10 @@ import com.atlas.reader.data.track.myanimelist.MyAnimeListApi
 import com.atlas.reader.data.track.shikimori.ShikimoriApi
 import com.atlas.reader.util.system.openInBrowser
 import com.atlas.reader.util.system.toast
+import dev.icerock.moko.resources.StringResource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import atlas.app.di.appGraph
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.automirroredrounded.Help
-import atlas.icons.materialsymbols.rounded.Close
-import atlas.icons.materialsymbols.roundedfilled.Visibility
-import atlas.icons.materialsymbols.roundedfilled.VisibilityOff
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
 
 object SettingsTrackingScreen : SearchableSettings {
 

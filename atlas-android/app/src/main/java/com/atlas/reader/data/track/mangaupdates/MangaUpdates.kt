@@ -1,6 +1,6 @@
 package com.atlas.reader.data.track.mangaupdates
 
-import dev.icerock.moko.resources.StringResource
+import atlas.i18n.MR
 import com.atlas.reader.R
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.BaseTracker
@@ -8,7 +8,7 @@ import com.atlas.reader.data.track.DeletableTracker
 import com.atlas.reader.data.track.mangaupdates.dto.MUListItem
 import com.atlas.reader.data.track.mangaupdates.dto.MURating
 import com.atlas.reader.data.track.model.TrackSearch
-import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
 import atlas.domain.track.model.Track as DomainTrack
 
 class MangaUpdates(id: Long) : BaseTracker(id, "MangaUpdates"), DeletableTracker {

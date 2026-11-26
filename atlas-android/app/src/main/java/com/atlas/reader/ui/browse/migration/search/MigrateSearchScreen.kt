@@ -3,15 +3,15 @@ package com.atlas.reader.ui.browse.migration.search
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import atlas.feature.migration.dialog.MigrateMangaDialog
+import atlas.feature.migration.list.MigrationListScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import com.atlas.presentation.browse.MigrateSearchScreen
 import com.atlas.presentation.util.Screen
 import com.atlas.reader.ui.browse.source.globalsearch.SearchViewModel
 import com.atlas.reader.ui.manga.MangaScreen
-import atlas.feature.migration.dialog.MigrateMangaDialog
-import atlas.feature.migration.list.MigrationListScreen
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 
 class MigrateSearchScreen(private val mangaId: Long) : Screen() {
 

@@ -6,9 +6,9 @@ import androidx.compose.material3.SmallExtendedFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Add
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.shouldExpandFAB
 

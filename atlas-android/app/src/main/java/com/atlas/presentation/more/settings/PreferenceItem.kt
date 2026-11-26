@@ -18,6 +18,10 @@ import androidx.compose.runtime.structuralEqualityPolicy
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import atlas.core.common.i18n.stringResource
+import atlas.i18n.MR
+import atlas.presentation.core.components.BaseSliderItem
+import atlas.presentation.core.util.collectAsState
 import com.atlas.presentation.more.settings.widget.EditTextPreferenceWidget
 import com.atlas.presentation.more.settings.widget.InfoWidget
 import com.atlas.presentation.more.settings.widget.ListPreferenceWidget
@@ -31,10 +35,6 @@ import com.atlas.presentation.more.settings.widget.TrackingPreferenceWidget
 import com.atlas.reader.data.track.RefreshResult
 import com.atlas.reader.util.system.toast
 import kotlinx.coroutines.launch
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
-import atlas.presentation.core.components.BaseSliderItem
-import atlas.presentation.core.util.collectAsState
 
 val LocalPreferenceHighlighted = compositionLocalOf(structuralEqualityPolicy()) { false }
 val LocalPreferenceMinHeight = compositionLocalOf(structuralEqualityPolicy()) { 56.dp }

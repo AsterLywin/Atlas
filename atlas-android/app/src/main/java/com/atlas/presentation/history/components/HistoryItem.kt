@@ -20,17 +20,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
+import atlas.domain.history.model.HistoryWithRelations
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Delete
+import atlas.icons.materialsymbols.rounded.Favorite
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.presentation.manga.components.MangaCover
 import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import com.atlas.presentation.util.formatChapterNumber
 import com.atlas.reader.util.lang.toTimestampString
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Delete
-import atlas.icons.materialsymbols.rounded.Favorite
-import atlas.domain.history.model.HistoryWithRelations
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 

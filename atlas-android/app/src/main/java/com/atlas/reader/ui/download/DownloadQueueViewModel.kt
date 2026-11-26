@@ -3,12 +3,12 @@ package com.atlas.reader.ui.download
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.atlas.reader.data.download.DownloadManager
+import com.atlas.reader.data.download.model.Download
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metrox.viewmodel.ViewModelKey
-import com.atlas.reader.data.download.DownloadManager
-import com.atlas.reader.data.download.model.Download
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

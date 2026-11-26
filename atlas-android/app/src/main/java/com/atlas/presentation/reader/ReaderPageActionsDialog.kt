@@ -14,16 +14,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.components.AdaptiveSheet
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.ContentCopy
 import atlas.icons.materialsymbols.rounded.Photo
 import atlas.icons.materialsymbols.rounded.Save
 import atlas.icons.materialsymbols.rounded.Share
-import atlas.i18n.MR
 import atlas.presentation.core.components.ActionButton
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.components.AdaptiveSheet
 
 @Composable
 fun ReaderPageActionsDialog(

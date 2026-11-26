@@ -7,10 +7,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import com.atlas.reader.ui.reader.setting.ReaderPreferences
-import com.atlas.reader.ui.reader.setting.ReaderSettingsViewModel
-import com.atlas.reader.ui.reader.setting.ReadingMode
-import com.atlas.reader.util.system.hasDisplayCutout
 import atlas.i18n.MR
 import atlas.presentation.core.components.CheckboxItem
 import atlas.presentation.core.components.SettingsChipRow
@@ -18,6 +14,10 @@ import atlas.presentation.core.components.SliderItem
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import com.atlas.reader.ui.reader.setting.ReaderPreferences
+import com.atlas.reader.ui.reader.setting.ReaderSettingsViewModel
+import com.atlas.reader.ui.reader.setting.ReadingMode
+import com.atlas.reader.util.system.hasDisplayCutout
 
 private val themes = listOf(
     MR.strings.black_background to 1,

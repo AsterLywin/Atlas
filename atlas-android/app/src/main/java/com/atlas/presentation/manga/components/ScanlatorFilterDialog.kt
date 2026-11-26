@@ -24,10 +24,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.CheckBoxOutlineBlank
 import atlas.icons.materialsymbols.roundedfilled.DisabledByDefault
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.TextButton
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource

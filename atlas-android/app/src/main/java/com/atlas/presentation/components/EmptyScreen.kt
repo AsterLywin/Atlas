@@ -3,13 +3,13 @@ package com.atlas.presentation.components
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.Help
 import atlas.icons.materialsymbols.rounded.Refresh
-import atlas.i18n.MR
 import atlas.presentation.core.screens.EmptyScreen
 import atlas.presentation.core.screens.EmptyScreenAction
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
 
 @PreviewLightDark
 @Composable

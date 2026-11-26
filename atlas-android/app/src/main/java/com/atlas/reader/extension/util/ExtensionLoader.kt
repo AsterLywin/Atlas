@@ -6,6 +6,11 @@ import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.content.pm.PackageInfoCompat
+import atlas.app.di.appGraph
+import atlas.core.common.util.system.logcat
+import atlas.data.dalvik.DelegateLastClassLoaderCompat
+import atlas.domain.extension.model.ContentWarning
+import atlas.domain.extension.model.ExtensionStore
 import com.atlas.domain.extension.interactor.TrustExtension
 import com.atlas.reader.extension.model.Extension
 import com.atlas.reader.source.Source
@@ -18,11 +23,6 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.app.di.appGraph
-import atlas.data.dalvik.DelegateLastClassLoaderCompat
-import atlas.domain.extension.model.ContentWarning
-import atlas.domain.extension.model.ExtensionStore
-import atlas.core.common.util.system.logcat
 import java.io.File
 import java.io.IOException
 

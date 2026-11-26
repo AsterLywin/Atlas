@@ -40,17 +40,17 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.core.app.ActivityCompat
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.roundedfilled.CheckCircle
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.util.secondaryItemAlpha
 import com.atlas.domain.ui.model.AppTheme
 import com.atlas.presentation.manga.components.MangaCover
 import com.atlas.presentation.theme.TachiyomiTheme
 import com.atlas.reader.util.system.DeviceUtil
 import com.atlas.reader.util.system.isDynamicColorAvailable
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.roundedfilled.CheckCircle
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.util.secondaryItemAlpha
 
 @Composable
 internal fun AppThemePreferenceWidget(

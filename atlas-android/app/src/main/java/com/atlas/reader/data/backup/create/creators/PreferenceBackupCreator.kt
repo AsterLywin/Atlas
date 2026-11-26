@@ -1,6 +1,8 @@
 package com.atlas.reader.data.backup.create.creators
 
-import dev.zacsweers.metro.Inject
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.PreferenceStore
+import atlas.domain.source.service.SourceManager
 import com.atlas.reader.data.backup.models.BackupPreference
 import com.atlas.reader.data.backup.models.BackupSourcePreferences
 import com.atlas.reader.data.backup.models.BooleanPreferenceValue
@@ -12,9 +14,7 @@ import com.atlas.reader.data.backup.models.StringSetPreferenceValue
 import com.atlas.reader.source.ConfigurableSource
 import com.atlas.reader.source.preferenceKey
 import com.atlas.reader.source.sourcePreferences
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.PreferenceStore
-import atlas.domain.source.service.SourceManager
+import dev.zacsweers.metro.Inject
 
 @Inject
 class PreferenceBackupCreator(

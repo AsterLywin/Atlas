@@ -51,18 +51,18 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import kotlinx.coroutines.flow.drop
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.ArrowBack
 import atlas.icons.materialsymbols.rounded.Close
 import atlas.icons.materialsymbols.rounded.MoreVert
 import atlas.icons.materialsymbols.rounded.Search
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.clearFocusOnSoftKeyboardHide
 import atlas.presentation.core.util.runOnEnterKeyPressed
 import atlas.presentation.core.util.secondaryItemAlpha
 import atlas.presentation.core.util.showSoftKeyboard
+import kotlinx.coroutines.flow.drop
 
 @Composable
 fun AppBar(

@@ -6,17 +6,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.util.fastMap
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.presentation.core.screens.LoadingScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.category.CategoryScreen
 import com.atlas.presentation.category.components.CategoryCreateDialog
 import com.atlas.presentation.category.components.CategoryDeleteDialog
 import com.atlas.presentation.category.components.CategoryRenameDialog
 import com.atlas.presentation.util.Screen
 import com.atlas.reader.util.system.toast
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 import kotlinx.coroutines.flow.collectLatest
-import atlas.presentation.core.screens.LoadingScreen
 
 class CategoryScreen : Screen() {
 

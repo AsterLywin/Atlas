@@ -3,13 +3,13 @@ package com.atlas.presentation.reader.appbars
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.components.AppBarActions
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Bookmark
 import atlas.icons.materialsymbols.roundedfilled.Bookmark
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.components.AppBarActions
 
 @Composable
 fun ReaderTopBar(

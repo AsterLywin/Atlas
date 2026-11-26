@@ -1,7 +1,7 @@
 package com.atlas.domain.ui.model
 
-import dev.icerock.moko.resources.StringResource
 import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
 
 enum class TimeFormat(val titleRes: StringResource) {
     FOLLOW_LANGUAGE(MR.strings.follow_language),

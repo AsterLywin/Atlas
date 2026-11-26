@@ -1,18 +1,18 @@
 package com.atlas.domain.source.service
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import com.atlas.domain.source.interactor.SetMigrateSorting
-import com.atlas.reader.util.system.LocaleHelper
-import atlas.domain.extension.model.ContentWarning
-import atlas.domain.migration.models.MigrationFlag
 import atlas.core.common.preference.Preference
 import atlas.core.common.preference.PreferenceStore
 import atlas.core.common.preference.getEnum
 import atlas.core.common.preference.getEnumSet
 import atlas.core.common.preference.getLongArray
+import atlas.domain.extension.model.ContentWarning
 import atlas.domain.library.model.LibraryDisplayMode
+import atlas.domain.migration.models.MigrationFlag
+import com.atlas.domain.source.interactor.SetMigrateSorting
+import com.atlas.reader.util.system.LocaleHelper
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 
 @Inject
 @SingleIn(AppScope::class)

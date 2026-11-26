@@ -17,9 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.EditNote
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.Button
 import atlas.presentation.core.components.material.ButtonDefaults
 import atlas.presentation.core.components.material.padding

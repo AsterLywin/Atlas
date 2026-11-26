@@ -22,6 +22,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.core.net.toUri
+import atlas.app.di.appGraph
+import atlas.core.common.util.system.ImageUtil
+import atlas.core.common.util.system.logcat
+import atlas.domain.library.service.LibraryPreferences
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.util.collectAsState
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.domain.base.BasePreferences
@@ -54,14 +61,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.app.di.appGraph
 import okhttp3.Headers
-import atlas.core.common.util.system.ImageUtil
-import atlas.core.common.util.system.logcat
-import atlas.domain.library.service.LibraryPreferences
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.util.collectAsState
 import java.io.File
 
 object SettingsAdvancedScreen : SearchableSettings {

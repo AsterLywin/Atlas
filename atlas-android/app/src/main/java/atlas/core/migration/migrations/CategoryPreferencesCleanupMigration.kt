@@ -1,15 +1,15 @@
 package atlas.core.migration.migrations
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoSet
-import dev.zacsweers.metro.Inject
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import atlas.core.migration.Migration
 import atlas.core.migration.MigrationContext
 import atlas.domain.category.interactor.GetCategories
 import atlas.domain.download.service.DownloadPreferences
 import atlas.domain.library.service.LibraryPreferences
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoSet
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 @Inject
 @ContributesIntoSet(AppScope::class)

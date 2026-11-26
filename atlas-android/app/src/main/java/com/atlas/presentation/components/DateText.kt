@@ -4,14 +4,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLocale
+import atlas.app.di.appGraph
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.domain.ui.UiPreferences
 import com.atlas.reader.util.lang.toRelativeString
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
-import atlas.app.di.appGraph
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 import kotlin.time.Instant
 
 @Composable

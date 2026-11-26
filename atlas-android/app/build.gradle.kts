@@ -1,12 +1,12 @@
-import com.android.build.api.variant.ApplicationVariant
-import com.android.build.api.variant.BuildConfigField
-import com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsExtension
 import atlas.gradle.Config
 import atlas.gradle.getCurrentTime
 import atlas.gradle.getLatestCommitCount
 import atlas.gradle.getLatestCommitSha
 import atlas.gradle.getLatestCommitTime
 import atlas.gradle.tasks.ReplaceShortcutsPlaceholderTask
+import com.android.build.api.variant.ApplicationVariant
+import com.android.build.api.variant.BuildConfigField
+import com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsExtension
 import java.io.FileInputStream
 import java.util.Properties
 

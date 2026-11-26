@@ -1,13 +1,13 @@
 package atlas.core.migration.migrations
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoSet
-import dev.zacsweers.metro.Inject
-import com.atlas.domain.source.service.SourcePreferences
+import atlas.core.common.preference.PreferenceStore
 import atlas.core.migration.Migration
 import atlas.core.migration.MigrationContext
 import atlas.domain.extension.model.ContentWarning
-import atlas.core.common.preference.PreferenceStore
+import com.atlas.domain.source.service.SourcePreferences
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoSet
+import dev.zacsweers.metro.Inject
 
 @Inject
 @ContributesIntoSet(AppScope::class)

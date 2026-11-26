@@ -6,8 +6,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.core.metro.AppCoroutineScope
+import atlas.domain.manga.interactor.UpdateMangaNotes
+import atlas.domain.manga.model.Manga
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.manga.MangaNotesScreen
+import com.atlas.presentation.util.Screen
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
@@ -16,17 +21,12 @@ import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
 import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
-import com.atlas.presentation.manga.MangaNotesScreen
-import com.atlas.presentation.util.Screen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import atlas.core.metro.AppCoroutineScope
-import atlas.domain.manga.interactor.UpdateMangaNotes
-import atlas.domain.manga.model.Manga
 
 class MangaNotesScreen(
     private val manga: Manga,

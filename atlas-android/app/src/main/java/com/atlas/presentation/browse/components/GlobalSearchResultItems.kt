@@ -20,10 +20,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.ArrowForward
 import atlas.icons.materialsymbols.roundedfilled.Error
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 

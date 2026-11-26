@@ -8,17 +8,17 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkerParameters
-import dev.zacsweers.metro.Inject
+import atlas.app.di.AppGraph
+import atlas.core.common.util.system.logcat
+import atlas.core.metro.metroGraph
+import atlas.domain.track.interactor.GetTracks
 import com.atlas.domain.track.interactor.TrackChapter
 import com.atlas.domain.track.store.DelayedTrackingStore
 import com.atlas.reader.util.system.workManager
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.app.di.AppGraph
-import atlas.core.metro.metroGraph
-import atlas.core.common.util.system.logcat
-import atlas.domain.track.interactor.GetTracks
 import java.util.concurrent.TimeUnit
 
 class DelayedTrackingUpdateWorker(private val context: Context, workerParams: WorkerParameters) :

@@ -18,18 +18,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.atlas.domain.source.interactor.SetMigrateSorting
-import com.atlas.presentation.browse.components.BaseSourceItem
-import com.atlas.presentation.browse.components.SourceIcon
-import com.atlas.reader.ui.browse.migration.sources.MigrateSourceViewModel
-import com.atlas.reader.util.system.copyToClipboard
+import atlas.domain.source.model.Source
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.ArrowDownward
 import atlas.icons.materialsymbols.rounded.ArrowUpward
 import atlas.icons.materialsymbols.rounded.Numbers
 import atlas.icons.materialsymbols.rounded.SortByAlpha
-import atlas.domain.source.model.Source
-import atlas.i18n.MR
 import atlas.presentation.core.components.Badge
 import atlas.presentation.core.components.BadgeGroup
 import atlas.presentation.core.components.ScrollbarLazyColumn
@@ -42,6 +37,11 @@ import atlas.presentation.core.screens.LoadingScreen
 import atlas.presentation.core.theme.header
 import atlas.presentation.core.util.plus
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.domain.source.interactor.SetMigrateSorting
+import com.atlas.presentation.browse.components.BaseSourceItem
+import com.atlas.presentation.browse.components.SourceIcon
+import com.atlas.reader.ui.browse.migration.sources.MigrateSourceViewModel
+import com.atlas.reader.util.system.copyToClipboard
 
 @Composable
 fun MigrateSourceScreen(

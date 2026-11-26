@@ -2,6 +2,15 @@ package com.atlas.reader.data.track.anilist
 
 import android.net.Uri
 import androidx.core.net.toUri
+import atlas.core.common.util.system.logcat
+import atlas.graphql.anilist.AniListAddMangaMutation
+import atlas.graphql.anilist.AniListDeleteMangaMutation
+import atlas.graphql.anilist.AniListGetCurrentUserQuery
+import atlas.graphql.anilist.AniListGetLibMangaQuery
+import atlas.graphql.anilist.AniListGetMangaDetailsQuery
+import atlas.graphql.anilist.AniListSearchMangaQuery
+import atlas.graphql.anilist.AniListUpdateMangaMutation
+import atlas.graphql.anilist.type.FuzzyDateInput
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Optional
 import com.apollographql.apollo.network.okHttpClient
@@ -14,16 +23,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.number
 import kotlinx.datetime.toLocalDateTime
-import atlas.graphql.anilist.AniListAddMangaMutation
-import atlas.graphql.anilist.AniListDeleteMangaMutation
-import atlas.graphql.anilist.AniListGetCurrentUserQuery
-import atlas.graphql.anilist.AniListGetLibMangaQuery
-import atlas.graphql.anilist.AniListGetMangaDetailsQuery
-import atlas.graphql.anilist.AniListSearchMangaQuery
-import atlas.graphql.anilist.AniListUpdateMangaMutation
-import atlas.graphql.anilist.type.FuzzyDateInput
 import okhttp3.OkHttpClient
-import atlas.core.common.util.system.logcat
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Instant
 import atlas.domain.track.model.Track as DomainTrack

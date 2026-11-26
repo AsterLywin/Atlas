@@ -3,6 +3,20 @@ package atlas.feature.migration.list
 import androidx.annotation.FloatRange
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.core.common.util.system.logcat
+import atlas.domain.chapter.interactor.GetChapterSummaryByMangaId
+import atlas.domain.manga.interactor.GetManga
+import atlas.domain.manga.interactor.NetworkToLocalManga
+import atlas.domain.manga.model.Manga
+import atlas.domain.migration.usecases.MigrateMangaUseCase
+import atlas.domain.source.interactor.UpdateMangaFromRemote
+import atlas.domain.source.service.SourceManager
+import atlas.feature.migration.list.models.MigratingManga
+import atlas.feature.migration.list.models.MigratingManga.SearchResult
+import atlas.feature.migration.list.search.SmartSourceSearchEngine
+import com.atlas.domain.source.service.SourcePreferences
+import com.atlas.reader.source.Source
+import com.atlas.reader.source.getNameForMangaInfo
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
@@ -10,9 +24,6 @@ import dev.zacsweers.metro.AssistedInject
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactoryKey
-import com.atlas.domain.source.service.SourcePreferences
-import com.atlas.reader.source.Source
-import com.atlas.reader.source.getNameForMangaInfo
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -32,17 +43,6 @@ import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.domain.migration.usecases.MigrateMangaUseCase
-import atlas.domain.source.interactor.UpdateMangaFromRemote
-import atlas.feature.migration.list.models.MigratingManga
-import atlas.feature.migration.list.models.MigratingManga.SearchResult
-import atlas.feature.migration.list.search.SmartSourceSearchEngine
-import atlas.core.common.util.system.logcat
-import atlas.domain.chapter.interactor.GetChapterSummaryByMangaId
-import atlas.domain.manga.interactor.GetManga
-import atlas.domain.manga.interactor.NetworkToLocalManga
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.service.SourceManager
 
 @AssistedInject
 class MigrationListViewModel(

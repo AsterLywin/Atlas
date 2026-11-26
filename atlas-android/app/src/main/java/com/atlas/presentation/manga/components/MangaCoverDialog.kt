@@ -33,6 +33,17 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.updatePadding
+import atlas.domain.manga.model.Manga
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Close
+import atlas.icons.materialsymbols.rounded.Edit
+import atlas.icons.materialsymbols.rounded.Save
+import atlas.icons.materialsymbols.rounded.Share
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.util.clickableNoIndication
+import atlas.source.local.isLocal
 import coil3.asDrawable
 import coil3.imageLoader
 import coil3.request.CachePolicy
@@ -43,17 +54,6 @@ import com.atlas.presentation.components.AppBarActions
 import com.atlas.presentation.components.DropdownMenu
 import com.atlas.presentation.manga.EditCoverAction
 import com.atlas.reader.ui.reader.viewer.ReaderPageImageView
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Close
-import atlas.icons.materialsymbols.rounded.Edit
-import atlas.icons.materialsymbols.rounded.Save
-import atlas.icons.materialsymbols.rounded.Share
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.util.clickableNoIndication
-import atlas.source.local.isLocal
 
 @Composable
 fun MangaCoverDialog(

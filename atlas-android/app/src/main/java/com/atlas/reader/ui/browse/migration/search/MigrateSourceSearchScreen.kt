@@ -15,9 +15,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalUriHandler
+import atlas.core.common.Constants
+import atlas.domain.manga.model.Manga
+import atlas.feature.migration.dialog.MigrateMangaDialog
+import atlas.feature.migration.list.MigrationListScreen
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.FilterList
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.LoadingScreen
+import atlas.presentation.core.util.collectAsLazyPagingItems
+import atlas.source.local.LocalSource
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import com.atlas.presentation.browse.BrowseSourceContent
 import com.atlas.presentation.components.SearchToolbar
 import com.atlas.presentation.util.Screen
@@ -27,19 +38,8 @@ import com.atlas.reader.ui.browse.source.browse.SourceFilterDialog
 import com.atlas.reader.ui.home.HomeScreen
 import com.atlas.reader.ui.manga.MangaScreen
 import com.atlas.reader.ui.webview.WebViewScreen
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 import kotlinx.coroutines.launch
-import atlas.feature.migration.dialog.MigrateMangaDialog
-import atlas.feature.migration.list.MigrationListScreen
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.FilterList
-import atlas.presentation.core.util.collectAsLazyPagingItems
-import atlas.core.common.Constants
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.LoadingScreen
-import atlas.source.local.LocalSource
 
 data class MigrateSourceSearchScreen(
     private val currentManga: Manga,

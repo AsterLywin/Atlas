@@ -3,6 +3,14 @@ package com.atlas.reader.ui.category
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.core.metro.AppCoroutineScope
+import atlas.domain.category.interactor.CreateCategoryWithName
+import atlas.domain.category.interactor.DeleteCategory
+import atlas.domain.category.interactor.GetCategories
+import atlas.domain.category.interactor.RenameCategory
+import atlas.domain.category.interactor.ReorderCategory
+import atlas.domain.category.model.Category
+import atlas.i18n.MR
 import dev.icerock.moko.resources.StringResource
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
@@ -21,14 +29,6 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import atlas.core.metro.AppCoroutineScope
-import atlas.domain.category.interactor.CreateCategoryWithName
-import atlas.domain.category.interactor.DeleteCategory
-import atlas.domain.category.interactor.GetCategories
-import atlas.domain.category.interactor.RenameCategory
-import atlas.domain.category.interactor.ReorderCategory
-import atlas.domain.category.model.Category
-import atlas.i18n.MR
 import kotlin.time.Duration.Companion.seconds
 
 @Inject

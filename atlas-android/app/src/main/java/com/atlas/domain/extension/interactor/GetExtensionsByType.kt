@@ -1,10 +1,10 @@
 package com.atlas.domain.extension.interactor
 
-import dev.zacsweers.metro.Inject
 import com.atlas.domain.extension.model.Extensions
 import com.atlas.domain.source.service.SourcePreferences
 import com.atlas.reader.extension.ExtensionManager
 import com.atlas.reader.extension.model.Extension
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 

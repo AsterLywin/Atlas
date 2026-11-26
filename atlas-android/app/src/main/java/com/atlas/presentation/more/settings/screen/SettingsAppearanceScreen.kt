@@ -9,6 +9,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLocale
 import androidx.core.app.ActivityCompat
+import atlas.app.di.appGraph
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.util.collectAsState
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.domain.ui.UiPreferences
@@ -25,10 +29,6 @@ import com.atlas.reader.util.system.toast
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toJavaLocalDateTime
 import kotlinx.datetime.toLocalDateTime
-import atlas.app.di.appGraph
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.util.collectAsState
 import kotlin.time.Clock
 
 object SettingsAppearanceScreen : SearchableSettings {

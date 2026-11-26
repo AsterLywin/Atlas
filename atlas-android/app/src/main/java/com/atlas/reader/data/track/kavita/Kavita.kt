@@ -1,6 +1,8 @@
 package com.atlas.reader.data.track.kavita
 
-import dev.icerock.moko.resources.StringResource
+import atlas.domain.manga.model.Manga
+import atlas.domain.source.service.SourceManager
+import atlas.i18n.MR
 import com.atlas.reader.R
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.BaseTracker
@@ -9,10 +11,8 @@ import com.atlas.reader.data.track.model.TrackSearch
 import com.atlas.reader.source.ConfigurableSource
 import com.atlas.reader.source.Source
 import com.atlas.reader.source.sourcePreferences
+import dev.icerock.moko.resources.StringResource
 import kotlinx.coroutines.runBlocking
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.service.SourceManager
-import atlas.i18n.MR
 import java.security.MessageDigest
 import atlas.domain.track.model.Track as DomainTrack
 

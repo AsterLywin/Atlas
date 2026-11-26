@@ -17,16 +17,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.browse.components.BaseSourceItem
-import com.atlas.reader.ui.browse.source.SourcesViewModel
-import com.atlas.reader.ui.browse.source.browse.BrowseSourceViewModel.Listing
-import com.atlas.reader.util.system.LocaleHelper
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Keep
-import atlas.icons.materialsymbols.roundedfilled.Keep
 import atlas.domain.source.model.Pin
 import atlas.domain.source.model.Source
 import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Keep
+import atlas.icons.materialsymbols.roundedfilled.Keep
 import atlas.presentation.core.components.ScrollbarLazyColumn
 import atlas.presentation.core.components.material.SECONDARY_ALPHA
 import atlas.presentation.core.components.material.padding
@@ -37,6 +33,10 @@ import atlas.presentation.core.screens.LoadingScreen
 import atlas.presentation.core.theme.header
 import atlas.presentation.core.util.plus
 import atlas.source.local.isLocal
+import com.atlas.presentation.browse.components.BaseSourceItem
+import com.atlas.reader.ui.browse.source.SourcesViewModel
+import com.atlas.reader.ui.browse.source.browse.BrowseSourceViewModel.Listing
+import com.atlas.reader.util.system.LocaleHelper
 
 @Composable
 fun SourcesScreen(

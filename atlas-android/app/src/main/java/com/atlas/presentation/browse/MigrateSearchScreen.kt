@@ -2,12 +2,12 @@ package com.atlas.presentation.browse
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
+import atlas.domain.manga.model.Manga
+import atlas.presentation.core.components.material.Scaffold
 import com.atlas.presentation.browse.components.GlobalSearchToolbar
 import com.atlas.reader.source.Source
 import com.atlas.reader.ui.browse.source.globalsearch.SearchViewModel
 import com.atlas.reader.ui.browse.source.globalsearch.SourceFilter
-import atlas.domain.manga.model.Manga
-import atlas.presentation.core.components.material.Scaffold
 
 @Composable
 fun MigrateSearchScreen(

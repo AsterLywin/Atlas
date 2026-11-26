@@ -45,6 +45,20 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.util.fastAll
 import androidx.compose.ui.util.fastAny
 import androidx.compose.ui.util.fastMap
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.library.service.LibraryPreferences
+import atlas.domain.manga.model.Manga
+import atlas.domain.source.model.StubSource
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.roundedfilled.PlayArrow
+import atlas.presentation.core.components.TwoPanelBox
+import atlas.presentation.core.components.VerticalFastScroller
+import atlas.presentation.core.components.material.PullRefresh
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.util.shouldExpandFAB
+import atlas.source.local.isLocal
 import com.atlas.presentation.components.relativeDateText
 import com.atlas.presentation.manga.components.ChapterDownloadAction
 import com.atlas.presentation.manga.components.ChapterHeader
@@ -61,20 +75,6 @@ import com.atlas.reader.source.getNameForMangaInfo
 import com.atlas.reader.ui.manga.ChapterList
 import com.atlas.reader.ui.manga.MangaViewModel
 import com.atlas.reader.util.system.copyToClipboard
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.roundedfilled.PlayArrow
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.library.service.LibraryPreferences
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.model.StubSource
-import atlas.i18n.MR
-import atlas.presentation.core.components.TwoPanelBox
-import atlas.presentation.core.components.VerticalFastScroller
-import atlas.presentation.core.components.material.PullRefresh
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.util.shouldExpandFAB
-import atlas.source.local.isLocal
 import kotlin.time.Instant
 
 @Composable

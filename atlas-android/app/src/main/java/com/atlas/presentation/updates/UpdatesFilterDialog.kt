@@ -22,10 +22,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEachIndexed
-import com.atlas.presentation.category.visualName
-import com.atlas.presentation.components.TabbedDialog
-import com.atlas.presentation.components.TabbedDialogPaddings
-import com.atlas.reader.ui.updates.UpdatesSettingsViewModel
 import atlas.core.common.preference.TriState
 import atlas.core.common.preference.getAndSet
 import atlas.domain.updates.service.UpdatesPreferences
@@ -36,6 +32,10 @@ import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.LoadingScreen
 import atlas.presentation.core.util.collectAsState
+import com.atlas.presentation.category.visualName
+import com.atlas.presentation.components.TabbedDialog
+import com.atlas.presentation.components.TabbedDialogPaddings
+import com.atlas.reader.ui.updates.UpdatesSettingsViewModel
 
 @Composable
 fun UpdatesFilterDialog(

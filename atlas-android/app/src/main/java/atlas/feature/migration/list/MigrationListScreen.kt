@@ -7,17 +7,17 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
-import com.atlas.presentation.util.Screen
-import com.atlas.reader.ui.browse.migration.search.MigrateSearchScreen
-import com.atlas.reader.ui.manga.MangaScreen
-import com.atlas.reader.util.system.toast
 import atlas.feature.migration.list.components.MigrationExitDialog
 import atlas.feature.migration.list.components.MigrationMangaDialog
 import atlas.feature.migration.list.components.MigrationProgressDialog
 import atlas.i18n.MR
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.util.Screen
+import com.atlas.reader.ui.browse.migration.search.MigrateSearchScreen
+import com.atlas.reader.ui.manga.MangaScreen
+import com.atlas.reader.util.system.toast
+import dev.zacsweers.metrox.viewmodel.assistedMetroViewModel
 
 class MigrationListScreen(private val mangaIds: Collection<Long>, private val extraSearchQuery: String?) : Screen() {
 

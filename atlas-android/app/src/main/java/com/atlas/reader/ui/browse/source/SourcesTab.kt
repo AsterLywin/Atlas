@@ -4,23 +4,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.FilterList
+import atlas.icons.materialsymbols.rounded.TravelExplore
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.browse.SourceOptionsDialog
 import com.atlas.presentation.browse.SourcesScreen
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.components.TabContent
 import com.atlas.reader.ui.browse.source.browse.BrowseSourceScreen
 import com.atlas.reader.ui.browse.source.globalsearch.GlobalSearchScreen
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.FilterList
-import atlas.icons.materialsymbols.rounded.TravelExplore
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 
 @Composable
 fun Screen.sourcesTab(): TabContent {

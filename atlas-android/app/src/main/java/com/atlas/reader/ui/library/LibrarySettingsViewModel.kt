@@ -2,15 +2,6 @@ package com.atlas.reader.ui.library
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoMap
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metrox.viewmodel.ViewModelKey
-import com.atlas.domain.base.BasePreferences
-import com.atlas.reader.data.track.TrackerManager
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.launch
 import atlas.core.common.preference.Preference
 import atlas.core.common.preference.TriState
 import atlas.core.common.preference.getAndSet
@@ -20,6 +11,15 @@ import atlas.domain.category.model.Category
 import atlas.domain.library.model.LibraryDisplayMode
 import atlas.domain.library.model.LibrarySort
 import atlas.domain.library.service.LibraryPreferences
+import com.atlas.domain.base.BasePreferences
+import com.atlas.reader.data.track.TrackerManager
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoMap
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metrox.viewmodel.ViewModelKey
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.seconds
 
 @Inject

@@ -1,8 +1,8 @@
 package com.atlas.reader.data.backup.models
 
+import atlas.domain.extension.model.ExtensionStore
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.protobuf.ProtoNumber
-import atlas.domain.extension.model.ExtensionStore
 
 @Serializable
 class BackupExtensionStore(

@@ -1,6 +1,12 @@
 package com.atlas.domain.manga.model
 
 import android.content.Context
+import atlas.app.di.appGraph
+import atlas.core.common.preference.TriState
+import atlas.core.metadata.comicinfo.ComicInfo
+import atlas.core.metadata.comicinfo.ComicInfoPublishingStatus
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.manga.model.Manga
 import com.atlas.reader.data.cache.CoverCache
 import com.atlas.reader.source.model.SManga
 import com.atlas.reader.ui.reader.setting.ReaderOrientation
@@ -8,12 +14,6 @@ import com.atlas.reader.ui.reader.setting.ReadingMode
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.number
 import kotlinx.datetime.toLocalDateTime
-import atlas.app.di.appGraph
-import atlas.core.common.preference.TriState
-import atlas.core.metadata.comicinfo.ComicInfo
-import atlas.core.metadata.comicinfo.ComicInfoPublishingStatus
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.manga.model.Manga
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 

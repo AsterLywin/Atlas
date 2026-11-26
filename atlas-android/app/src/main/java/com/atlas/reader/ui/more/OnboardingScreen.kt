@@ -5,6 +5,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import atlas.app.di.appGraph
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.util.collectAsState
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.presentation.more.onboarding.OnboardingScreen
@@ -12,9 +15,6 @@ import com.atlas.presentation.more.settings.screen.SearchableSettings
 import com.atlas.presentation.more.settings.screen.SettingsDataScreen
 import com.atlas.presentation.util.Screen
 import com.atlas.reader.ui.setting.SettingsScreen
-import atlas.app.di.appGraph
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.util.collectAsState
 
 class OnboardingScreen : Screen() {
 

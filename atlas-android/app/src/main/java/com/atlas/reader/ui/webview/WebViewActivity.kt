@@ -9,7 +9,11 @@ import android.widget.Toast
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.produceState
 import androidx.core.net.toUri
-import dev.zacsweers.metro.Inject
+import atlas.app.di.appGraph
+import atlas.core.common.util.system.logcat
+import atlas.domain.source.service.SourceManager
+import atlas.i18n.MR
+import atlas.presentation.core.screens.LoadingScreen
 import com.atlas.presentation.webview.WebViewScreenContent
 import com.atlas.reader.R
 import com.atlas.reader.network.NetworkHelper
@@ -21,15 +25,11 @@ import com.atlas.reader.util.system.toShareIntent
 import com.atlas.reader.util.system.toWebViewHeaders
 import com.atlas.reader.util.system.toast
 import com.atlas.reader.util.view.setComposeContent
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.app.di.appGraph
 import okhttp3.HttpUrl.Companion.toHttpUrl
-import atlas.core.common.util.system.logcat
-import atlas.domain.source.service.SourceManager
-import atlas.i18n.MR
-import atlas.presentation.core.screens.LoadingScreen
 
 class WebViewActivity : BaseActivity() {
 

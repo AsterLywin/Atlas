@@ -7,17 +7,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.fragment.app.FragmentActivity
+import atlas.app.di.appGraph
+import atlas.core.common.i18n.stringResource
+import atlas.domain.extension.model.ContentWarning
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.pluralStringResource
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.presentation.more.settings.Preference
 import com.atlas.presentation.more.settings.screen.browse.ExtensionStoresScreen
 import com.atlas.reader.util.system.AuthenticatorUtil.authenticate
-import atlas.app.di.appGraph
-import atlas.domain.extension.model.ContentWarning
-import atlas.core.common.i18n.stringResource
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.pluralStringResource
-import atlas.presentation.core.i18n.stringResource
 
 object SettingsBrowseScreen : SearchableSettings {
 

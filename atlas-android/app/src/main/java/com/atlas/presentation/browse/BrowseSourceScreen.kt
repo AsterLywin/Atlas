@@ -12,6 +12,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
+import atlas.core.common.i18n.stringResource
+import atlas.domain.library.model.LibraryDisplayMode
+import atlas.domain.manga.model.Manga
+import atlas.domain.source.model.StubSource
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.automirroredrounded.Help
+import atlas.icons.materialsymbols.rounded.Public
+import atlas.icons.materialsymbols.rounded.Refresh
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.EmptyScreen
+import atlas.presentation.core.screens.EmptyScreenAction
+import atlas.presentation.core.screens.LoadingScreen
+import atlas.source.local.LocalSource
 import com.atlas.presentation.browse.components.BrowseSourceComfortableGrid
 import com.atlas.presentation.browse.components.BrowseSourceCompactGrid
 import com.atlas.presentation.browse.components.BrowseSourceList
@@ -19,21 +34,6 @@ import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.util.formattedMessage
 import com.atlas.reader.source.Source
 import kotlinx.coroutines.flow.StateFlow
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.automirroredrounded.Help
-import atlas.icons.materialsymbols.rounded.Public
-import atlas.icons.materialsymbols.rounded.Refresh
-import atlas.core.common.i18n.stringResource
-import atlas.domain.library.model.LibraryDisplayMode
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.model.StubSource
-import atlas.i18n.MR
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.EmptyScreen
-import atlas.presentation.core.screens.EmptyScreenAction
-import atlas.presentation.core.screens.LoadingScreen
-import atlas.source.local.LocalSource
 
 @Composable
 fun BrowseSourceContent(

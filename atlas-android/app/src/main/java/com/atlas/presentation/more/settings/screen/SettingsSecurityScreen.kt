@@ -6,18 +6,18 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.fragment.app.FragmentActivity
-import com.atlas.presentation.more.settings.Preference
-import com.atlas.reader.core.security.PrivacyPreferences
-import com.atlas.reader.core.security.SecurityPreferences
-import com.atlas.reader.util.system.AuthenticatorUtil.authenticate
-import com.atlas.reader.util.system.AuthenticatorUtil.isAuthenticationSupported
-import com.atlas.reader.util.system.telemetryIncluded
 import atlas.app.di.appGraph
 import atlas.core.common.i18n.stringResource
 import atlas.i18n.MR
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import com.atlas.presentation.more.settings.Preference
+import com.atlas.reader.core.security.PrivacyPreferences
+import com.atlas.reader.core.security.SecurityPreferences
+import com.atlas.reader.util.system.AuthenticatorUtil.authenticate
+import com.atlas.reader.util.system.AuthenticatorUtil.isAuthenticationSupported
+import com.atlas.reader.util.system.telemetryIncluded
 
 object SettingsSecurityScreen : SearchableSettings {
 

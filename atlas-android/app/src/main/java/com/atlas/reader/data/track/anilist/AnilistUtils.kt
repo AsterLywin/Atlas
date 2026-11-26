@@ -1,5 +1,12 @@
 package com.atlas.reader.data.track.anilist
 
+import atlas.graphql.anilist.AniListGetCurrentUserQuery
+import atlas.graphql.anilist.AniListGetLibMangaQuery
+import atlas.graphql.anilist.AniListGetMangaDetailsQuery
+import atlas.graphql.anilist.AniListSearchMangaQuery
+import atlas.graphql.anilist.fragment.MangaFragment
+import atlas.graphql.anilist.type.MediaListStatus
+import atlas.graphql.anilist.type.ScoreFormat
 import com.atlas.domain.track.service.TrackPreferences
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.anilist.dto.ALUser
@@ -8,13 +15,6 @@ import com.atlas.reader.util.lang.htmlDecode
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.atStartOfDayIn
-import atlas.graphql.anilist.AniListGetCurrentUserQuery
-import atlas.graphql.anilist.AniListGetLibMangaQuery
-import atlas.graphql.anilist.AniListGetMangaDetailsQuery
-import atlas.graphql.anilist.AniListSearchMangaQuery
-import atlas.graphql.anilist.fragment.MangaFragment
-import atlas.graphql.anilist.type.MediaListStatus
-import atlas.graphql.anilist.type.ScoreFormat
 import atlas.domain.track.model.Track as DomainTrack
 
 internal fun AniListGetCurrentUserQuery.Viewer.toALUser(): ALUser {

@@ -21,21 +21,21 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
-import com.atlas.presentation.util.Screen
+import atlas.core.common.Constants
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.OpenInNew
 import atlas.icons.simpleicons.Discord
 import atlas.icons.simpleicons.OpenCollective
 import atlas.icons.simpleicons.Patreon
 import atlas.icons.simpleicons.SimpleIcons
-import atlas.core.common.Constants
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
+import com.atlas.presentation.util.Screen
 
 class SupportUsScreen : Screen() {
 

@@ -2,6 +2,7 @@ package com.atlas.reader.data.coil
 
 import android.graphics.Bitmap
 import android.graphics.Matrix
+import atlas.core.common.util.system.ImageUtil
 import coil3.Canvas
 import coil3.Image
 import coil3.ImageLoader
@@ -16,7 +17,6 @@ import coil3.request.bitmapConfig
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
 import okio.BufferedSource
-import atlas.core.common.util.system.ImageUtil
 import tachiyomi.decoder.ImageDecoder
 import kotlin.math.min
 import kotlin.math.sqrt

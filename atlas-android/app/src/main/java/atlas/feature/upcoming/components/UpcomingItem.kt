@@ -14,10 +14,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.manga.components.MangaCover
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.asMangaCover
 import atlas.presentation.core.components.material.padding
+import com.atlas.presentation.manga.components.MangaCover
 
 private val UpcomingItemHeight = 96.dp
 

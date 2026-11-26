@@ -5,9 +5,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.atlas.reader.ui.library.LibraryItem
 import atlas.domain.library.model.LibraryManga
 import atlas.domain.manga.model.MangaCover
+import com.atlas.reader.ui.library.LibraryItem
 
 @Composable
 internal fun LibraryCompactGrid(

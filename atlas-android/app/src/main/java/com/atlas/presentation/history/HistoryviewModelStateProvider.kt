@@ -1,11 +1,11 @@
 package com.atlas.presentation.history
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
+import atlas.domain.history.model.HistoryWithRelations
+import atlas.domain.manga.model.MangaCover
 import com.atlas.reader.ui.history.HistoryViewModel
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
-import atlas.domain.history.model.HistoryWithRelations
-import atlas.domain.manga.model.MangaCover
 import kotlin.random.Random
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.days

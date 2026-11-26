@@ -8,16 +8,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.feature.support.SupportUsScreen
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoMap
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metrox.viewmodel.ViewModelKey
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.core.preference.asState
 import com.atlas.domain.base.BasePreferences
 import com.atlas.presentation.more.MoreScreen
@@ -29,15 +27,17 @@ import com.atlas.reader.ui.category.CategoryScreen
 import com.atlas.reader.ui.download.DownloadQueueScreen
 import com.atlas.reader.ui.setting.SettingsScreen
 import com.atlas.reader.ui.stats.StatsScreen
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoMap
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metrox.viewmodel.ViewModelKey
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
-import atlas.feature.support.SupportUsScreen
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 
 data object MoreTab : Tab {
 

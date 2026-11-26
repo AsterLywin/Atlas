@@ -29,24 +29,24 @@ import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.automirroredrounded.Sort
+import atlas.icons.materialsymbols.roundedfilled.Pause
+import atlas.icons.materialsymbols.roundedfilled.PlayArrow
+import atlas.presentation.core.components.Pill
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.EmptyScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.components.AppBarActions
 import com.atlas.presentation.components.DropdownMenu
 import com.atlas.presentation.components.NestedMenuItem
 import com.atlas.presentation.download.DownloadQueueList
 import com.atlas.presentation.util.Screen
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.automirroredrounded.Sort
-import atlas.icons.materialsymbols.roundedfilled.Pause
-import atlas.icons.materialsymbols.roundedfilled.PlayArrow
-import atlas.i18n.MR
-import atlas.presentation.core.components.Pill
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.EmptyScreen
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 
 object DownloadQueueScreen : Screen() {
 

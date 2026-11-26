@@ -29,6 +29,16 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import atlas.domain.updates.model.UpdatesWithRelations
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.roundedfilled.Bookmark
+import atlas.icons.materialsymbols.roundedfilled.Circle
+import atlas.presentation.core.components.ListGroupHeader
+import atlas.presentation.core.components.material.DISABLED_ALPHA
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.util.selectedBackground
 import com.atlas.presentation.components.relativeDateText
 import com.atlas.presentation.manga.components.ChapterDownloadAction
 import com.atlas.presentation.manga.components.ChapterDownloadIndicator
@@ -37,16 +47,6 @@ import com.atlas.presentation.manga.components.MangaCover
 import com.atlas.presentation.util.relativeTimeSpanString
 import com.atlas.reader.data.download.model.Download
 import com.atlas.reader.ui.updates.UpdatesItem
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.roundedfilled.Bookmark
-import atlas.icons.materialsymbols.roundedfilled.Circle
-import atlas.domain.updates.model.UpdatesWithRelations
-import atlas.i18n.MR
-import atlas.presentation.core.components.ListGroupHeader
-import atlas.presentation.core.components.material.DISABLED_ALPHA
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.util.selectedBackground
 
 internal fun LazyListScope.updatesLastUpdatedItem(
     lastUpdated: Long,

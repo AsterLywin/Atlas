@@ -10,12 +10,16 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.core.common.i18n.stringResource
+import atlas.domain.chapter.model.Chapter
+import atlas.feature.migration.dialog.MigrateMangaDialog
+import atlas.i18n.MR
+import atlas.presentation.core.i18n.stringResource
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.category.components.ChangeCategoryDialog
 import com.atlas.presentation.history.HistoryScreen
 import com.atlas.presentation.history.components.HistoryDeleteAllDialog
@@ -27,14 +31,10 @@ import com.atlas.reader.ui.category.CategoryScreen
 import com.atlas.reader.ui.main.MainActivity
 import com.atlas.reader.ui.manga.MangaScreen
 import com.atlas.reader.ui.reader.ReaderActivity
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.receiveAsFlow
-import atlas.feature.migration.dialog.MigrateMangaDialog
-import atlas.core.common.i18n.stringResource
-import atlas.domain.chapter.model.Chapter
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 
 data object HistoryTab : Tab {
 

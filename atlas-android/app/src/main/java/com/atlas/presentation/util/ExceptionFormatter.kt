@@ -1,12 +1,12 @@
 package com.atlas.presentation.util
 
 import android.content.Context
-import com.atlas.reader.network.HttpException
-import com.atlas.reader.util.system.isOnline
 import atlas.core.common.i18n.stringResource
 import atlas.data.source.NoResultsException
 import atlas.domain.source.model.SourceNotInstalledException
 import atlas.i18n.MR
+import com.atlas.reader.network.HttpException
+import com.atlas.reader.util.system.isOnline
 import java.net.UnknownHostException
 
 context(context: Context)

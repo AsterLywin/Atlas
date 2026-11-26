@@ -1,5 +1,15 @@
 package com.atlas.reader.data.track.kitsu
 
+import atlas.core.common.util.system.logcat
+import atlas.graphql.kitsu.KitsuAddLibMangaMutation
+import atlas.graphql.kitsu.KitsuDeleteLibEntryMutation
+import atlas.graphql.kitsu.KitsuFindLibMangaQuery
+import atlas.graphql.kitsu.KitsuGetCurrentAccountQuery
+import atlas.graphql.kitsu.KitsuGetMangaDetailsByIdQuery
+import atlas.graphql.kitsu.KitsuGetMangaDetailsBySlugQuery
+import atlas.graphql.kitsu.KitsuSearchMangaByTitleQuery
+import atlas.graphql.kitsu.KitsuUpdateLibMangaMutation
+import atlas.graphql.kitsu.type.MangaSubtypeEnum
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Optional
 import com.apollographql.apollo.network.okHttpClient
@@ -15,19 +25,9 @@ import com.atlas.reader.network.parseAs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
-import atlas.graphql.kitsu.KitsuAddLibMangaMutation
-import atlas.graphql.kitsu.KitsuDeleteLibEntryMutation
-import atlas.graphql.kitsu.KitsuFindLibMangaQuery
-import atlas.graphql.kitsu.KitsuGetCurrentAccountQuery
-import atlas.graphql.kitsu.KitsuGetMangaDetailsByIdQuery
-import atlas.graphql.kitsu.KitsuGetMangaDetailsBySlugQuery
-import atlas.graphql.kitsu.KitsuSearchMangaByTitleQuery
-import atlas.graphql.kitsu.KitsuUpdateLibMangaMutation
-import atlas.graphql.kitsu.type.MangaSubtypeEnum
 import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
-import atlas.core.common.util.system.logcat
 import uy.kohesive.injekt.injectLazy
 import kotlin.time.Instant
 import atlas.domain.track.model.Track as DomainTrack

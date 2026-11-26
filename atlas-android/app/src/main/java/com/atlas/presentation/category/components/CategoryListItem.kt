@@ -12,15 +12,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import atlas.domain.category.model.Category
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Delete
 import atlas.icons.materialsymbols.rounded.DragHandle
 import atlas.icons.materialsymbols.rounded.Edit
-import sh.calvin.reorderable.ReorderableCollectionItemScope
-import atlas.domain.category.model.Category
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import sh.calvin.reorderable.ReorderableCollectionItemScope
 
 @Composable
 fun ReorderableCollectionItemScope.CategoryListItem(

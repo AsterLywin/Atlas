@@ -2,7 +2,6 @@ package com.atlas.reader.util
 
 import android.content.Context
 import android.os.Build
-import dev.zacsweers.metro.Inject
 import com.atlas.domain.base.BasePreferences
 import com.atlas.reader.BuildConfig
 import com.atlas.reader.extension.ExtensionManager
@@ -13,6 +12,7 @@ import com.atlas.reader.util.system.WebViewUtil
 import com.atlas.reader.util.system.createFileInCacheDir
 import com.atlas.reader.util.system.toShareIntent
 import com.atlas.reader.util.system.toast
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.datetime.TimeZone

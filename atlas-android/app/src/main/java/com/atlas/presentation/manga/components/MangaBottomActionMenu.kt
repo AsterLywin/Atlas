@@ -43,13 +43,7 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.components.DownloadDropdownMenu
-import com.atlas.presentation.components.DropdownMenu
-import com.atlas.presentation.manga.DownloadAction
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.isActive
-import kotlinx.coroutines.launch
+import atlas.i18n.MR
 import atlas.icons.custommaterialsymbols.CustomMaterialSymbols
 import atlas.icons.custommaterialsymbols.rounded.DonePrevious
 import atlas.icons.materialsymbols.MaterialSymbols
@@ -62,8 +56,14 @@ import atlas.icons.materialsymbols.rounded.Download
 import atlas.icons.materialsymbols.rounded.MoreVert
 import atlas.icons.materialsymbols.rounded.RemoveDone
 import atlas.icons.materialsymbols.rounded.SwapCalls
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.components.DownloadDropdownMenu
+import com.atlas.presentation.components.DropdownMenu
+import com.atlas.presentation.manga.DownloadAction
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.seconds
 
 @Composable

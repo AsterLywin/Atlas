@@ -1,11 +1,19 @@
 package atlas.app.di
 
 import android.content.Context
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.DependencyGraph
-import dev.zacsweers.metro.Provides
-import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
-import dev.zacsweers.metrox.viewmodel.ViewModelGraph
+import atlas.core.metro.IsDebugBuild
+import atlas.domain.backup.service.BackupPreferences
+import atlas.domain.category.interactor.GetCategories
+import atlas.domain.category.interactor.ResetCategoryFlags
+import atlas.domain.download.service.DownloadPreferences
+import atlas.domain.extension.interactor.GetExtensionStoreCountAsFlow
+import atlas.domain.extension.repository.ExtensionStoreRepository
+import atlas.domain.library.service.LibraryPreferences
+import atlas.domain.manga.interactor.GetFavorites
+import atlas.domain.manga.interactor.ResetViewerFlags
+import atlas.domain.source.service.SourceManager
+import atlas.domain.storage.service.StoragePreferences
+import atlas.domain.track.interactor.UpsertTrack
 import com.atlas.domain.base.BasePreferences
 import com.atlas.domain.extension.interactor.TrustExtension
 import com.atlas.domain.source.service.SourcePreferences
@@ -40,22 +48,14 @@ import com.atlas.reader.ui.reader.setting.ReaderPreferences
 import com.atlas.reader.ui.setting.track.BaseOAuthLoginActivity
 import com.atlas.reader.ui.webview.WebViewActivity
 import com.atlas.reader.util.CrashLogUtil
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.DependencyGraph
+import dev.zacsweers.metro.Provides
+import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
+import dev.zacsweers.metrox.viewmodel.ViewModelGraph
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.protobuf.ProtoBuf
-import atlas.core.metro.IsDebugBuild
-import atlas.domain.extension.interactor.GetExtensionStoreCountAsFlow
-import atlas.domain.extension.repository.ExtensionStoreRepository
 import nl.adaptivity.xmlutil.serialization.XML
-import atlas.domain.backup.service.BackupPreferences
-import atlas.domain.category.interactor.GetCategories
-import atlas.domain.category.interactor.ResetCategoryFlags
-import atlas.domain.download.service.DownloadPreferences
-import atlas.domain.library.service.LibraryPreferences
-import atlas.domain.manga.interactor.GetFavorites
-import atlas.domain.manga.interactor.ResetViewerFlags
-import atlas.domain.source.service.SourceManager
-import atlas.domain.storage.service.StoragePreferences
-import atlas.domain.track.interactor.UpsertTrack
 
 @DependencyGraph(
     scope = AppScope::class,

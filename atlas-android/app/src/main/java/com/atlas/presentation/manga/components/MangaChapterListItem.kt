@@ -26,8 +26,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.atlas.reader.data.download.model.Download
-import me.saket.swipe.SwipeableActionsBox
+import atlas.domain.library.service.LibraryPreferences
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.BookmarkAdd
 import atlas.icons.materialsymbols.rounded.BookmarkRemove
@@ -38,12 +38,12 @@ import atlas.icons.materialsymbols.rounded.FileDownloadOff
 import atlas.icons.materialsymbols.rounded.RemoveDone
 import atlas.icons.materialsymbols.roundedfilled.Bookmark
 import atlas.icons.materialsymbols.roundedfilled.Circle
-import atlas.domain.library.service.LibraryPreferences
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.DISABLED_ALPHA
 import atlas.presentation.core.components.material.SECONDARY_ALPHA
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.selectedBackground
+import com.atlas.reader.data.download.model.Download
+import me.saket.swipe.SwipeableActionsBox
 
 @Composable
 fun MangaChapterListItem(

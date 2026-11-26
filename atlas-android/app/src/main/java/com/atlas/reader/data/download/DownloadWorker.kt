@@ -11,20 +11,20 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import dev.zacsweers.metro.Inject
+import atlas.app.di.AppGraph
+import atlas.core.metro.metroGraph
+import atlas.domain.download.service.DownloadPreferences
+import atlas.i18n.R
 import com.atlas.reader.data.notification.Notifications
 import com.atlas.reader.util.system.activeNetworkState
 import com.atlas.reader.util.system.notificationBuilder
 import com.atlas.reader.util.system.setForegroundSafely
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
-import atlas.app.di.AppGraph
-import atlas.core.metro.metroGraph
-import atlas.domain.download.service.DownloadPreferences
-import atlas.i18n.R
 import kotlin.time.Duration.Companion.seconds
 
 /**

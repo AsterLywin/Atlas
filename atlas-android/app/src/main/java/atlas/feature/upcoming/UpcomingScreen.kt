@@ -18,14 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEachIndexed
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.metroViewModel
-import com.atlas.presentation.category.visualName
-import com.atlas.presentation.components.TabbedDialog
-import com.atlas.presentation.components.TabbedDialogPaddings
-import com.atlas.presentation.util.Screen
-import com.atlas.reader.ui.manga.MangaScreen
 import atlas.core.common.preference.TriState
 import atlas.i18n.MR
 import atlas.presentation.core.components.SettingsItemsPaddings
@@ -34,6 +26,14 @@ import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.LoadingScreen
 import atlas.presentation.core.util.collectAsState
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.category.visualName
+import com.atlas.presentation.components.TabbedDialog
+import com.atlas.presentation.components.TabbedDialogPaddings
+import com.atlas.presentation.util.Screen
+import com.atlas.reader.ui.manga.MangaScreen
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 
 class UpcomingScreen : Screen() {
 

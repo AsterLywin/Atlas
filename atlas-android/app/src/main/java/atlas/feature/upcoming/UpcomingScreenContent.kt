@@ -17,6 +17,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
+import atlas.core.common.Constants
+import atlas.domain.manga.model.Manga
+import atlas.feature.upcoming.components.UpcomingItem
+import atlas.feature.upcoming.components.calendar.Calendar
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.automirroredrounded.Help
+import atlas.icons.materialsymbols.rounded.FilterList
+import atlas.presentation.core.components.FastScrollLazyColumn
+import atlas.presentation.core.components.TwoPanelBox
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.theme.active
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.atlas.presentation.components.AppBar
@@ -26,20 +40,6 @@ import com.atlas.presentation.util.isTabletUi
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.YearMonth
-import atlas.feature.upcoming.components.UpcomingItem
-import atlas.feature.upcoming.components.calendar.Calendar
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.automirroredrounded.Help
-import atlas.icons.materialsymbols.rounded.FilterList
-import atlas.core.common.Constants
-import atlas.domain.manga.model.Manga
-import atlas.i18n.MR
-import atlas.presentation.core.components.FastScrollLazyColumn
-import atlas.presentation.core.components.TwoPanelBox
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.theme.active
 
 @Composable
 fun UpcomingScreenContent(

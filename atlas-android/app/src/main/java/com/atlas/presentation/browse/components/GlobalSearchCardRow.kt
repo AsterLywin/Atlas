@@ -14,14 +14,14 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.library.components.CommonMangaItemDefaults
-import com.atlas.presentation.library.components.MangaComfortableGridItem
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.MangaCover
 import atlas.domain.manga.model.asMangaCover
 import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.library.components.CommonMangaItemDefaults
+import com.atlas.presentation.library.components.MangaComfortableGridItem
 
 @Composable
 fun GlobalSearchCardRow(

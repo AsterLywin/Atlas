@@ -2,6 +2,10 @@ package com.atlas.reader.data.track.shikimori
 
 import android.net.Uri
 import androidx.core.net.toUri
+import atlas.graphql.shikimori.ShikimoriGetCurrentUserQuery
+import atlas.graphql.shikimori.ShikimoriGetLibMangaQuery
+import atlas.graphql.shikimori.ShikimoriGetMangaDetailsQuery
+import atlas.graphql.shikimori.ShikimoriSearchMangaQuery
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.network.okHttpClient
 import com.atlas.reader.data.database.models.Track
@@ -22,10 +26,6 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonObject
-import atlas.graphql.shikimori.ShikimoriGetCurrentUserQuery
-import atlas.graphql.shikimori.ShikimoriGetLibMangaQuery
-import atlas.graphql.shikimori.ShikimoriGetMangaDetailsQuery
-import atlas.graphql.shikimori.ShikimoriSearchMangaQuery
 import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody.Companion.toRequestBody

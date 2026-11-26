@@ -12,21 +12,21 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import dev.zacsweers.metro.Inject
+import atlas.app.di.AppGraph
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.core.metro.metroGraph
+import atlas.i18n.MR
 import com.atlas.reader.data.backup.BackupNotifier
 import com.atlas.reader.data.notification.Notifications
 import com.atlas.reader.util.system.cancelNotification
 import com.atlas.reader.util.system.isRunning
 import com.atlas.reader.util.system.setForegroundSafely
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.app.di.AppGraph
-import atlas.core.metro.metroGraph
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 
 class BackupRestoreWorker(private val context: Context, workerParams: WorkerParameters) :
     CoroutineWorker(context, workerParams) {

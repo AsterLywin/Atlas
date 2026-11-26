@@ -13,6 +13,18 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLocale
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.tooling.preview.PreviewParameter
+import atlas.app.di.appGraph
+import atlas.domain.history.model.HistoryWithRelations
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.DeleteSweep
+import atlas.presentation.core.components.FastScrollLazyColumn
+import atlas.presentation.core.components.ListGroupHeader
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.EmptyScreen
+import atlas.presentation.core.screens.LoadingScreen
+import atlas.presentation.core.util.collectAsState
 import com.atlas.domain.ui.UiPreferences
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.components.AppBarActions
@@ -24,18 +36,6 @@ import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import com.atlas.presentation.util.rememberIs24HourSystem
 import com.atlas.reader.ui.history.HistoryViewModel
 import kotlinx.datetime.LocalDate
-import atlas.app.di.appGraph
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.DeleteSweep
-import atlas.domain.history.model.HistoryWithRelations
-import atlas.i18n.MR
-import atlas.presentation.core.components.FastScrollLazyColumn
-import atlas.presentation.core.components.ListGroupHeader
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.EmptyScreen
-import atlas.presentation.core.screens.LoadingScreen
-import atlas.presentation.core.util.collectAsState
 
 @Composable
 fun HistoryScreen(

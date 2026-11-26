@@ -1,9 +1,13 @@
 package com.atlas.reader.extension
 
 import android.content.Context
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
+import atlas.core.common.util.system.logcat
+import atlas.core.metro.AppCoroutineScope
+import atlas.domain.extension.interactor.UpdateExtensionStores
+import atlas.domain.extension.model.ExtensionStore
+import atlas.domain.extension.repository.ExtensionStoreRepository
+import atlas.domain.source.model.StubSource
+import atlas.i18n.MR
 import com.atlas.domain.extension.interactor.TrustExtension
 import com.atlas.domain.source.service.SourcePreferences
 import com.atlas.reader.extension.api.ExtensionUpdateNotifier
@@ -13,6 +17,9 @@ import com.atlas.reader.extension.util.ExtensionInstallReceiver
 import com.atlas.reader.extension.util.ExtensionInstaller
 import com.atlas.reader.extension.util.ExtensionLoader
 import com.atlas.reader.util.system.toast
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -34,13 +41,6 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import logcat.LogPriority
-import atlas.core.metro.AppCoroutineScope
-import atlas.domain.extension.interactor.UpdateExtensionStores
-import atlas.domain.extension.model.ExtensionStore
-import atlas.domain.extension.repository.ExtensionStoreRepository
-import atlas.core.common.util.system.logcat
-import atlas.domain.source.model.StubSource
-import atlas.i18n.MR
 import java.util.Locale
 
 /**

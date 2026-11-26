@@ -1,5 +1,7 @@
 package com.atlas.reader.data.download
 
+import atlas.core.common.preference.InMemoryPreferenceStore
+import atlas.domain.library.service.LibraryPreferences
 import com.atlas.reader.util.lang.Hash.md5
 import com.atlas.reader.util.storage.DiskUtil
 import io.kotest.matchers.collections.shouldContain
@@ -8,8 +10,6 @@ import io.mockk.mockk
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
-import atlas.core.common.preference.InMemoryPreferenceStore
-import atlas.domain.library.service.LibraryPreferences
 
 class DownloadProviderTest {
 

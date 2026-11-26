@@ -23,15 +23,15 @@ import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.atlas.presentation.components.SearchToolbar
-import com.atlas.reader.ui.browse.source.globalsearch.SourceFilter
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.DoneAll
 import atlas.icons.materialsymbols.rounded.FilterList
 import atlas.icons.materialsymbols.rounded.Keep
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.components.SearchToolbar
+import com.atlas.reader.ui.browse.source.globalsearch.SourceFilter
 
 @Composable
 fun GlobalSearchToolbar(

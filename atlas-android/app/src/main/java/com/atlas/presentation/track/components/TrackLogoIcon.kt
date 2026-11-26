@@ -10,9 +10,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
+import atlas.presentation.core.util.clickableNoIndication
 import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import com.atlas.reader.data.track.Tracker
-import atlas.presentation.core.util.clickableNoIndication
 
 @Composable
 fun TrackLogoIcon(

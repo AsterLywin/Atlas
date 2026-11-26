@@ -65,18 +65,12 @@ import androidx.compose.ui.text.toLowerCase
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.components.DropdownMenu
-import com.atlas.presentation.manga.components.MangaCover
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
-import com.atlas.reader.data.track.model.TrackSearch
-import com.atlas.reader.util.system.openInBrowser
-import kotlinx.coroutines.launch
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.ArrowBack
 import atlas.icons.materialsymbols.rounded.Close
 import atlas.icons.materialsymbols.roundedfilled.CheckCircle
 import atlas.icons.materialsymbols.roundedfilled.VisibilityOff
-import atlas.i18n.MR
 import atlas.presentation.core.components.ScrollbarLazyColumn
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.components.material.padding
@@ -86,6 +80,12 @@ import atlas.presentation.core.screens.LoadingScreen
 import atlas.presentation.core.util.plus
 import atlas.presentation.core.util.runOnEnterKeyPressed
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.presentation.components.DropdownMenu
+import com.atlas.presentation.manga.components.MangaCover
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import com.atlas.reader.data.track.model.TrackSearch
+import com.atlas.reader.util.system.openInBrowser
+import kotlinx.coroutines.launch
 
 @Composable
 fun TrackerSearch(

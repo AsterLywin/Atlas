@@ -34,16 +34,16 @@ import androidx.core.net.toUri
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.atlas.presentation.util.rememberRequestPackageInstallsPermissionState
-import com.atlas.reader.util.system.launchRequestPackageInstallsPermission
-import com.atlas.reader.util.system.telemetryIncluded
 import atlas.app.di.appGraph
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Check
-import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
 import atlas.presentation.core.util.secondaryItemAlpha
+import com.atlas.presentation.util.rememberRequestPackageInstallsPermissionState
+import com.atlas.reader.util.system.launchRequestPackageInstallsPermission
+import com.atlas.reader.util.system.telemetryIncluded
 
 internal class PermissionStep : OnboardingStep {
 

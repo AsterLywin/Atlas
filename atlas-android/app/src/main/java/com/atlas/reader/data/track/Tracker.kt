@@ -2,9 +2,9 @@ package com.atlas.reader.data.track
 
 import androidx.annotation.CallSuper
 import androidx.annotation.DrawableRes
-import dev.icerock.moko.resources.StringResource
 import com.atlas.reader.data.database.models.Track
 import com.atlas.reader.data.track.model.TrackSearch
+import dev.icerock.moko.resources.StringResource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow

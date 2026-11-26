@@ -19,6 +19,20 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.util.fastAll
 import androidx.compose.ui.util.fastAny
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.CalendarMonth
+import atlas.icons.materialsymbols.rounded.FilterList
+import atlas.icons.materialsymbols.rounded.FlipToBack
+import atlas.icons.materialsymbols.rounded.Refresh
+import atlas.icons.materialsymbols.rounded.SelectAll
+import atlas.presentation.core.components.FastScrollLazyColumn
+import atlas.presentation.core.components.material.PullRefresh
+import atlas.presentation.core.components.material.Scaffold
+import atlas.presentation.core.i18n.stringResource
+import atlas.presentation.core.screens.EmptyScreen
+import atlas.presentation.core.screens.LoadingScreen
+import atlas.presentation.core.theme.active
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.components.AppBarActions
 import com.atlas.presentation.manga.components.ChapterDownloadAction
@@ -29,20 +43,6 @@ import com.atlas.reader.ui.updates.UpdatesViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.CalendarMonth
-import atlas.icons.materialsymbols.rounded.FilterList
-import atlas.icons.materialsymbols.rounded.FlipToBack
-import atlas.icons.materialsymbols.rounded.Refresh
-import atlas.icons.materialsymbols.rounded.SelectAll
-import atlas.i18n.MR
-import atlas.presentation.core.components.FastScrollLazyColumn
-import atlas.presentation.core.components.material.PullRefresh
-import atlas.presentation.core.components.material.Scaffold
-import atlas.presentation.core.i18n.stringResource
-import atlas.presentation.core.screens.EmptyScreen
-import atlas.presentation.core.screens.LoadingScreen
-import atlas.presentation.core.theme.active
 import kotlin.time.Duration.Companion.seconds
 
 @Composable

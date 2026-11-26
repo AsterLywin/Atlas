@@ -7,6 +7,7 @@ import androidx.compose.material3.MaterialExpressiveTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import atlas.app.di.appGraph
 import com.atlas.domain.ui.model.AppTheme
 import com.atlas.presentation.theme.colorscheme.BaseColorScheme
 import com.atlas.presentation.theme.colorscheme.CatppuccinColorScheme
@@ -24,7 +25,6 @@ import com.atlas.presentation.theme.colorscheme.TidalWaveColorScheme
 import com.atlas.presentation.theme.colorscheme.TokyoNightColorScheme
 import com.atlas.presentation.theme.colorscheme.YinYangColorScheme
 import com.atlas.presentation.theme.colorscheme.YotsubaColorScheme
-import atlas.app.di.appGraph
 
 @Composable
 fun TachiyomiTheme(

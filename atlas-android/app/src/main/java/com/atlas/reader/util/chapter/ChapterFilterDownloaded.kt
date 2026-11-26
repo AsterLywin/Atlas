@@ -1,9 +1,9 @@
 package com.atlas.reader.util.chapter
 
-import com.atlas.reader.data.download.DownloadCache
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.manga.model.Manga
 import atlas.source.local.isLocal
+import com.atlas.reader.data.download.DownloadCache
 
 /**
  * Returns a copy of the list with not downloaded chapters removed.

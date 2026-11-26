@@ -5,9 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.core.net.toUri
+import atlas.core.common.Constants
 import com.atlas.reader.extension.util.ExtensionInstaller
 import com.atlas.reader.ui.main.MainActivity
-import atlas.core.common.Constants
 
 /**
  * Class that manages [PendingIntent] of activity's

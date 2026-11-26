@@ -27,24 +27,24 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.util.fastForEach
-import com.atlas.core.util.fastFilterNot
-import com.atlas.domain.source.service.SourcePreferences
-import com.atlas.presentation.components.AdaptiveSheet
-import atlas.domain.migration.models.MigrationFlag
-import atlas.feature.common.utils.getLabel
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Check
-import atlas.icons.materialsymbols.roundedfilled.Warning
 import atlas.core.common.preference.Preference
 import atlas.core.common.preference.getAndSet
 import atlas.core.common.preference.toggle
+import atlas.domain.migration.models.MigrationFlag
+import atlas.feature.common.utils.getLabel
 import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Check
+import atlas.icons.materialsymbols.roundedfilled.Warning
 import atlas.presentation.core.components.material.Button
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.theme.active
 import atlas.presentation.core.theme.header
 import atlas.presentation.core.util.collectAsState
+import com.atlas.core.util.fastFilterNot
+import com.atlas.domain.source.service.SourcePreferences
+import com.atlas.presentation.components.AdaptiveSheet
 
 @Composable
 fun MigrationConfigScreenSheet(

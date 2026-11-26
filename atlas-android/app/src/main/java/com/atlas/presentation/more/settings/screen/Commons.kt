@@ -3,10 +3,10 @@ package com.atlas.presentation.more.settings.screen
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.platform.LocalContext
-import com.atlas.presentation.category.visualName
 import atlas.domain.category.model.Category
 import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.category.visualName
 
 /**
  * Returns a string of categories name for settings subtitle

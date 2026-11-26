@@ -18,18 +18,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.atlas.presentation.manga.components.MarkdownRender
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
-import com.atlas.reader.ui.more.NewUpdateScreenModel
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.OpenInNew
 import atlas.icons.materialsymbols.rounded.UpdateDisabled
 import atlas.icons.materialsymbols.rounded.Verified
-import org.intellij.markdown.flavours.gfm.GFMFlavourDescriptor
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.InfoScreen
+import com.atlas.presentation.manga.components.MarkdownRender
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
+import com.atlas.reader.ui.more.NewUpdateScreenModel
+import org.intellij.markdown.flavours.gfm.GFMFlavourDescriptor
 
 @Composable
 fun NewUpdateScreen(

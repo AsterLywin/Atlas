@@ -4,9 +4,9 @@ import androidx.annotation.IntRange
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.atlas.reader.data.track.Tracker
 import atlas.i18n.MR
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.reader.data.track.Tracker
 import atlas.core.common.preference.Preference as PreferenceData
 
 sealed class Preference {

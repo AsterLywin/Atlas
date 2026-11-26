@@ -1,14 +1,14 @@
 package com.atlas.domain.base
 
 import android.content.Context
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.PreferenceStore
+import atlas.i18n.MR
+import com.atlas.reader.util.system.GLUtil
 import dev.icerock.moko.resources.StringResource
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.util.system.GLUtil
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.PreferenceStore
-import atlas.i18n.MR
 
 @Inject
 @SingleIn(AppScope::class)

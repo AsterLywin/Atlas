@@ -11,6 +11,8 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.WebtoonLayoutManager
+import atlas.app.di.appGraph
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.ui.reader.ReaderActivity
 import com.atlas.reader.ui.reader.model.ChapterTransition
 import com.atlas.reader.ui.reader.model.ReaderPage
@@ -19,8 +21,6 @@ import com.atlas.reader.ui.reader.viewer.Viewer
 import com.atlas.reader.ui.reader.viewer.ViewerNavigation.NavigationRegion
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
-import atlas.app.di.appGraph
-import atlas.core.common.util.system.logcat
 import kotlin.math.max
 import kotlin.math.min
 

@@ -1,7 +1,7 @@
 package com.atlas.reader.data.backup.create
 
-import dev.icerock.moko.resources.StringResource
 import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
 
 data class BackupOptions(
     val libraryEntries: Boolean = true,

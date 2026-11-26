@@ -1,15 +1,15 @@
 package atlas.core.migration.migrations
 
+import atlas.core.common.preference.PreferenceStore
+import atlas.core.migration.Migration
+import atlas.core.migration.MigrationContext
+import com.atlas.reader.ui.reader.setting.ReaderPreferences
+import com.atlas.reader.ui.reader.setting.ReadingMode
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoSet
 import dev.zacsweers.metro.Inject
-import com.atlas.reader.ui.reader.setting.ReaderPreferences
-import com.atlas.reader.ui.reader.setting.ReadingMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import atlas.core.migration.Migration
-import atlas.core.migration.MigrationContext
-import atlas.core.common.preference.PreferenceStore
 
 @Inject
 @ContributesIntoSet(AppScope::class)

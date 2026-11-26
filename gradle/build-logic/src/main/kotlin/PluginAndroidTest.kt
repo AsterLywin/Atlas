@@ -1,6 +1,6 @@
 import atlas.gradle.extensions.alias
-import atlas.gradle.extensions.libs
 import atlas.gradle.extensions.atlasx
+import atlas.gradle.extensions.libs
 import atlas.gradle.extensions.plugins
 import org.gradle.api.Plugin
 import org.gradle.api.Project

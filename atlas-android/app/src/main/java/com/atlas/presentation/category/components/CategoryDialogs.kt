@@ -25,13 +25,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import com.atlas.core.preference.asToggleableState
-import com.atlas.presentation.category.visualName
 import atlas.core.common.preference.CheckboxState
 import atlas.domain.category.model.Category
 import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.core.preference.asToggleableState
+import com.atlas.presentation.category.visualName
 
 @Composable
 fun CategoryCreateDialog(

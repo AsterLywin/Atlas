@@ -1,6 +1,12 @@
 package com.atlas.reader.data.track.suwayomi
 
 import android.content.SharedPreferences
+import atlas.domain.source.service.SourceManager
+import atlas.graphql.suwayomi.SuwayomiGetMangaQuery
+import atlas.graphql.suwayomi.SuwayomiGetMangaUnreadChaptersQuery
+import atlas.graphql.suwayomi.SuwayomiMarkAndDeleteChaptersMutation
+import atlas.graphql.suwayomi.SuwayomiMarkChaptersReadMutation
+import atlas.graphql.suwayomi.SuwayomiUpdateMangaProgressMutation
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.network.okHttpClient
 import com.atlas.reader.data.database.models.Track
@@ -10,12 +16,6 @@ import com.atlas.reader.source.ConfigurableSource
 import com.atlas.reader.source.online.HttpSource
 import com.atlas.reader.source.sourcePreferences
 import kotlinx.coroutines.Dispatchers
-import atlas.graphql.suwayomi.SuwayomiGetMangaQuery
-import atlas.graphql.suwayomi.SuwayomiGetMangaUnreadChaptersQuery
-import atlas.graphql.suwayomi.SuwayomiMarkAndDeleteChaptersMutation
-import atlas.graphql.suwayomi.SuwayomiMarkChaptersReadMutation
-import atlas.graphql.suwayomi.SuwayomiUpdateMangaProgressMutation
-import atlas.domain.source.service.SourceManager
 import java.security.MessageDigest
 
 class SuwayomiApi(

@@ -1,11 +1,11 @@
 package atlas.core.migration.migrations
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoSet
-import dev.zacsweers.metro.Inject
 import atlas.core.migration.Migration
 import atlas.core.migration.MigrationContext
 import atlas.domain.library.service.LibraryPreferences
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoSet
+import dev.zacsweers.metro.Inject
 
 @Inject
 @ContributesIntoSet(AppScope::class)

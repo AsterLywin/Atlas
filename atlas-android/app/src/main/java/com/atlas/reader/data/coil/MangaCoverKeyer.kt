@@ -1,10 +1,10 @@
 package com.atlas.reader.data.coil
 
+import atlas.domain.manga.model.MangaCover
 import coil3.key.Keyer
 import coil3.request.Options
 import com.atlas.domain.manga.model.hasCustomCover
 import com.atlas.reader.data.cache.CoverCache
-import atlas.domain.manga.model.MangaCover
 import atlas.domain.manga.model.Manga as DomainManga
 
 class MangaKeyer : Keyer<DomainManga> {

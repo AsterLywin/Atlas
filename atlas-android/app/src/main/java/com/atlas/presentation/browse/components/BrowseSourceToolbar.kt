@@ -7,6 +7,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import atlas.domain.library.model.LibraryDisplayMode
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.automirroredroundedfilled.ViewList
+import atlas.icons.materialsymbols.roundedfilled.ViewCompact
+import atlas.icons.materialsymbols.roundedfilled.ViewModule
+import atlas.presentation.core.i18n.stringResource
+import atlas.source.local.LocalSource
 import com.atlas.presentation.components.AppBar
 import com.atlas.presentation.components.AppBarActions
 import com.atlas.presentation.components.AppBarTitle
@@ -15,14 +23,6 @@ import com.atlas.presentation.components.RadioMenuItem
 import com.atlas.presentation.components.SearchToolbar
 import com.atlas.reader.source.ConfigurableSource
 import com.atlas.reader.source.Source
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.automirroredroundedfilled.ViewList
-import atlas.icons.materialsymbols.roundedfilled.ViewCompact
-import atlas.icons.materialsymbols.roundedfilled.ViewModule
-import atlas.domain.library.model.LibraryDisplayMode
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
-import atlas.source.local.LocalSource
 
 @Composable
 fun BrowseSourceToolbar(

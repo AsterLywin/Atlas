@@ -1,9 +1,9 @@
 package com.atlas.domain.chapter.model
 
-import com.atlas.reader.source.model.SChapter
 import atlas.core.common.extensions.toEpochMillisOrZero
 import atlas.core.common.extensions.toInstantOrNull
 import atlas.domain.chapter.model.Chapter
+import com.atlas.reader.source.model.SChapter
 
 fun Chapter.toSChapter(): SChapter {
     return SChapter.create().also {

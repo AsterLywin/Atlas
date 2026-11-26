@@ -3,10 +3,10 @@ package com.atlas.reader.ui.reader.viewer
 import android.graphics.Color
 import android.graphics.PointF
 import android.graphics.RectF
-import dev.icerock.moko.resources.StringResource
+import atlas.i18n.MR
 import com.atlas.reader.ui.reader.setting.ReaderPreferences
 import com.atlas.reader.util.lang.invert
-import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
 
 abstract class ViewerNavigation {
 

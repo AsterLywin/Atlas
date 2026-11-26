@@ -4,22 +4,6 @@ import androidx.compose.ui.util.fastDistinctBy
 import androidx.compose.ui.util.fastFilter
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoMap
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.binding
-import dev.zacsweers.metrox.viewmodel.ViewModelKey
-import com.atlas.core.util.fastCountNot
-import com.atlas.presentation.more.stats.StatsScreenState
-import com.atlas.presentation.more.stats.data.StatsData
-import com.atlas.reader.data.download.DownloadManager
-import com.atlas.reader.data.track.TrackerManager
-import com.atlas.reader.source.model.SManga
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 import atlas.domain.history.interactor.GetTotalReadDuration
 import atlas.domain.library.model.LibraryManga
 import atlas.domain.library.service.LibraryPreferences
@@ -30,6 +14,22 @@ import atlas.domain.manga.interactor.GetLibraryManga
 import atlas.domain.track.interactor.GetTracksPerManga
 import atlas.domain.track.model.Track
 import atlas.source.local.isLocal
+import com.atlas.core.util.fastCountNot
+import com.atlas.presentation.more.stats.StatsScreenState
+import com.atlas.presentation.more.stats.data.StatsData
+import com.atlas.reader.data.download.DownloadManager
+import com.atlas.reader.data.track.TrackerManager
+import com.atlas.reader.source.model.SManga
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoMap
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.binding
+import dev.zacsweers.metrox.viewmodel.ViewModelKey
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 @Inject
 @ViewModelKey

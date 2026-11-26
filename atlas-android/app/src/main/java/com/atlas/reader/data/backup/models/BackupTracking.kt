@@ -1,10 +1,10 @@
 package com.atlas.reader.data.backup.models
 
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.protobuf.ProtoNumber
 import atlas.core.common.extensions.toEpochMillisOrZero
 import atlas.core.common.extensions.toInstantOrNull
 import atlas.domain.track.model.Track
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.protobuf.ProtoNumber
 
 @Serializable
 data class BackupTracking(

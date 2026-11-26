@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import atlas.domain.extension.model.ExtensionStore
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.Label
 import atlas.icons.materialsymbols.rounded.ContentCopy
@@ -23,7 +24,6 @@ import atlas.icons.materialsymbols.rounded.Delete
 import atlas.icons.materialsymbols.rounded.Public
 import atlas.icons.simpleicons.Discord
 import atlas.icons.simpleicons.SimpleIcons
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 

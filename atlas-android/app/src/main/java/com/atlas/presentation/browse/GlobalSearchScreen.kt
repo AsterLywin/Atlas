@@ -5,6 +5,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.ui.Modifier
+import atlas.domain.manga.model.Manga
+import atlas.presentation.core.components.material.Scaffold
 import com.atlas.presentation.browse.components.GlobalSearchCardRow
 import com.atlas.presentation.browse.components.GlobalSearchErrorResultItem
 import com.atlas.presentation.browse.components.GlobalSearchLoadingResultItem
@@ -15,8 +17,6 @@ import com.atlas.reader.ui.browse.source.globalsearch.SearchItemResult
 import com.atlas.reader.ui.browse.source.globalsearch.SearchViewModel
 import com.atlas.reader.ui.browse.source.globalsearch.SourceFilter
 import com.atlas.reader.util.system.LocaleHelper
-import atlas.domain.manga.model.Manga
-import atlas.presentation.core.components.material.Scaffold
 
 @Composable
 fun GlobalSearchScreen(

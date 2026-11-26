@@ -5,15 +5,15 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.metroViewModel
-import com.atlas.presentation.browse.ExtensionFilterScreen
-import com.atlas.presentation.util.Screen
-import kotlinx.coroutines.flow.collectLatest
 import atlas.core.common.i18n.stringResource
 import atlas.i18n.MR
 import atlas.presentation.core.screens.LoadingScreen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.atlas.presentation.browse.ExtensionFilterScreen
+import com.atlas.presentation.util.Screen
+import dev.zacsweers.metrox.viewmodel.metroViewModel
+import kotlinx.coroutines.flow.collectLatest
 
 class ExtensionFilterScreen : Screen() {
 

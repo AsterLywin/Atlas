@@ -1,16 +1,16 @@
 package com.atlas.reader.ui.updates
 
 import androidx.lifecycle.ViewModel
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesIntoMap
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metrox.viewmodel.ViewModelKey
 import atlas.core.common.preference.Preference
 import atlas.core.common.preference.TriState
 import atlas.core.common.preference.getAndSet
 import atlas.domain.category.interactor.GetCategories
 import atlas.domain.category.model.Category
 import atlas.domain.updates.service.UpdatesPreferences
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesIntoMap
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metrox.viewmodel.ViewModelKey
 
 @Inject
 @ViewModelKey

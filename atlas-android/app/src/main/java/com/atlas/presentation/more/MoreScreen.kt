@@ -5,9 +5,8 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
-import com.atlas.presentation.more.settings.widget.SwitchPreferenceWidget
-import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
-import com.atlas.reader.ui.more.DownloadQueueState
+import atlas.core.common.Constants
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.automirroredrounded.Help
 import atlas.icons.materialsymbols.automirroredrounded.Label
@@ -19,12 +18,13 @@ import atlas.icons.materialsymbols.rounded.QueryStats
 import atlas.icons.materialsymbols.rounded.Settings
 import atlas.icons.materialsymbols.rounded.Storage
 import atlas.icons.materialsymbols.roundedfilled.VolunteerActivism
-import atlas.core.common.Constants
-import atlas.i18n.MR
 import atlas.presentation.core.components.ScrollbarLazyColumn
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.i18n.pluralStringResource
 import atlas.presentation.core.i18n.stringResource
+import com.atlas.presentation.more.settings.widget.SwitchPreferenceWidget
+import com.atlas.presentation.more.settings.widget.TextPreferenceWidget
+import com.atlas.reader.ui.more.DownloadQueueState
 
 @Composable
 fun MoreScreen(

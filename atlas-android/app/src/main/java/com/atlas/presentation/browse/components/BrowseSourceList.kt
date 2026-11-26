@@ -8,12 +8,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import com.atlas.presentation.library.components.CommonMangaItemDefaults
-import com.atlas.presentation.library.components.MangaListItem
-import kotlinx.coroutines.flow.StateFlow
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.MangaCover
 import atlas.presentation.core.util.plus
+import com.atlas.presentation.library.components.CommonMangaItemDefaults
+import com.atlas.presentation.library.components.MangaListItem
+import kotlinx.coroutines.flow.StateFlow
 
 @Composable
 fun BrowseSourceList(

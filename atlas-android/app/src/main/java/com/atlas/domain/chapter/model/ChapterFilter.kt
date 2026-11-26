@@ -1,13 +1,13 @@
 package com.atlas.domain.chapter.model
 
-import com.atlas.domain.manga.model.downloadedFilter
-import com.atlas.reader.data.download.DownloadManager
-import com.atlas.reader.ui.manga.ChapterList
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.chapter.service.getChapterSort
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.applyFilter
 import atlas.source.local.isLocal
+import com.atlas.domain.manga.model.downloadedFilter
+import com.atlas.reader.data.download.DownloadManager
+import com.atlas.reader.ui.manga.ChapterList
 
 /**
  * Applies the view filters to the list of chapters obtained from the database.

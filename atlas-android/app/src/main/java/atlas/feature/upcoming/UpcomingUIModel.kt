@@ -1,7 +1,7 @@
 package atlas.feature.upcoming
 
-import kotlinx.datetime.LocalDate
 import atlas.domain.manga.model.Manga
+import kotlinx.datetime.LocalDate
 
 sealed interface UpcomingUIModel {
     data class Header(val date: LocalDate, val mangaCount: Int) : UpcomingUIModel

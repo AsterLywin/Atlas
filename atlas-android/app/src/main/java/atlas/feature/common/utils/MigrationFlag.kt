@@ -1,8 +1,8 @@
 package atlas.feature.common.utils
 
-import dev.icerock.moko.resources.StringResource
 import atlas.domain.migration.models.MigrationFlag
 import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
 
 fun MigrationFlag.getLabel(): StringResource {
     return when (this) {

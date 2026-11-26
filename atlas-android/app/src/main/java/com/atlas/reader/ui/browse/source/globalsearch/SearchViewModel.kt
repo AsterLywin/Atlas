@@ -5,6 +5,13 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.produceState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import atlas.core.common.preference.toggle
+import atlas.domain.manga.interactor.GetManga
+import atlas.domain.manga.interactor.NetworkToLocalManga
+import atlas.domain.manga.model.Manga
+import atlas.domain.manga.model.toDomainManga
+import atlas.domain.source.service.SourceManager
+import atlas.source.local.isLocal
 import com.atlas.domain.source.service.SourcePreferences
 import com.atlas.reader.extension.ExtensionManager
 import com.atlas.reader.source.Source
@@ -20,13 +27,6 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import atlas.domain.manga.model.toDomainManga
-import atlas.core.common.preference.toggle
-import atlas.domain.manga.interactor.GetManga
-import atlas.domain.manga.interactor.NetworkToLocalManga
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.service.SourceManager
-import atlas.source.local.isLocal
 
 abstract class SearchViewModel(
     initialState: State = State(),

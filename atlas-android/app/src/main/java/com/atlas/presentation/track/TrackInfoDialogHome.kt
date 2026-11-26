@@ -47,7 +47,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import dev.icerock.moko.resources.StringResource
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.MoreVert
+import atlas.icons.materialsymbols.roundedfilled.VisibilityOff
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.presentation.components.DropdownMenu
 import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import com.atlas.presentation.track.components.TrackLogoIcon
@@ -56,12 +60,8 @@ import com.atlas.reader.ui.manga.track.TrackItem
 import com.atlas.reader.util.lang.toJavaLocalDate
 import com.atlas.reader.util.lang.toLocalDate
 import com.atlas.reader.util.system.copyToClipboard
+import dev.icerock.moko.resources.StringResource
 import kotlinx.datetime.toJavaLocalDate
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.MoreVert
-import atlas.icons.materialsymbols.roundedfilled.VisibilityOff
-import atlas.i18n.MR
-import atlas.presentation.core.i18n.stringResource
 import java.time.format.DateTimeFormatter
 
 @Composable

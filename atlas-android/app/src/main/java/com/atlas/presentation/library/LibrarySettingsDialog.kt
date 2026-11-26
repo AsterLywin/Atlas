@@ -15,12 +15,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
-import com.atlas.presentation.components.TabbedDialog
-import com.atlas.presentation.components.TabbedDialogPaddings
-import com.atlas.reader.ui.library.LibrarySettingsViewModel
-import com.atlas.reader.util.system.isReleaseBuildType
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.Refresh
 import atlas.core.common.preference.TriState
 import atlas.domain.category.model.Category
 import atlas.domain.library.model.LibraryDisplayMode
@@ -28,6 +22,8 @@ import atlas.domain.library.model.LibrarySort
 import atlas.domain.library.model.sort
 import atlas.domain.library.service.LibraryPreferences
 import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.Refresh
 import atlas.presentation.core.components.BaseSortItem
 import atlas.presentation.core.components.CheckboxItem
 import atlas.presentation.core.components.HeadingItem
@@ -37,6 +33,10 @@ import atlas.presentation.core.components.SortItem
 import atlas.presentation.core.components.TriStateItem
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.collectAsState
+import com.atlas.presentation.components.TabbedDialog
+import com.atlas.presentation.components.TabbedDialogPaddings
+import com.atlas.reader.ui.library.LibrarySettingsViewModel
+import com.atlas.reader.util.system.isReleaseBuildType
 
 @Composable
 fun LibrarySettingsDialog(

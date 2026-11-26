@@ -1,8 +1,5 @@
 package com.atlas.domain.chapter.interactor
 
-import dev.zacsweers.metro.Inject
-import com.atlas.domain.download.interactor.DeleteDownload
-import logcat.LogPriority
 import atlas.core.common.util.system.logcat
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.chapter.model.ChapterUpdate
@@ -10,6 +7,9 @@ import atlas.domain.chapter.repository.ChapterRepository
 import atlas.domain.download.service.DownloadPreferences
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.repository.MangaRepository
+import com.atlas.domain.download.interactor.DeleteDownload
+import dev.zacsweers.metro.Inject
+import logcat.LogPriority
 
 @Inject
 class SetReadStatus(

@@ -3,8 +3,10 @@ package com.atlas.reader.data.backup
 import android.content.Context
 import android.graphics.BitmapFactory
 import androidx.core.app.NotificationCompat
-import com.hippo.unifile.UniFile
-import dev.zacsweers.metro.Inject
+import atlas.core.common.i18n.pluralStringResource
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.storage.displayablePath
+import atlas.i18n.MR
 import com.atlas.reader.R
 import com.atlas.reader.core.security.SecurityPreferences
 import com.atlas.reader.data.notification.NotificationReceiver
@@ -13,10 +15,8 @@ import com.atlas.reader.util.storage.getUriCompat
 import com.atlas.reader.util.system.cancelNotification
 import com.atlas.reader.util.system.notificationBuilder
 import com.atlas.reader.util.system.notify
-import atlas.core.common.i18n.pluralStringResource
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.storage.displayablePath
-import atlas.i18n.MR
+import com.hippo.unifile.UniFile
+import dev.zacsweers.metro.Inject
 import java.io.File
 import kotlin.time.Duration.Companion.milliseconds
 import atlas.icons.materialsymbols.R as MaterialSymbolsR

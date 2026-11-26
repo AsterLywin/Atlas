@@ -43,6 +43,13 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import atlas.i18n.MR
+import atlas.icons.materialsymbols.MaterialSymbols
+import atlas.icons.materialsymbols.rounded.DragHandle
+import atlas.icons.materialsymbols.rounded.MoreVert
+import atlas.presentation.core.components.ListGroupHeader
+import atlas.presentation.core.components.material.padding
+import atlas.presentation.core.i18n.stringResource
 import com.atlas.presentation.components.DropdownMenu
 import com.atlas.reader.data.download.model.Download
 import com.atlas.reader.source.model.Page
@@ -50,17 +57,10 @@ import com.atlas.reader.ui.download.DownloadQueueSection
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
-import atlas.icons.materialsymbols.MaterialSymbols
-import atlas.icons.materialsymbols.rounded.DragHandle
-import atlas.icons.materialsymbols.rounded.MoreVert
 import sh.calvin.reorderable.ReorderableCollectionItemScope
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 import sh.calvin.reorderable.rememberScroller
-import atlas.i18n.MR
-import atlas.presentation.core.components.ListGroupHeader
-import atlas.presentation.core.components.material.padding
-import atlas.presentation.core.i18n.stringResource
 
 @Composable
 fun DownloadQueueList(

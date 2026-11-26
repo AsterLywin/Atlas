@@ -1,6 +1,15 @@
 package com.atlas.reader.ui.reader.loader
 
 import android.content.Context
+import atlas.core.archive.archiveReader
+import atlas.core.archive.epubReader
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.domain.manga.model.Manga
+import atlas.domain.source.model.StubSource
+import atlas.i18n.MR
+import atlas.source.local.LocalSource
+import atlas.source.local.io.Format
 import com.atlas.domain.chapter.model.toSChapter
 import com.atlas.reader.data.cache.ChapterCache
 import com.atlas.reader.data.download.DownloadManager
@@ -11,15 +20,6 @@ import com.atlas.reader.ui.reader.model.ReaderChapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import atlas.core.archive.archiveReader
-import atlas.core.archive.epubReader
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.model.StubSource
-import atlas.i18n.MR
-import atlas.source.local.LocalSource
-import atlas.source.local.io.Format
 
 /**
  * Loader used to retrieve the [PageLoader] for a given chapter.

@@ -3,11 +3,11 @@ package com.atlas.reader.extension.installer
 import android.app.Service
 import android.net.Uri
 import androidx.annotation.CallSuper
+import atlas.app.di.appGraph
+import atlas.core.common.util.system.logcat
 import com.atlas.reader.extension.ExtensionManager
 import com.atlas.reader.extension.model.InstallStep
 import logcat.LogPriority
-import atlas.app.di.appGraph
-import atlas.core.common.util.system.logcat
 import java.util.Collections
 import java.util.concurrent.CopyOnWriteArraySet
 import kotlin.concurrent.atomics.AtomicReference

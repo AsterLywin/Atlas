@@ -1,9 +1,9 @@
 package com.atlas.reader.data.track
 
-import com.atlas.reader.data.track.model.TrackSearch
-import com.atlas.reader.source.Source
 import atlas.domain.manga.model.Manga
 import atlas.domain.track.model.Track
+import com.atlas.reader.data.track.model.TrackSearch
+import com.atlas.reader.source.Source
 
 /**
  * A tracker that will never prompt the user to manually bind an entry.

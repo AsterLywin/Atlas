@@ -1,11 +1,11 @@
 package com.atlas.reader.data.backup.restore.restorers
 
-import dev.zacsweers.metro.Inject
-import com.atlas.reader.data.backup.models.BackupCategory
 import atlas.domain.category.interactor.GetCategories
 import atlas.domain.category.model.NewCategory
 import atlas.domain.category.repository.CategoryRepository
 import atlas.domain.library.service.LibraryPreferences
+import com.atlas.reader.data.backup.models.BackupCategory
+import dev.zacsweers.metro.Inject
 
 @Inject
 class CategoriesRestorer(

@@ -8,19 +8,19 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.atlas.presentation.category.components.CategoryFloatingActionButton
-import com.atlas.presentation.components.AppBar
-import com.atlas.presentation.more.settings.screen.browse.ExtensionStoreScreenState
 import atlas.domain.extension.model.ExtensionStore
+import atlas.i18n.MR
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Refresh
-import atlas.i18n.MR
 import atlas.presentation.core.components.material.Scaffold
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.components.material.topSmallPaddingValues
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.screens.EmptyScreen
 import atlas.presentation.core.util.plus
+import com.atlas.presentation.category.components.CategoryFloatingActionButton
+import com.atlas.presentation.components.AppBar
+import com.atlas.presentation.more.settings.screen.browse.ExtensionStoreScreenState
 
 @Composable
 fun ExtensionStoresScreen(

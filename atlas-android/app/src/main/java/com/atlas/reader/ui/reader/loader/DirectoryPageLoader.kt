@@ -1,10 +1,10 @@
 package com.atlas.reader.ui.reader.loader
 
-import com.hippo.unifile.UniFile
+import atlas.core.common.util.system.ImageUtil
 import com.atlas.reader.source.model.Page
 import com.atlas.reader.ui.reader.model.ReaderPage
 import com.atlas.reader.util.lang.compareToCaseInsensitiveNaturalOrder
-import atlas.core.common.util.system.ImageUtil
+import com.hippo.unifile.UniFile
 
 /**
  * Loader used to load a chapter from a directory given on [file].

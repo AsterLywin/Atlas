@@ -43,10 +43,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
-import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-import com.google.android.material.transition.platform.MaterialContainerTransform
-import com.hippo.unifile.UniFile
-import dev.zacsweers.metro.Inject
+import atlas.app.di.AppGraph
+import atlas.core.common.Constants
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.core.metro.metroGraph
+import atlas.i18n.MR
+import atlas.presentation.core.util.collectAsState
 import com.atlas.domain.base.BasePreferences
 import com.atlas.presentation.reader.DisplayRefreshHost
 import com.atlas.presentation.reader.OrientationSelectDialog
@@ -83,6 +86,10 @@ import com.atlas.reader.util.system.readerBackgroundColor
 import com.atlas.reader.util.system.toShareIntent
 import com.atlas.reader.util.system.toast
 import com.atlas.reader.util.view.setComposeContent
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+import com.google.android.material.transition.platform.MaterialContainerTransform
+import com.hippo.unifile.UniFile
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -94,13 +101,6 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.sample
 import kotlinx.coroutines.launch
 import logcat.LogPriority
-import atlas.app.di.AppGraph
-import atlas.core.metro.metroGraph
-import atlas.core.common.Constants
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
-import atlas.presentation.core.util.collectAsState
 import java.io.ByteArrayOutputStream
 import kotlin.time.Duration.Companion.seconds
 

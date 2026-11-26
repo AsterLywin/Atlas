@@ -1,8 +1,5 @@
 package com.atlas.reader.data.track.kitsu
 
-import com.atlas.reader.data.database.models.Track
-import com.atlas.reader.data.track.kitsu.dto.KitsuUser
-import com.atlas.reader.data.track.model.TrackSearch
 import atlas.graphql.kitsu.KitsuFindLibMangaQuery
 import atlas.graphql.kitsu.KitsuGetCurrentAccountQuery
 import atlas.graphql.kitsu.KitsuGetMangaDetailsByIdQuery
@@ -12,6 +9,9 @@ import atlas.graphql.kitsu.fragment.MangaFragment
 import atlas.graphql.kitsu.type.LibraryEntryStatusEnum
 import atlas.graphql.kitsu.type.MangaSubtypeEnum
 import atlas.graphql.kitsu.type.ReleaseStatusEnum
+import com.atlas.reader.data.database.models.Track
+import com.atlas.reader.data.track.kitsu.dto.KitsuUser
+import com.atlas.reader.data.track.model.TrackSearch
 
 internal fun Track.toKitsuStatus() = when (this.status) {
     Kitsu.READING -> LibraryEntryStatusEnum.CURRENT

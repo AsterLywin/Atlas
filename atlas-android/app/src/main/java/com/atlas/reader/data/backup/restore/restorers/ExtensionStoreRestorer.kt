@@ -1,9 +1,9 @@
 package com.atlas.reader.data.backup.restore.restorers
 
-import dev.zacsweers.metro.Inject
-import com.atlas.reader.data.backup.models.BackupExtensionStore
 import atlas.domain.extension.model.ExtensionStore
 import atlas.domain.extension.repository.ExtensionStoreRepository
+import com.atlas.reader.data.backup.models.BackupExtensionStore
+import dev.zacsweers.metro.Inject
 
 @Inject
 class ExtensionStoreRestorer(

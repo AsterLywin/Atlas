@@ -1,16 +1,16 @@
 package com.atlas.domain.track.interactor
 
-import dev.zacsweers.metro.Inject
+import atlas.domain.track.interactor.GetTracks
+import atlas.domain.track.interactor.UpsertTrack
 import com.atlas.domain.track.model.toDbTrack
 import com.atlas.domain.track.model.toDomainTrack
 import com.atlas.reader.data.track.Tracker
 import com.atlas.reader.data.track.TrackerManager
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.supervisorScope
-import atlas.domain.track.interactor.GetTracks
-import atlas.domain.track.interactor.UpsertTrack
 
 @Inject
 class RefreshTracks(

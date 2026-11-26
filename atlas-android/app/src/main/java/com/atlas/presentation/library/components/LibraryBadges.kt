@@ -4,10 +4,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.atlas.presentation.theme.TachiyomiPreviewTheme
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.Folder
 import atlas.presentation.core.components.Badge
+import com.atlas.presentation.theme.TachiyomiPreviewTheme
 
 @Composable
 internal fun DownloadsBadge(count: Int) {

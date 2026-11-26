@@ -5,9 +5,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atlas.presentation.core.screens.LoadingScreen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import dev.zacsweers.metrox.viewmodel.metroViewModel
 import com.atlas.presentation.more.settings.screen.browse.components.ExtensionStoreConfirmDialog
 import com.atlas.presentation.more.settings.screen.browse.components.ExtensionStoreCreateDialog
 import com.atlas.presentation.more.settings.screen.browse.components.ExtensionStoreDeleteDialog
@@ -15,7 +15,7 @@ import com.atlas.presentation.more.settings.screen.browse.components.ExtensionSt
 import com.atlas.presentation.util.Screen
 import com.atlas.reader.util.system.copyToClipboard
 import com.atlas.reader.util.system.openInBrowser
-import atlas.presentation.core.screens.LoadingScreen
+import dev.zacsweers.metrox.viewmodel.metroViewModel
 
 class ExtensionStoresScreen(
     private val url: String? = null,

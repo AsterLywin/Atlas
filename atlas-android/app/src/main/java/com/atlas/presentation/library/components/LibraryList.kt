@@ -7,11 +7,11 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.atlas.reader.ui.library.LibraryItem
 import atlas.domain.library.model.LibraryManga
 import atlas.domain.manga.model.MangaCover
 import atlas.presentation.core.components.FastScrollLazyColumn
 import atlas.presentation.core.util.plus
+import com.atlas.reader.ui.library.LibraryItem
 
 @Composable
 internal fun LibraryList(

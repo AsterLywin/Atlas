@@ -1,10 +1,10 @@
 package com.atlas.reader.data.backup.create.creators
 
-import dev.zacsweers.metro.Inject
-import com.atlas.reader.data.backup.models.BackupCategory
-import com.atlas.reader.data.backup.models.backupCategoryMapper
 import atlas.domain.category.interactor.GetCategories
 import atlas.domain.category.model.Category
+import com.atlas.reader.data.backup.models.BackupCategory
+import com.atlas.reader.data.backup.models.backupCategoryMapper
+import dev.zacsweers.metro.Inject
 
 @Inject
 class CategoriesBackupCreator(

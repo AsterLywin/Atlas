@@ -2,19 +2,6 @@ package com.atlas.reader.data.download
 
 import android.content.ContentResolver
 import android.content.Context
-import com.hippo.unifile.UniFile
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.source.Source
-import com.atlas.reader.util.lang.Hash.md5
-import com.atlas.reader.util.storage.DiskUtil
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.withContext
-import logcat.LogPriority
 import atlas.core.common.i18n.stringResource
 import atlas.core.common.storage.displayablePath
 import atlas.core.common.util.system.logcat
@@ -23,6 +10,19 @@ import atlas.domain.library.service.LibraryPreferences
 import atlas.domain.manga.model.Manga
 import atlas.domain.storage.service.StorageManager
 import atlas.i18n.MR
+import com.atlas.reader.source.Source
+import com.atlas.reader.util.lang.Hash.md5
+import com.atlas.reader.util.storage.DiskUtil
+import com.hippo.unifile.UniFile
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.withContext
+import logcat.LogPriority
 import java.io.IOException
 
 /**

@@ -14,18 +14,18 @@ import android.provider.Settings
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.content.getSystemService
 import androidx.core.net.toUri
-import com.hippo.unifile.UniFile
+import atlas.app.di.appGraph
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.domain.ui.model.ThemeMode
 import com.atlas.reader.R
 import com.atlas.reader.ui.base.delegate.ThemingDelegate
 import com.atlas.reader.util.lang.truncateCenter
+import com.hippo.unifile.UniFile
 import logcat.LogPriority
-import atlas.app.di.appGraph
 import rikka.shizuku.ShizukuProvider
 import rikka.sui.Sui
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 import java.io.File
 
 /**

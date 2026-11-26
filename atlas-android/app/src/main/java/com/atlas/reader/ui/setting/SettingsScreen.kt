@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
+import atlas.presentation.core.components.TwoPanelBox
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
@@ -21,7 +22,6 @@ import com.atlas.presentation.util.DefaultNavigatorScreenTransition
 import com.atlas.presentation.util.LocalBackPress
 import com.atlas.presentation.util.Screen
 import com.atlas.presentation.util.isTabletUi
-import atlas.presentation.core.components.TwoPanelBox
 
 class SettingsScreen(
     private val destination: Int? = null,

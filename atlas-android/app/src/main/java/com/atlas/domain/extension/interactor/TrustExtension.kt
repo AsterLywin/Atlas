@@ -2,16 +2,16 @@ package com.atlas.domain.extension.interactor
 
 import android.content.pm.PackageInfo
 import androidx.core.content.pm.PackageInfoCompat
-import dev.zacsweers.metro.Inject
+import atlas.core.common.preference.getAndSet
+import atlas.domain.extension.model.ExtensionStore
+import atlas.domain.extension.repository.ExtensionStoreRepository
 import com.atlas.domain.source.service.SourcePreferences
+import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.merge
-import atlas.domain.extension.model.ExtensionStore
-import atlas.domain.extension.repository.ExtensionStoreRepository
-import atlas.core.common.preference.getAndSet
 
 @Inject
 class TrustExtension(
