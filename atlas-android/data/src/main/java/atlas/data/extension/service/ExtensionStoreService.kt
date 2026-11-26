@@ -1,12 +1,18 @@
 package atlas.data.extension.service
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
+import atlas.core.common.util.system.logcat
+import atlas.data.extension.model.NetworkExtensionStore
+import atlas.data.extension.model.NetworkLegacyExtension
+import atlas.data.extension.model.NetworkLegacyExtensionRepo
+import atlas.data.extension.model.toAvailableExtensions
+import atlas.domain.extension.model.ExtensionStore
 import com.atlas.reader.extension.model.Extension
 import com.atlas.reader.network.GET
 import com.atlas.reader.network.NetworkHelper
 import com.atlas.reader.network.awaitSuccess
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.decodeFromByteArray
@@ -14,15 +20,9 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.okio.decodeFromBufferedSource
 import kotlinx.serialization.protobuf.ProtoBuf
 import logcat.LogPriority
-import atlas.data.extension.model.NetworkExtensionStore
-import atlas.data.extension.model.NetworkLegacyExtension
-import atlas.data.extension.model.NetworkLegacyExtensionRepo
-import atlas.data.extension.model.toAvailableExtensions
-import atlas.domain.extension.model.ExtensionStore
 import okio.BufferedSource
 import okio.buffer
 import okio.gzip
-import atlas.core.common.util.system.logcat
 import kotlin.coroutines.cancellation.CancellationException
 
 @Inject

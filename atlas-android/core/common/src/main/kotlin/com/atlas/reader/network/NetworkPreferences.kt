@@ -1,11 +1,11 @@
 package com.atlas.reader.network
 
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.PreferenceStore
+import atlas.core.metro.IsDebugBuild
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import atlas.core.metro.IsDebugBuild
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.PreferenceStore
 
 @Inject
 @SingleIn(AppScope::class)

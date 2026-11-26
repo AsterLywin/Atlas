@@ -2,15 +2,15 @@ package atlas.data.track
 
 import app.cash.sqldelight.async.coroutines.awaitAsList
 import app.cash.sqldelight.async.coroutines.awaitAsOneOrNull
+import atlas.data.Database
+import atlas.data.subscribeToList
+import atlas.domain.track.model.Track
+import atlas.domain.track.repository.TrackRepository
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.flow.Flow
-import atlas.data.Database
-import atlas.data.subscribeToList
-import atlas.domain.track.model.Track
-import atlas.domain.track.repository.TrackRepository
 
 @Inject
 @SingleIn(AppScope::class)

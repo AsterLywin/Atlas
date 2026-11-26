@@ -21,11 +21,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
-import dev.icerock.moko.resources.StringResource
 import atlas.presentation.core.components.ActionButton
 import atlas.presentation.core.components.material.padding
 import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.util.secondaryItemAlpha
+import dev.icerock.moko.resources.StringResource
 import kotlin.random.Random
 
 data class EmptyScreenAction(

@@ -1,9 +1,9 @@
 package atlas.source.local.filter
 
 import android.content.Context
-import com.atlas.reader.source.model.Filter
 import atlas.core.common.i18n.stringResource
 import atlas.i18n.MR
+import com.atlas.reader.source.model.Filter
 
 sealed class OrderBy(context: Context, selection: Selection) : Filter.Sort(
     context.stringResource(MR.strings.local_filter_order_by),

@@ -1,8 +1,8 @@
 package atlas.source.local.metadata
 
+import atlas.core.archive.EpubReader
 import com.atlas.reader.source.model.SChapter
 import com.atlas.reader.source.model.SManga
-import atlas.core.archive.EpubReader
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Locale

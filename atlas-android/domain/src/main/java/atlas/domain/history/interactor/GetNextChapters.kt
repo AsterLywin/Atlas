@@ -1,11 +1,11 @@
 package atlas.domain.history.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.chapter.interactor.GetChaptersByMangaId
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.chapter.service.getChapterSort
 import atlas.domain.history.repository.HistoryRepository
 import atlas.domain.manga.interactor.GetManga
+import dev.zacsweers.metro.Inject
 import kotlin.math.max
 
 @Inject

@@ -13,6 +13,9 @@ import androidx.core.content.ContextCompat
 import androidx.webkit.ScriptHandler
 import androidx.webkit.WebViewCompat
 import androidx.webkit.WebViewFeature
+import atlas.core.common.i18n.stringResource
+import atlas.core.common.util.system.logcat
+import atlas.i18n.MR
 import com.atlas.reader.network.AndroidCookieJar
 import com.atlas.reader.util.system.isOutdated
 import com.atlas.reader.util.system.toWebViewHeaders
@@ -23,9 +26,6 @@ import okhttp3.HttpUrl
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
-import atlas.core.common.i18n.stringResource
-import atlas.core.common.util.system.logcat
-import atlas.i18n.MR
 import java.io.IOException
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CountDownLatch

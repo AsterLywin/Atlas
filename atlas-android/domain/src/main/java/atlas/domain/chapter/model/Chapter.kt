@@ -1,7 +1,7 @@
 package atlas.domain.chapter.model
 
-import kotlinx.serialization.json.JsonObject
 import atlas.core.common.extensions.EMPTY
+import kotlinx.serialization.json.JsonObject
 import kotlin.time.Instant
 
 data class Chapter(

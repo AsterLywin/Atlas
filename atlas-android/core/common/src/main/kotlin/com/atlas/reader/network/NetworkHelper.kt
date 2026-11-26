@@ -1,14 +1,14 @@
 package com.atlas.reader.network
 
 import android.content.Context
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
+import atlas.core.metro.AppCoroutineScope
 import com.atlas.reader.network.interceptor.CloudflareInterceptor
 import com.atlas.reader.network.interceptor.UncaughtExceptionInterceptor
 import com.atlas.reader.network.interceptor.UserAgentInterceptor
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.CoroutineScope
-import atlas.core.metro.AppCoroutineScope
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

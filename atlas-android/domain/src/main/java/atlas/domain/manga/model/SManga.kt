@@ -1,7 +1,7 @@
 package atlas.domain.manga.model
 
-import com.atlas.reader.source.model.SManga
 import atlas.domain.manga.model.Manga
+import com.atlas.reader.source.model.SManga
 
 fun SManga.toDomainManga(sourceId: Long): Manga {
     return Manga.create().copy(

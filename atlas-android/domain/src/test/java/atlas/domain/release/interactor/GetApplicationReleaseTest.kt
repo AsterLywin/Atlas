@@ -1,13 +1,13 @@
 package atlas.domain.release.interactor
 
+import atlas.domain.release.model.Release
+import atlas.domain.release.service.ReleaseService
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import atlas.domain.release.model.Release
-import atlas.domain.release.service.ReleaseService
 
 class GetApplicationReleaseTest {
 

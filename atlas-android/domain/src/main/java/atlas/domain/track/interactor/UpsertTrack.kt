@@ -1,10 +1,10 @@
 package atlas.domain.track.interactor
 
-import dev.zacsweers.metro.Inject
-import logcat.LogPriority
 import atlas.core.common.util.system.logcat
 import atlas.domain.track.model.Track
 import atlas.domain.track.repository.TrackRepository
+import dev.zacsweers.metro.Inject
+import logcat.LogPriority
 
 @Inject
 class UpsertTrack(

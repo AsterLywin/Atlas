@@ -1,11 +1,11 @@
 package atlas.domain.source.repository
 
 import androidx.paging.PagingSource
-import com.atlas.reader.source.model.FilterList
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.manga.model.Manga
 import atlas.domain.source.model.Source
 import atlas.domain.source.model.SourceWithCount
+import com.atlas.reader.source.model.FilterList
+import kotlinx.coroutines.flow.Flow
 
 typealias SourcePagingSource = PagingSource<Long, Manga>
 

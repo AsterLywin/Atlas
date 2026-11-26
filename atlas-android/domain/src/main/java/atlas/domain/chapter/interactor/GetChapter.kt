@@ -1,10 +1,10 @@
 package atlas.domain.chapter.interactor
 
-import dev.zacsweers.metro.Inject
-import logcat.LogPriority
 import atlas.core.common.util.system.logcat
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.chapter.repository.ChapterRepository
+import dev.zacsweers.metro.Inject
+import logcat.LogPriority
 
 @Inject
 class GetChapter(

@@ -1,15 +1,15 @@
 package atlas.source.local.image
 
 import android.content.Context
+import atlas.core.common.storage.nameWithoutExtension
+import atlas.core.common.util.system.ImageUtil
+import atlas.source.local.io.LocalSourceFileSystem
+import com.atlas.reader.source.model.SManga
+import com.atlas.reader.util.storage.DiskUtil
 import com.hippo.unifile.UniFile
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.source.model.SManga
-import com.atlas.reader.util.storage.DiskUtil
-import atlas.core.common.storage.nameWithoutExtension
-import atlas.core.common.util.system.ImageUtil
-import atlas.source.local.io.LocalSourceFileSystem
 import java.io.InputStream
 
 private const val DEFAULT_COVER_NAME = "cover.jpg"

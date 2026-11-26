@@ -1,10 +1,10 @@
 package atlas.domain.track.interactor
 
+import atlas.domain.track.model.Track
+import atlas.domain.track.repository.TrackRepository
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import atlas.domain.track.model.Track
-import atlas.domain.track.repository.TrackRepository
 
 @Inject
 class GetTracksPerManga(

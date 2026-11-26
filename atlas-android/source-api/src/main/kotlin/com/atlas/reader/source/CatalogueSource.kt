@@ -1,5 +1,6 @@
 package com.atlas.reader.source
 
+import atlas.core.common.util.lang.awaitSingle
 import com.atlas.reader.source.model.FilterList
 import com.atlas.reader.source.model.MangasPage
 import com.atlas.reader.source.model.Page
@@ -9,7 +10,6 @@ import com.atlas.reader.source.model.SMangaUpdate
 import kotlinx.coroutines.async
 import kotlinx.coroutines.supervisorScope
 import rx.Observable
-import atlas.core.common.util.lang.awaitSingle
 
 interface CatalogueSource : Source {
 

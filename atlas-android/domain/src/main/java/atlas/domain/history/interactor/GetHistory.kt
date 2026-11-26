@@ -1,10 +1,10 @@
 package atlas.domain.history.interactor
 
-import dev.zacsweers.metro.Inject
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.history.model.History
 import atlas.domain.history.model.HistoryWithRelations
 import atlas.domain.history.repository.HistoryRepository
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.flow.Flow
 
 @Inject
 class GetHistory(

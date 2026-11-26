@@ -1,10 +1,10 @@
 package atlas.source.local.io
 
+import atlas.domain.storage.service.StorageManager
 import com.hippo.unifile.UniFile
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import atlas.domain.storage.service.StorageManager
 
 @Inject
 @SingleIn(AppScope::class)

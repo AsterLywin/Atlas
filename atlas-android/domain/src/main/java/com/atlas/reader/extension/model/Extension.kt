@@ -1,9 +1,9 @@
 package com.atlas.reader.extension.model
 
-import com.atlas.reader.source.Source
 import atlas.domain.extension.model.ContentWarning
 import atlas.domain.extension.model.ExtensionStore
 import atlas.domain.source.model.StubSource
+import com.atlas.reader.source.Source
 
 sealed interface Extension {
 

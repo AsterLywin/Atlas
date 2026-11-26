@@ -1,7 +1,7 @@
 package atlas.domain.updates.repository
 
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.updates.model.UpdatesWithRelations
+import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
 
 interface UpdatesRepository {

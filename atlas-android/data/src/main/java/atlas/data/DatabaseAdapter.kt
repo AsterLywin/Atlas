@@ -1,10 +1,10 @@
 package atlas.data
 
 import app.cash.sqldelight.ColumnAdapter
-import com.atlas.reader.source.model.UpdateStrategy
-import kotlinx.serialization.json.JsonObject
 import atlas.core.common.extensions.toByteArray
 import atlas.core.common.extensions.toJsonObject
+import com.atlas.reader.source.model.UpdateStrategy
+import kotlinx.serialization.json.JsonObject
 import kotlin.time.Instant
 
 object InstantColumnAdapter : ColumnAdapter<Instant, Long> {

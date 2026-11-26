@@ -5,6 +5,7 @@ import android.os.Build
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.widget.Toast
+import atlas.i18n.MR
 import com.atlas.reader.util.system.DeviceUtil
 import com.atlas.reader.util.system.WebViewUtil
 import com.atlas.reader.util.system.setDefaultSettings
@@ -16,7 +17,6 @@ import kotlinx.coroutines.launch
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
-import atlas.i18n.MR
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 

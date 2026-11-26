@@ -1,8 +1,8 @@
 package atlas.domain.category.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.library.model.LibraryDisplayMode
 import atlas.domain.library.service.LibraryPreferences
+import dev.zacsweers.metro.Inject
 
 @Inject
 class SetDisplayMode(

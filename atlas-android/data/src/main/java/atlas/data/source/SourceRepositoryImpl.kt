@@ -1,15 +1,5 @@
 package atlas.data.source
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesBinding
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.source.Source
-import com.atlas.reader.source.model.FilterList
-import com.atlas.reader.source.online.HttpSource
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.map
 import atlas.data.Database
 import atlas.data.subscribeToList
 import atlas.domain.manga.interactor.NetworkToLocalManga
@@ -18,6 +8,16 @@ import atlas.domain.source.model.StubSource
 import atlas.domain.source.repository.SourcePagingSource
 import atlas.domain.source.repository.SourceRepository
 import atlas.domain.source.service.SourceManager
+import com.atlas.reader.source.Source
+import com.atlas.reader.source.model.FilterList
+import com.atlas.reader.source.online.HttpSource
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesBinding
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import atlas.domain.source.model.Source as DomainSource
 
 @Inject

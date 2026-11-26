@@ -1,13 +1,13 @@
 package com.atlas.reader.core.security
 
-import dev.icerock.moko.resources.StringResource
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
 import atlas.core.common.preference.Preference
 import atlas.core.common.preference.PreferenceStore
 import atlas.core.common.preference.getEnum
 import atlas.i18n.MR
+import dev.icerock.moko.resources.StringResource
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 
 @Inject
 @SingleIn(AppScope::class)

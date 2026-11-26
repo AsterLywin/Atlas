@@ -1,14 +1,14 @@
 package atlas.domain.manga.interactor
 
+import atlas.core.common.util.system.logcat
+import atlas.domain.library.model.LibraryManga
+import atlas.domain.manga.repository.MangaRepository
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.retry
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
-import atlas.domain.library.model.LibraryManga
-import atlas.domain.manga.repository.MangaRepository
 import kotlin.time.Duration.Companion.seconds
 
 @Inject

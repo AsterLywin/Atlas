@@ -1,10 +1,10 @@
 package atlas.data.manga
 
-import com.atlas.reader.source.model.UpdateStrategy
-import kotlinx.serialization.json.JsonObject
 import atlas.domain.library.model.LibraryManga
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.MangaWithChapterCount
+import com.atlas.reader.source.model.UpdateStrategy
+import kotlinx.serialization.json.JsonObject
 import kotlin.time.Instant
 
 object MangaMapper {

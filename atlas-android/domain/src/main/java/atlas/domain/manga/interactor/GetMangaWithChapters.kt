@@ -1,12 +1,12 @@
 package atlas.domain.manga.interactor
 
-import dev.zacsweers.metro.Inject
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.combine
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.chapter.repository.ChapterRepository
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.repository.MangaRepository
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
 
 @Inject
 class GetMangaWithChapters(

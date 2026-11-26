@@ -1,10 +1,10 @@
 package atlas.domain.category.interactor
 
-import dev.zacsweers.metro.Inject
-import logcat.LogPriority
 import atlas.core.common.util.system.logcat
 import atlas.domain.category.model.Category
 import atlas.domain.category.repository.CategoryRepository
+import dev.zacsweers.metro.Inject
+import logcat.LogPriority
 
 @Inject
 class RenameCategory(

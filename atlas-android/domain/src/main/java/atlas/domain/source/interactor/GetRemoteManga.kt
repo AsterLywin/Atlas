@@ -1,9 +1,9 @@
 package atlas.domain.source.interactor
 
-import dev.zacsweers.metro.Inject
-import com.atlas.reader.source.model.FilterList
 import atlas.domain.source.repository.SourcePagingSource
 import atlas.domain.source.repository.SourceRepository
+import com.atlas.reader.source.model.FilterList
+import dev.zacsweers.metro.Inject
 
 @Inject
 class GetRemoteManga(

@@ -1,10 +1,10 @@
 package com.atlas.reader.core.security
 
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.PreferenceStore
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.PreferenceStore
 
 @Inject
 @SingleIn(AppScope::class)

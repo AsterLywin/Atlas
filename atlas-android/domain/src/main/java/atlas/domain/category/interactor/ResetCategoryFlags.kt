@@ -1,9 +1,9 @@
 package atlas.domain.category.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.category.repository.CategoryRepository
 import atlas.domain.library.model.plus
 import atlas.domain.library.service.LibraryPreferences
+import dev.zacsweers.metro.Inject
 
 @Inject
 class ResetCategoryFlags(

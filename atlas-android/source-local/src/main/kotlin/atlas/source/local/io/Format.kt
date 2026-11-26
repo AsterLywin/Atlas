@@ -1,7 +1,7 @@
 package atlas.source.local.io
 
-import com.hippo.unifile.UniFile
 import atlas.core.common.storage.extension
+import com.hippo.unifile.UniFile
 import atlas.source.local.io.Archive.isSupported as isArchiveSupported
 
 sealed interface Format {

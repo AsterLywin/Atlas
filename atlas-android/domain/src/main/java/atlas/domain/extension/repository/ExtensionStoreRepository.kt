@@ -1,8 +1,8 @@
 package atlas.domain.extension.repository
 
+import atlas.domain.extension.model.ExtensionStore
 import com.atlas.reader.extension.model.Extension
 import kotlinx.coroutines.flow.Flow
-import atlas.domain.extension.model.ExtensionStore
 
 interface ExtensionStoreRepository {
     suspend fun insert(indexUrl: String): Result<Unit>

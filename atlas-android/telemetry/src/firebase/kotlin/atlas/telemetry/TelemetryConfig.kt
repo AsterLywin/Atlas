@@ -3,11 +3,11 @@ package atlas.telemetry
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
+import atlas.core.common.util.system.logcat
 import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
 
 object TelemetryConfig {
     private var analytics: FirebaseAnalytics? = null

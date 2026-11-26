@@ -1,8 +1,8 @@
 package atlas.domain.chapter.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.chapter.repository.ChapterRepository
+import dev.zacsweers.metro.Inject
 
 @Inject
 class GetChapterByUrlAndMangaId(

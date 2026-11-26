@@ -1,11 +1,11 @@
 package atlas.domain.chapter.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.category.interactor.GetCategories
 import atlas.domain.chapter.interactor.GetChaptersByMangaId
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.download.service.DownloadPreferences
 import atlas.domain.manga.model.Manga
+import dev.zacsweers.metro.Inject
 
 /**
  * Interactor responsible for determining which chapters of a manga should be downloaded.

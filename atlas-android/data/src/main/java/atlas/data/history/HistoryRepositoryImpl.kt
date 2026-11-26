@@ -3,12 +3,6 @@ package atlas.data.history
 import app.cash.sqldelight.async.coroutines.awaitAsList
 import app.cash.sqldelight.async.coroutines.awaitAsOne
 import app.cash.sqldelight.async.coroutines.awaitAsOneOrNull
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesBinding
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import kotlinx.coroutines.flow.Flow
-import logcat.LogPriority
 import atlas.core.common.util.system.logcat
 import atlas.data.Database
 import atlas.data.subscribeToList
@@ -16,6 +10,12 @@ import atlas.domain.history.model.History
 import atlas.domain.history.model.HistoryUpdate
 import atlas.domain.history.model.HistoryWithRelations
 import atlas.domain.history.repository.HistoryRepository
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesBinding
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.coroutines.flow.Flow
+import logcat.LogPriority
 
 @Inject
 @SingleIn(AppScope::class)

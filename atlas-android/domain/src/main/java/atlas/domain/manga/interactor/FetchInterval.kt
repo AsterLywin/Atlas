@@ -1,14 +1,14 @@
 package atlas.domain.manga.interactor
 
+import atlas.domain.chapter.interactor.GetChaptersByMangaId
+import atlas.domain.manga.model.Manga
+import atlas.domain.manga.model.MangaUpdate
 import dev.zacsweers.metro.Inject
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.atStartOfDayIn
 import kotlinx.datetime.toLocalDateTime
-import atlas.domain.chapter.interactor.GetChaptersByMangaId
-import atlas.domain.manga.model.Manga
-import atlas.domain.manga.model.MangaUpdate
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.milliseconds

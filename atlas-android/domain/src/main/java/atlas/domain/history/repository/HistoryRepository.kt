@@ -1,9 +1,9 @@
 package atlas.domain.history.repository
 
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.history.model.History
 import atlas.domain.history.model.HistoryUpdate
 import atlas.domain.history.model.HistoryWithRelations
+import kotlinx.coroutines.flow.Flow
 
 interface HistoryRepository {
 

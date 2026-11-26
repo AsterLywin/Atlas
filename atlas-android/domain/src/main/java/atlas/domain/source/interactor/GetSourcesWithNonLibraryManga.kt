@@ -1,9 +1,9 @@
 package atlas.domain.source.interactor
 
-import dev.zacsweers.metro.Inject
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.source.model.SourceWithCount
 import atlas.domain.source.repository.SourceRepository
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.flow.Flow
 
 @Inject
 class GetSourcesWithNonLibraryManga(

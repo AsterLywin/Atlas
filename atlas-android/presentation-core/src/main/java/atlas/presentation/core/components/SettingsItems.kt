@@ -44,16 +44,15 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
-import dev.icerock.moko.resources.StringResource
+import atlas.core.common.preference.Preference
+import atlas.core.common.preference.TriState
+import atlas.core.common.preference.toggle
 import atlas.icons.materialsymbols.MaterialSymbols
 import atlas.icons.materialsymbols.rounded.ArrowDownward
 import atlas.icons.materialsymbols.rounded.ArrowUpward
 import atlas.icons.materialsymbols.rounded.CheckBoxOutlineBlank
 import atlas.icons.materialsymbols.roundedfilled.CheckBox
 import atlas.icons.materialsymbols.roundedfilled.DisabledByDefault
-import atlas.core.common.preference.Preference
-import atlas.core.common.preference.TriState
-import atlas.core.common.preference.toggle
 import atlas.presentation.core.components.material.DISABLED_ALPHA
 import atlas.presentation.core.components.material.Slider
 import atlas.presentation.core.components.material.padding
@@ -61,6 +60,7 @@ import atlas.presentation.core.i18n.stringResource
 import atlas.presentation.core.theme.header
 import atlas.presentation.core.util.collectAsState
 import atlas.presentation.core.util.secondaryItemAlpha
+import dev.icerock.moko.resources.StringResource
 
 object SettingsItemsPaddings {
     val Horizontal = 24.dp

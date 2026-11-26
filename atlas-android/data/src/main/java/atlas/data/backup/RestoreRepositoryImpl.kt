@@ -3,13 +3,6 @@ package atlas.data.backup
 import app.cash.sqldelight.async.coroutines.awaitAsList
 import app.cash.sqldelight.async.coroutines.awaitAsOne
 import app.cash.sqldelight.async.coroutines.awaitAsOneOrNull
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesBinding
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import kotlinx.coroutines.currentCoroutineContext
-import kotlinx.coroutines.ensureActive
-import kotlinx.serialization.json.JsonObject
 import atlas.data.Database
 import atlas.domain.backup.model.RestoredHistory
 import atlas.domain.backup.model.RestoredManga
@@ -21,6 +14,13 @@ import atlas.domain.manga.model.MangaUpdate
 import atlas.domain.manga.repository.MangaRepository
 import atlas.domain.track.model.Track
 import atlas.domain.track.repository.TrackRepository
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesBinding
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.ensureActive
+import kotlinx.serialization.json.JsonObject
 import kotlin.math.max
 import kotlin.time.Instant
 

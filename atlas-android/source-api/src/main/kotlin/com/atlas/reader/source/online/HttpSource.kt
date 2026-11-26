@@ -1,5 +1,6 @@
 package com.atlas.reader.source.online
 
+import atlas.core.common.util.lang.awaitSingle
 import com.atlas.reader.network.GET
 import com.atlas.reader.network.NetworkHelper
 import com.atlas.reader.network.asObservableSuccess
@@ -16,7 +17,6 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import rx.Observable
-import atlas.core.common.util.lang.awaitSingle
 import uy.kohesive.injekt.injectLazy
 import java.net.URI
 import java.net.URISyntaxException

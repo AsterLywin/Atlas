@@ -1,5 +1,8 @@
 package atlas.domain.manga.interactor
 
+import atlas.domain.chapter.interactor.GetChaptersByMangaId
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.manga.model.Manga
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -17,9 +20,6 @@ import kotlinx.datetime.toLocalDateTime
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.parallel.Execution
 import org.junit.jupiter.api.parallel.ExecutionMode
-import atlas.domain.chapter.interactor.GetChaptersByMangaId
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.manga.model.Manga
 import kotlin.time.Clock
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.days

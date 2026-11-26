@@ -1,11 +1,11 @@
 package atlas.domain.chapter.service
 
+import atlas.domain.chapter.model.Chapter
+import atlas.domain.chapter.service.ChapterRecognition.ChapterNumbering
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.parallel.Execution
 import org.junit.jupiter.api.parallel.ExecutionMode
-import atlas.domain.chapter.model.Chapter
-import atlas.domain.chapter.service.ChapterRecognition.ChapterNumbering
 
 @Execution(ExecutionMode.CONCURRENT)
 class ChapterRecognitionTest {

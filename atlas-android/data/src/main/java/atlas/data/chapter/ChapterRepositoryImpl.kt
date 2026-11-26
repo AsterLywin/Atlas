@@ -3,12 +3,6 @@ package atlas.data.chapter
 import app.cash.sqldelight.async.coroutines.awaitAsList
 import app.cash.sqldelight.async.coroutines.awaitAsOne
 import app.cash.sqldelight.async.coroutines.awaitAsOneOrNull
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesBinding
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import kotlinx.coroutines.flow.Flow
-import kotlinx.serialization.json.JsonObject
 import atlas.core.common.util.lang.toLong
 import atlas.data.Database
 import atlas.data.subscribeToList
@@ -17,6 +11,12 @@ import atlas.domain.chapter.model.ChapterRemoteUpdate
 import atlas.domain.chapter.model.ChapterSummary
 import atlas.domain.chapter.model.ChapterUpdate
 import atlas.domain.chapter.repository.ChapterRepository
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesBinding
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.coroutines.flow.Flow
+import kotlinx.serialization.json.JsonObject
 import kotlin.time.Instant
 
 @Inject

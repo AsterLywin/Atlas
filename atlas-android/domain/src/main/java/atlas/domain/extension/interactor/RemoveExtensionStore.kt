@@ -1,7 +1,7 @@
 package atlas.domain.extension.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.extension.repository.ExtensionStoreRepository
+import dev.zacsweers.metro.Inject
 
 @Inject
 class RemoveExtensionStore(

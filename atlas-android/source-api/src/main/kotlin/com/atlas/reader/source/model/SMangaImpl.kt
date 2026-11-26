@@ -2,8 +2,8 @@
 
 package com.atlas.reader.source.model
 
-import kotlinx.serialization.json.JsonObject
 import atlas.core.common.extensions.EMPTY
+import kotlinx.serialization.json.JsonObject
 
 class SMangaImpl : SManga {
 

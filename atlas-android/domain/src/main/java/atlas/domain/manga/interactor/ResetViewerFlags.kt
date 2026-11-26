@@ -1,7 +1,7 @@
 package atlas.domain.manga.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.manga.repository.MangaRepository
+import dev.zacsweers.metro.Inject
 
 @Inject
 class ResetViewerFlags(

@@ -1,8 +1,5 @@
 package atlas.domain.library.service
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
 import atlas.core.common.preference.Preference
 import atlas.core.common.preference.PreferenceStore
 import atlas.core.common.preference.TriState
@@ -10,6 +7,9 @@ import atlas.core.common.preference.getEnum
 import atlas.domain.library.model.LibraryDisplayMode
 import atlas.domain.library.model.LibrarySort
 import atlas.domain.manga.model.Manga
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 
 @Inject
 @SingleIn(AppScope::class)

@@ -1,9 +1,9 @@
 package atlas.domain.manga.interactor
 
-import dev.zacsweers.metro.Inject
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.repository.MangaRepository
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.flow.Flow
 
 @Inject
 class GetFavorites(

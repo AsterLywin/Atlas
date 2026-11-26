@@ -1,20 +1,20 @@
 package atlas.data.release
 
 import android.os.Build
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesBinding
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
+import atlas.domain.release.interactor.GetApplicationRelease
+import atlas.domain.release.model.Release
+import atlas.domain.release.service.ReleaseService
 import com.atlas.reader.network.GET
 import com.atlas.reader.network.NetworkHelper
 import com.atlas.reader.network.awaitSuccess
 import com.atlas.reader.network.parseAs
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesBinding
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
-import atlas.domain.release.interactor.GetApplicationRelease
-import atlas.domain.release.model.Release
-import atlas.domain.release.service.ReleaseService
 
 @Inject
 @SingleIn(AppScope::class)

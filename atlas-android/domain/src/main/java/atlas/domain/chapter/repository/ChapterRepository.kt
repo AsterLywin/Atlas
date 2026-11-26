@@ -1,10 +1,10 @@
 package atlas.domain.chapter.repository
 
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.chapter.model.Chapter
 import atlas.domain.chapter.model.ChapterRemoteUpdate
 import atlas.domain.chapter.model.ChapterSummary
 import atlas.domain.chapter.model.ChapterUpdate
+import kotlinx.coroutines.flow.Flow
 
 interface ChapterRepository {
 

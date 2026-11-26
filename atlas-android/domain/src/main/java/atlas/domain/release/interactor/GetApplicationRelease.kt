@@ -1,8 +1,8 @@
 package atlas.domain.release.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.release.model.Release
 import atlas.domain.release.service.ReleaseService
+import dev.zacsweers.metro.Inject
 
 @Inject
 class GetApplicationRelease(

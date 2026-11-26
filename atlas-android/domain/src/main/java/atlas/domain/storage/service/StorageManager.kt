@@ -2,11 +2,12 @@ package atlas.domain.storage.service
 
 import android.content.Context
 import androidx.core.net.toUri
+import atlas.core.metro.AppCoroutineScope
+import com.atlas.reader.util.storage.DiskUtil
 import com.hippo.unifile.UniFile
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.util.storage.DiskUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.SharingStarted
@@ -16,7 +17,6 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.shareIn
-import atlas.core.metro.AppCoroutineScope
 import java.util.concurrent.ConcurrentHashMap
 
 @Inject

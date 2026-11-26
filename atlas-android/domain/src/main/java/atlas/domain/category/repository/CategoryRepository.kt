@@ -1,8 +1,8 @@
 package atlas.domain.category.repository
 
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.category.model.Category
 import atlas.domain.category.model.NewCategory
+import kotlinx.coroutines.flow.Flow
 
 interface CategoryRepository {
 

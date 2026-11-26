@@ -2,17 +2,17 @@ package atlas.data.updates
 
 import app.cash.sqldelight.Query
 import app.cash.sqldelight.async.coroutines.awaitAsList
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.ContributesBinding
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
-import kotlinx.coroutines.flow.Flow
 import atlas.core.common.util.lang.toLong
 import atlas.data.Database
 import atlas.data.subscribeToList
 import atlas.domain.manga.model.MangaCover
 import atlas.domain.updates.model.UpdatesWithRelations
 import atlas.domain.updates.repository.UpdatesRepository
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.ContributesBinding
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
+import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
 
 @Inject

@@ -1,11 +1,11 @@
 package atlas.domain.storage.service
 
-import dev.zacsweers.metro.AppScope
-import dev.zacsweers.metro.Inject
-import dev.zacsweers.metro.SingleIn
 import atlas.core.common.preference.Preference
 import atlas.core.common.preference.PreferenceStore
 import atlas.core.common.storage.FolderProvider
+import dev.zacsweers.metro.AppScope
+import dev.zacsweers.metro.Inject
+import dev.zacsweers.metro.SingleIn
 
 @Inject
 @SingleIn(AppScope::class)

@@ -1,16 +1,16 @@
 package atlas.data.source
 
 import androidx.paging.PagingState
+import atlas.domain.manga.interactor.NetworkToLocalManga
+import atlas.domain.manga.model.Manga
+import atlas.domain.manga.model.toDomainManga
+import atlas.domain.source.repository.SourcePagingSource
 import com.atlas.reader.source.Source
 import com.atlas.reader.source.model.FilterList
 import com.atlas.reader.source.model.MangasPage
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import atlas.domain.manga.model.toDomainManga
-import atlas.domain.manga.interactor.NetworkToLocalManga
-import atlas.domain.manga.model.Manga
-import atlas.domain.source.repository.SourcePagingSource
 
 class SourceSearchPagingSource(
     source: suspend () -> Source,

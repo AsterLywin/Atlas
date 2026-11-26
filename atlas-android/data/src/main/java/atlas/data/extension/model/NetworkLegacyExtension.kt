@@ -1,10 +1,10 @@
 package atlas.data.extension.model
 
 import android.annotation.SuppressLint
-import com.atlas.reader.extension.model.Extension
-import kotlinx.serialization.Serializable
 import atlas.domain.extension.model.ContentWarning
 import atlas.domain.extension.model.ExtensionStore
+import com.atlas.reader.extension.model.Extension
+import kotlinx.serialization.Serializable
 
 @SuppressLint("UnsafeOptInUsageError")
 @Serializable

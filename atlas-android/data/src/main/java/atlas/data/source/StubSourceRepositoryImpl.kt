@@ -1,15 +1,15 @@
 package atlas.data.source
 
 import app.cash.sqldelight.async.coroutines.awaitAsOneOrNull
+import atlas.data.Database
+import atlas.data.subscribeToList
+import atlas.domain.source.model.StubSource
+import atlas.domain.source.repository.StubSourceRepository
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.flow.Flow
-import atlas.data.Database
-import atlas.data.subscribeToList
-import atlas.domain.source.model.StubSource
-import atlas.domain.source.repository.StubSourceRepository
 
 @Inject
 @SingleIn(AppScope::class)

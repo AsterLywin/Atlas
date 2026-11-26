@@ -1,10 +1,10 @@
 package atlas.domain.chapter.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.library.service.LibraryPreferences
 import atlas.domain.manga.interactor.GetFavorites
 import atlas.domain.manga.interactor.SetMangaChapterFlags
 import atlas.domain.manga.model.Manga
+import dev.zacsweers.metro.Inject
 
 @Inject
 class SetMangaDefaultChapterFlags(

@@ -1,9 +1,9 @@
 package atlas.domain.category.interactor
 
-import dev.zacsweers.metro.Inject
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.category.model.Category
 import atlas.domain.category.repository.CategoryRepository
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.flow.Flow
 
 @Inject
 class GetCategories(

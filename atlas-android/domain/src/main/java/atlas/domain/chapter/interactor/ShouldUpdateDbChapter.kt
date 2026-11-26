@@ -1,7 +1,7 @@
 package atlas.domain.chapter.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.chapter.model.Chapter
+import dev.zacsweers.metro.Inject
 
 @Inject
 class ShouldUpdateDbChapter {

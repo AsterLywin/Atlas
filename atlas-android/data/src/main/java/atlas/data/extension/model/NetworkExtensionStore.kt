@@ -1,14 +1,14 @@
 package atlas.data.extension.model
 
 import android.annotation.SuppressLint
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.JsonNames
-import kotlinx.serialization.protobuf.ProtoNumber
 import atlas.data.extension.model.NetworkExtensionStore.ContentWarning
 import atlas.data.extension.model.NetworkExtensionStore.ExtensionList
 import atlas.domain.extension.model.ExtensionStore
-import com.atlas.reader.extension.model.Extension as TachiyomiExtension
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonNames
+import kotlinx.serialization.protobuf.ProtoNumber
 import atlas.domain.extension.model.ContentWarning as DomainContentWarning
+import com.atlas.reader.extension.model.Extension as TachiyomiExtension
 
 @SuppressLint("UnsafeOptInUsageError")
 @Serializable

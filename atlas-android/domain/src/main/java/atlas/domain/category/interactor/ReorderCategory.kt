@@ -1,12 +1,12 @@
 package atlas.domain.category.interactor
 
+import atlas.core.common.util.system.logcat
+import atlas.domain.category.model.Category
+import atlas.domain.category.repository.CategoryRepository
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import logcat.LogPriority
-import atlas.core.common.util.system.logcat
-import atlas.domain.category.model.Category
-import atlas.domain.category.repository.CategoryRepository
 
 @Inject
 class ReorderCategory(

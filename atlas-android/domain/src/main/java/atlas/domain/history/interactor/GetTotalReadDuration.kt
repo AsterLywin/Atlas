@@ -1,7 +1,7 @@
 package atlas.domain.history.interactor
 
-import dev.zacsweers.metro.Inject
 import atlas.domain.history.repository.HistoryRepository
+import dev.zacsweers.metro.Inject
 
 @Inject
 class GetTotalReadDuration(

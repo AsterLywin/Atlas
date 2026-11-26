@@ -1,7 +1,7 @@
 package atlas.domain.track.repository
 
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.track.model.Track
+import kotlinx.coroutines.flow.Flow
 
 interface TrackRepository {
 

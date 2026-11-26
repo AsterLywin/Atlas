@@ -1,9 +1,9 @@
 package atlas.domain.updates.interactor
 
-import dev.zacsweers.metro.Inject
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.updates.model.UpdatesWithRelations
 import atlas.domain.updates.repository.UpdatesRepository
+import dev.zacsweers.metro.Inject
+import kotlinx.coroutines.flow.Flow
 import kotlin.time.Instant
 
 @Inject

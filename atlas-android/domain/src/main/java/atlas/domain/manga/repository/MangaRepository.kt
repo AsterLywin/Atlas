@@ -1,11 +1,11 @@
 package atlas.domain.manga.repository
 
-import kotlinx.coroutines.flow.Flow
 import atlas.domain.library.model.LibraryManga
 import atlas.domain.manga.model.Manga
 import atlas.domain.manga.model.MangaRemoteUpdate
 import atlas.domain.manga.model.MangaUpdate
 import atlas.domain.manga.model.MangaWithChapterCount
+import kotlinx.coroutines.flow.Flow
 
 interface MangaRepository {
 

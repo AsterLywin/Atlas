@@ -1,9 +1,9 @@
 package atlas.domain.source.service
 
+import atlas.domain.source.model.StubSource
 import com.atlas.reader.source.Source
 import com.atlas.reader.source.online.HttpSource
 import kotlinx.coroutines.flow.Flow
-import atlas.domain.source.model.StubSource
 
 interface SourceManager {
 

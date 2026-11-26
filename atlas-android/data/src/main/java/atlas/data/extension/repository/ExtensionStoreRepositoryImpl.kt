@@ -2,11 +2,19 @@ package atlas.data.extension.repository
 
 import app.cash.sqldelight.async.coroutines.awaitAsList
 import app.cash.sqldelight.async.coroutines.awaitAsOne
+import atlas.core.common.util.system.logcat
+import atlas.core.metro.AppCoroutineScope
+import atlas.data.Database
+import atlas.data.extension.service.ExtensionStoreService
+import atlas.data.subscribeToList
+import atlas.data.subscribeToOne
+import atlas.domain.extension.model.ExtensionStore
+import atlas.domain.extension.repository.ExtensionStoreRepository
+import com.atlas.reader.extension.model.Extension
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
-import com.atlas.reader.extension.model.Extension
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -18,14 +26,6 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.supervisorScope
 import logcat.LogPriority
-import atlas.core.metro.AppCoroutineScope
-import atlas.data.extension.service.ExtensionStoreService
-import atlas.domain.extension.model.ExtensionStore
-import atlas.domain.extension.repository.ExtensionStoreRepository
-import atlas.core.common.util.system.logcat
-import atlas.data.Database
-import atlas.data.subscribeToList
-import atlas.data.subscribeToOne
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 
