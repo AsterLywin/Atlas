@@ -209,6 +209,12 @@ dependencies {
     baselineProfile(projects.atlasAndroid.baselineProfile)
 
     implementation(projects.atlasAndroid.i18n)
+    // The shared Compose UI (library / browse / reader / settings).
+    implementation(projects.atlasUi)
+    // Needed directly: the shared-UI activity maps the core Book /
+    // Chapter types (atlas-parsers only exposes them as implementation,
+    // so they are not on this module's compile classpath otherwise).
+    implementation(projects.atlasCore)
     implementation(projects.atlasAndroid.icons.customMaterialSymbols)
     implementation(projects.atlasAndroid.icons.materialSymbols)
     implementation(projects.atlasAndroid.icons.simpleIcons)
@@ -218,7 +224,16 @@ dependencies {
     implementation(projects.atlasAndroid.coreMetadata)
     implementation(projects.atlasAndroid.sourceApi)
     implementation(projects.atlasAndroid.sourceLocal)
-    implementation(projects.atlasParsers)
+    // GraalJS is excluded from the Android build on purpose: the
+    // JavaScript engine behind AtlasMangaLoaderContext.evaluateJs runs
+    // on the desktop JVM only (AndroidMangaLoaderContext overrides
+    // evaluateJs to return null — parsers treat that as "unavailable").
+    // Without the exclusion the ~69 MB of Graal jars would ride along
+    // in the APK transitively and never be loaded.
+    implementation(projects.atlasParsers) {
+        exclude(group = "org.graalvm.polyglot", module = "polyglot")
+        exclude(group = "org.graalvm.js", module = "js-language")
+    }
     implementation(projects.atlasAndroid.data)
     implementation(projects.atlasAndroid.domain)
     implementation(projects.atlasAndroid.presentationCore)

@@ -1,0 +1,78 @@
+import kotlin.Boolean;
+
+-- The desktop library database. This schema is the desktop's own: it is
+-- deliberately NOT the Android data module's schema (different tables,
+-- different queries, different package). REAL columns come back as
+-- Double from SQLDelight; the store maps them to the core Float fields
+-- (the conversion is exact for chapter numbers like 1.5).
+CREATE TABLE library_book (
+    id TEXT NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    author TEXT,
+    source_id TEXT NOT NULL,
+    cover_url TEXT,
+    last_read_chapter_id TEXT,
+    last_read_position REAL NOT NULL DEFAULT 0,
+    finished INTEGER AS Boolean NOT NULL DEFAULT 0
+);
+
+CREATE TABLE library_chapter (
+    id TEXT NOT NULL PRIMARY KEY,
+    book_id TEXT NOT NULL REFERENCES library_book(id),
+    title TEXT NOT NULL,
+    number REAL NOT NULL,
+    read INTEGER AS Boolean NOT NULL DEFAULT 0,
+    progress REAL NOT NULL DEFAULT 0
+);
+
+CREATE INDEX library_chapter_book_id ON library_chapter(book_id);
+
+insertBook:
+INSERT INTO library_book(id, title, author, source_id, cover_url)
+VALUES (?, ?, ?, ?, ?)
+ON CONFLICT(id) DO UPDATE SET
+    title = excluded.title,
+    author = excluded.author,
+    source_id = excluded.source_id,
+    cover_url = excluded.cover_url;
+
+insertChapter:
+INSERT INTO library_chapter(id, book_id, title, number, read, progress)
+VALUES (?, ?, ?, ?, ?, ?)
+ON CONFLICT(id) DO UPDATE SET
+    book_id = excluded.book_id,
+    title = excluded.title,
+    number = excluded.number,
+    read = excluded.read,
+    progress = excluded.progress;
+
+selectBooks:
+SELECT * FROM library_book
+ORDER BY rowid;
+
+selectBook:
+SELECT * FROM library_book
+WHERE id = ?;
+
+selectChapters:
+SELECT * FROM library_chapter
+WHERE book_id = ?
+ORDER BY number ASC, rowid ASC;
+
+deleteBook:
+DELETE FROM library_book
+WHERE id = ?;
+
+deleteChapters:
+DELETE FROM library_chapter
+WHERE book_id = ?;
+
+updateChapterRead:
+UPDATE library_chapter
+SET read = ?, progress = ?
+WHERE id = ?;
+
+updateBookProgress:
+UPDATE library_book
+SET last_read_chapter_id = ?, last_read_position = ?, finished = ?
+WHERE id = ?;

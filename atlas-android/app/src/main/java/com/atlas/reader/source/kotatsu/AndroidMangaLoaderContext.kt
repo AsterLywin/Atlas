@@ -24,8 +24,10 @@ import org.koitharu.kotatsu.parsers.bitmap.Bitmap as KotatsuBitmap
  * descramble images (e.g. AsuraScans' tiled pages) work on the phone.
  *
  * Everything else — HTTP client, cookie jar, per-source config, and the
- * JavaScript/WebView hooks that throw [UnsupportedOperationException] —
- * is inherited unchanged.
+ * WebView hooks that throw [UnsupportedOperationException] — is
+ * inherited unchanged. JavaScript evaluation is the exception: it is
+ * disabled here (see [evaluateJs]), because the GraalJS engine behind
+ * the JVM implementation is excluded from the Android build.
  */
 class AndroidMangaLoaderContext(
     httpClient: OkHttpClient = AtlasMangaLoaderContext.defaultHttpClient(),
@@ -38,6 +40,19 @@ class AndroidMangaLoaderContext(
     defaultUserAgent = defaultUserAgent,
     configOverrides = configOverrides,
 ) {
+
+    /**
+     * JavaScript evaluation is unavailable on Android: the JVM base
+     * class runs it on GraalJS, and the Graal jars are excluded from
+     * the Android build (see app/build.gradle.kts) — they would only
+     * bloat the APK, the engine never loads on the phone. Returning
+     * null is the same signal the JVM engine gives for "script
+     * unavailable", so parsers that need JS fail the same way they
+     * would on a fetch failure instead of crashing on a missing class.
+     */
+    override suspend fun evaluateJs(script: String): String? = null
+
+    override suspend fun evaluateJs(baseUrl: String, script: String, timeout: Long): String? = null
 
     override fun redrawImageResponse(
         response: Response,

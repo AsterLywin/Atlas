@@ -98,8 +98,9 @@ class KotatsuSourceAdapter(
 
     private fun MangaChapter.toChapter(bookId: String, index: Int): Chapter {
         // Parser numbers are floats (1, 1.5, 2...); Atlas numbers are
-        // 1-based ints. Unknown numbers (0) fall back to list position.
-        val n = number.toInt().takeIf { it > 0 } ?: (index + 1)
+        // floats too, so 1.5 stays 1.5. Unknown numbers (0) fall back to
+        // list position.
+        val n = number.takeIf { it > 0f } ?: (index + 1).toFloat()
         return Chapter(
             id = KotatsuIds.chapterIdOf(bookId, this),
             bookId = bookId,

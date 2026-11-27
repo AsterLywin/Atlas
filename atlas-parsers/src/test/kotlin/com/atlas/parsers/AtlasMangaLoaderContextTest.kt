@@ -43,9 +43,37 @@ class AtlasMangaLoaderContextTest {
     }
 
     @Test
-    fun `evaluateJs is unavailable on plain JVM`() {
+    fun `evaluateJs evaluates pure JS on a blank page`() {
+        val result = kotlinx.coroutines.runBlocking { context.evaluateJs("1+1") }
+        assertEquals("2", result)
+    }
+
+    @Test
+    fun `evaluateJs returns null for a failing script instead of throwing`() {
+        val result = kotlinx.coroutines.runBlocking {
+            context.evaluateJs("(() => { throw new Error('kaboom'); })()")
+        }
+        assertEquals(null, result)
+    }
+
+    @Test
+    fun `browser hooks still fail cleanly without a WebView`() {
+        val parser = KotatsuParserRegistry().newParser(
+            org.koitharu.kotatsu.parsers.model.MangaParserSource.MANGADEX,
+            context,
+        )
         assertThrows(UnsupportedOperationException::class.java) {
-            kotlinx.coroutines.runBlocking { context.evaluateJs("1+1") }
+            context.requestBrowserAction(parser, "https://example.com/")
+        }
+        assertThrows(UnsupportedOperationException::class.java) {
+            kotlinx.coroutines.runBlocking {
+                context.interceptWebViewRequests("https://example.com/", "return true;", 1000L)
+            }
+        }
+        assertThrows(UnsupportedOperationException::class.java) {
+            kotlinx.coroutines.runBlocking {
+                context.captureWebViewUrls("https://example.com/", Regex("example"), 1000L)
+            }
         }
     }
 

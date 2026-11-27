@@ -29,6 +29,7 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "Atlas"
+include(":atlas-ui")
 include(":atlas-core")
 include(":atlas-parsers")
 include(":atlas-desktop")

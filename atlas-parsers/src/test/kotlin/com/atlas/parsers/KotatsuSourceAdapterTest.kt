@@ -118,12 +118,12 @@ class KotatsuSourceAdapterTest {
         val chapters = adapter.listChapters(bookId)
         assertEquals(3, chapters.size)
         assertEquals("First", chapters[0].title)
-        assertEquals(1, chapters[0].number)
+        assertEquals(1f, chapters[0].number)
         // No title from the parser: empty, the UI supplies the fallback.
         assertEquals("", chapters[1].title)
-        assertEquals(2, chapters[1].number)
-        // Fractional number 2.5 floors to the Atlas int number 2.
-        assertEquals(2, chapters[2].number)
+        assertEquals(2f, chapters[1].number)
+        // Fractional number 2.5 stays 2.5 now that Atlas numbers are floats.
+        assertEquals(2.5f, chapters[2].number)
         assertEquals(bookId, chapters[0].bookId)
     }
 

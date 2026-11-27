@@ -122,6 +122,15 @@
             android:exported="false"
             android:process=":error_handler" />
 
+        <!-- The shared Compose UI (library / browse / reader / settings
+             from :atlas-ui). Standalone on purpose: the app's own
+             reader and navigation are untouched. Not exported and no
+             launcher entry — open it with an explicit intent. -->
+        <activity
+            android:name=".ui.shared.AtlasSharedUiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Tachiyomi" />
+
         <activity
             android:name=".ui.deeplink.DeepLinkActivity"
             android:exported="true"

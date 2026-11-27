@@ -1,6 +1,11 @@
 package com.atlas.reader.source.kotatsu
 
 import android.content.Context
+import app.cash.sqldelight.SuspendingTransacter
+import app.cash.sqldelight.db.QueryResult
+import app.cash.sqldelight.db.SqlCursor
+import app.cash.sqldelight.db.SqlDriver
+import app.cash.sqldelight.db.SqlPreparedStatement
 import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
 import atlas.core.common.preference.InMemoryPreferenceStore
 import atlas.core.common.storage.FolderProvider
@@ -50,9 +55,13 @@ import com.atlas.reader.source.AndroidSourceManager
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import nl.adaptivity.xmlutil.serialization.XML
 import okhttp3.HttpUrl
 import org.koitharu.kotatsu.parsers.MangaLoaderContext
@@ -61,6 +70,8 @@ import org.koitharu.kotatsu.parsers.ParsersApi
 import org.koitharu.kotatsu.parsers.ParsersBundle
 import org.koitharu.kotatsu.parsers.model.ParserMangaSource
 import java.io.File
+import kotlin.coroutines.resume
+import kotlin.coroutines.suspendCoroutine
 import org.koitharu.kotatsu.parsers.model.Manga as KotatsuManga
 
 /**
@@ -89,7 +100,7 @@ internal data class TestStores(
 )
 
 internal suspend fun newTestStores(): TestStores {
-    val driver = JdbcSqliteDriver(JdbcSqliteDriver.IN_MEMORY)
+    val driver = newConcurrentTestDriver()
     Database.Schema.create(driver).await()
     val database = Database(
         driver = driver,
@@ -141,6 +152,126 @@ internal suspend fun newTestStores(): TestStores {
         fetchInterval = fetchInterval,
         updateManga = UpdateManga(mangaRepository, fetchInterval),
         getCategories = GetCategories(categoryRepository),
+    )
+}
+
+/**
+ * Serializes all database transactions. A temp-file database alone is
+ * not enough: two overlapping write transactions still collide
+ * (SQLITE_BUSY on the second writer, and SQLITE_BUSY_SNAPSHOT when a
+ * read-then-write transaction races another connection's commit — the
+ * busy handler is never invoked for the snapshot error, so no
+ * busy_timeout can save it). SqlDelight routes every suspend transaction
+ * through [SuspendingTransacter.TransactionDispatcher] when the driver
+ * implements it, so serializing there makes concurrent updates behave
+ * exactly like the production AndroidX driver does.
+ *
+ * A [Mutex] — not a single-thread dispatcher — because the transaction
+ * body suspends inside awaitAs* (SuspendLambda with several suspension
+ * points), which yields a dispatcher thread and lets the next
+ * transaction start mid-body (that is how SQLITE_BUSY_SNAPSHOT still
+ * happened with the dispatcher). A Mutex is held across suspension.
+ * It is re-entrant per coroutine: RestoreRepositoryImpl opens a
+ * transaction and calls mangaRepository.update() inside it, which opens
+ * another one — a plain Mutex would deadlock there.
+ */
+private class SerializingTestDriver(
+    private val delegate: SqlDriver,
+) : SqlDriver by delegate, SuspendingTransacter.TransactionDispatcher {
+    private val mutex = Mutex()
+
+    @Volatile
+    private var holderJob: Job? = null
+
+    @Volatile
+    private var holdCount = 0
+
+    // The thread running the current transaction body. Transactions stay
+    // on one thread in practice (awaitAs* resumes inline), so a plain
+    // statement from that thread is inside the owner's transaction and
+    // must run inline; any other thread blocks on the mutex instead.
+    @Volatile
+    private var holderThread: Thread? = null
+
+    // The current coroutine's Job identifies the owner for re-entrancy
+    // (currentCoroutineContext is not available in this toolchain's
+    // stdlib, so the Job is read off the continuation instead).
+    private suspend fun currentJob(): Job? = suspendCoroutine { continuation ->
+        continuation.resume(continuation.context[Job])
+    }
+
+    override suspend fun <R> dispatch(block: suspend () -> R): R {
+        val job = currentJob()
+        if (holderJob === job) {
+            holdCount++
+            try {
+                return block()
+            } finally {
+                holdCount--
+            }
+        }
+        return mutex.withLock {
+            holderJob = job
+            holderThread = Thread.currentThread()
+            holdCount = 1
+            try {
+                block()
+            } finally {
+                holdCount = 0
+                holderJob = null
+                holderThread = null
+            }
+        }
+    }
+
+    /**
+     * Plain statements (e.g. MangaRepositoryImpl.updateRemote, a single
+     * autocommit UPDATE) bypass dispatch, so serializing transactions
+     * alone is not enough: one updater's autocommit write collided with
+     * the other updater's open transaction and failed it with
+     * SQLITE_BUSY (proved by the TX trace: the failing transaction held
+     * the mutex exclusively, no other transaction overlapped). Every
+     * statement goes through the same mutex, exactly like the production
+     * AndroidX driver serializes all access on one SQLiteDatabase.
+     */
+    private fun <R> serializeStatement(block: () -> R): R {
+        if (Thread.currentThread() === holderThread) return block()
+        return runBlocking { mutex.withLock { block() } }
+    }
+
+    override fun execute(
+        identifier: Int?,
+        sql: String,
+        parameters: Int,
+        binders: (SqlPreparedStatement.() -> Unit)?,
+    ): QueryResult<Long> =
+        serializeStatement { delegate.execute(identifier, sql, parameters, binders) }
+
+    override fun <R> executeQuery(
+        identifier: Int?,
+        sql: String,
+        mapper: (SqlCursor) -> QueryResult<R>,
+        parameters: Int,
+        binders: (SqlPreparedStatement.() -> Unit)?,
+    ): QueryResult<R> =
+        serializeStatement { delegate.executeQuery(identifier, sql, mapper, parameters, binders) }
+
+    override fun close() {
+        delegate.close()
+    }
+}
+
+private fun newConcurrentTestDriver(): SqlDriver {
+    val file = File.createTempFile("atlas-test-", ".db")
+    file.deleteOnExit()
+    File(file.absolutePath + "-wal").deleteOnExit()
+    File(file.absolutePath + "-shm").deleteOnExit()
+    val properties = java.util.Properties().apply {
+        setProperty("busy_timeout", "10000")
+        setProperty("journal_mode", "WAL")
+    }
+    return SerializingTestDriver(
+        JdbcSqliteDriver("jdbc:sqlite:${file.absolutePath}", properties),
     )
 }
 

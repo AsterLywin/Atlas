@@ -22,8 +22,12 @@ data class Chapter(
     val id: String,
     val bookId: String,
     val title: String,
-    /** 1-based reading order. */
-    val number: Int,
+    /**
+     * 1-based reading order. A float, not an int: fractional chapters
+     * (1.5, 2.5, …) are real catalogue numbers and must survive the
+     * mapping instead of being floored to the whole chapter below.
+     */
+    val number: Float,
     val read: Boolean = false,
     /** 0..1 fraction read inside this chapter. */
     val progress: Float = 0f,

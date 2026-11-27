@@ -32,11 +32,14 @@ import org.koitharu.kotatsu.parsers.model.MangaSource
  * Android, so the Android app must supply `android.graphics.Bitmap`
  * backed implementations instead.
  *
+ * JavaScript ([evaluateJs]) runs on the GraalVM JS engine in
+ * [AtlasJsEngine]: the page at `baseUrl` is fetched with the context
+ * HTTP client and the script runs against a small browser shim
+ * (DOM/localStorage/fetch/XHR) backed by that page. It returns the
+ * result string, or null when the page cannot be fetched, the script
+ * fails, or the timeout runs out — it never throws for a script failure.
+ *
  * What is NOT implemented here, deliberately:
- * - [evaluateJs]: JavaScript evaluation needs a JS engine (QuickJS on the
- *   JVM, WebView on Android). It throws [UnsupportedOperationException],
- *   which only affects the 19 parsers that call it; the other ~1,390
- *   parsers never touch JS.
  * - [requestBrowserAction] / WebView interception: the base implementations
  *   throw, which only affects the 16 parsers that need a browser.
  */
@@ -56,17 +59,27 @@ open class AtlasMangaLoaderContext(
 
     override fun getDefaultUserAgent(): String = defaultUserAgent
 
-    override suspend fun evaluateJs(script: String): String? =
-        throw UnsupportedOperationException(
-            "JavaScript evaluation is not available in this Atlas build; " +
-                "parsers that need it cannot run here.",
-        )
+    /** Lazily created, so hosts that override [evaluateJs] never pay for it. */
+    private val jsEngine: AtlasJsEngine by lazy {
+        AtlasJsEngine(httpClient, cookieJar, getDefaultUserAgent())
+    }
 
+    /**
+     * Pure computation on a blank page (no DOM): the deprecated overload
+     * parsers use for deobfuscation. Never throws for a script failure.
+     */
+    override suspend fun evaluateJs(script: String): String? =
+        jsEngine.evaluateJs(null, script, SINGLE_SCRIPT_TIMEOUT_MS)
+
+    /**
+     * Runs [script] against the page at [baseUrl] (fetched with the
+     * context HTTP client) with [timeout] as the total budget. Returns
+     * the result string, or null when the page cannot be fetched, the
+     * script fails, its promise never settles, or the timeout runs out.
+     * Never throws for a script failure.
+     */
     override suspend fun evaluateJs(baseUrl: String, script: String, timeout: Long): String? =
-        throw UnsupportedOperationException(
-            "JavaScript evaluation is not available in this Atlas build; " +
-                "parsers that need it cannot run here.",
-        )
+        jsEngine.evaluateJs(baseUrl, script, timeout)
 
     /**
      * JVM image descrambling: decode the response into a [BufferedImage],
@@ -108,6 +121,9 @@ open class AtlasMangaLoaderContext(
         const val DEFAULT_USER_AGENT: String =
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
                 "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+
+        /** Budget for the single-argument overload, which carries no timeout of its own. */
+        private const val SINGLE_SCRIPT_TIMEOUT_MS = 30_000L
 
         fun defaultHttpClient(cookieJar: CookieJar = InMemoryCookieJar()): OkHttpClient =
             OkHttpClient.Builder()
