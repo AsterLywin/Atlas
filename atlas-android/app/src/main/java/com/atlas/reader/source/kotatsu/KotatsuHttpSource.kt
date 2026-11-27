@@ -90,8 +90,23 @@ class KotatsuHttpSource(
             .build()
     }
 
+    /**
+     * Covers (and every other request built from [headers]) go through
+     * here: [MangaCoverFetcher] builds its request from `source.headers`,
+     * so the parser's own request headers — Referer and friends from
+     * [MangaParser.getRequestHeaders] — must be in the set, or sources
+     * that gate covers on Referer answer 403 while their pages load fine.
+     * The parser headers already carry a User-Agent by default; the
+     * loader context's is only added when the parser has none.
+     */
     override fun headersBuilder(): Headers.Builder = Headers.Builder().apply {
-        add("User-Agent", loaderContext.getDefaultUserAgent())
+        val parserHeaders = parser.getRequestHeaders()
+        for (i in 0 until parserHeaders.size) {
+            add(parserHeaders.name(i), parserHeaders.value(i))
+        }
+        if (parserHeaders["User-Agent"] == null) {
+            add("User-Agent", loaderContext.getDefaultUserAgent())
+        }
     }
 
     /**

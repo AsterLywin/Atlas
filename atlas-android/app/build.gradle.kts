@@ -332,6 +332,8 @@ dependencies {
     testImplementation(libs.junit4)
     testImplementation(libs.mockwebserver)
     testImplementation(libs.robolectric)
+    // Real SQLDelight database (JDBC driver) for the library/backup loop tests
+    testImplementation(libs.sqldelight.sqliteDriver)
     testRuntimeOnly(libs.junit.platform.launcher)
     testRuntimeOnly(libs.junit.vintage.engine)
 
